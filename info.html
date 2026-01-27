@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about AlphaSEO & Marketing - Your trusted digital marketing partner in Kolkata.">
+  <title>About Us | AlphaSEO & Marketing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+    :root{
+      --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#F2F2F7;--on-background:#1C1C1E;
+      --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
+      --outline:rgba(0,0,0,0.1);--outline-variant:rgba(0,0,0,0.05);
+      --glass-bg:rgba(255,255,255,0.15);--glass-border:rgba(255,255,255,0.6);--glass-blur:15px;
+      --rim-light:0 0 0 1px rgba(255,255,255,0.5), 0 0 0 1.5px rgba(255,255,255,0.2);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.12);
+      --grid-line:rgba(0,0,0,0.05);
+      --background-rgb:242,242,247;
+    }
+    [data-theme="dark"]{
+      --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#000;--on-background:#F2F2F7;
+      --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
+      --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
+      --glass-bg:rgba(28,28,30,0.7);--glass-border:rgba(255,255,255,0.1);--glass-blur:2px;
+      --hero-card-bg:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+      --rim-light:0 0 0 1px rgba(255,255,255,0.1), 0 0 0 1.5px rgba(255,255,255,0.05);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.6);
+      --grid-line:rgba(255,255,255,0.05);
+      --background-rgb:0,0,0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden}
+    .uniform-card{padding:40px 32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease;display:flex;flex-direction:column}
+    .uniform-card::after { display: none !important; }
+
+    .scroll-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg, var(--primary), #AF52DE);z-index:1001;width:0%;transition:width .1s ease}
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:var(--background);
+      z-index:-1;
+    }
+    h1,h2,h3{font-weight:600;line-height:1.2;color:var(--on-surface)}h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:1.1rem}p{color:var(--on-surface-variant);max-width:65ch}a{color:var(--primary);text-decoration:none}
+    
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 32px;background:var(--glass-bg);backdrop-filter:blur(15px) saturate(180%);-webkit-backdrop-filter:blur(15px) saturate(180%);border-bottom:1px solid var(--glass-border)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px}.nav-logo{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;color:#fff}.nav-title{font-size:1.125rem;font-weight:600;color:var(--on-surface)}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}.nav-links a{color:var(--on-surface-variant);font-weight:500;font-size:.9rem;padding:10px 16px;border-radius:20px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;align-items:center;gap:6px}.nav-links a:hover{color:var(--primary);background:rgba(10,132,255,.12);transform:scale(1.05) translateY(-1px)}.nav-links a.active{color:var(--primary);background:rgba(10,132,255,.08)}
+    .nav-actions{display:flex;align-items:center;gap:4px}.toggle-btn{width:40px;height:40px;border:1px solid var(--glass-border);border-radius:20px;background:var(--glass-bg);color:var(--on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);backdrop-filter:blur(5px)}.toggle-btn:hover{background:var(--primary);color:#fff;transform:scale(1.1);border-color:var(--primary)}
+    .mobile-toggle{display:none;flex-direction:column;gap:5px;padding:10px;background:var(--surface);border:none;border-radius:8px;cursor:pointer;z-index:1001}.mobile-toggle span{width:22px;height:2.5px;background:var(--on-surface);border-radius:2px;transition:all .3s ease}.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.mobile-toggle.active span:nth-child(2){opacity:0}.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:24px 16px;z-index:999;overflow-y:auto;animation:slideDown .3s ease;border:1px solid var(--glass-border);box-shadow:var(--glass-shadow)}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(10,132,255,0.25)}.btn-primary:hover{background:var(--primary-light)}
+    .page-hero{padding:180px 32px 80px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(var(--background-rgb), 0.7), rgba(var(--background-rgb), 0.7)), url('hero-bg.jpg');background-size:cover;background-position:center;background-attachment:fixed;border-bottom:1px solid var(--outline)}
+    .page-hero h1, .page-hero p{position:relative;z-index:1}
+    .section{padding:64px 32px}.section-header{text-align:center;max-width:600px;margin:0 auto 48px}.section-label{font-size:.8rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:block}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .info-card{padding:40px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease}
+    .info-card:hover{transform:translateY(-8px);border-color:var(--primary);box-shadow:0 20px 40px rgba(10,132,255,0.25)}
+    .info-icon{font-size:2rem;margin-bottom:16px}.info-title{font-size:1.1rem;margin-bottom:8px}.info-desc{color:var(--on-surface-variant);font-size:.9rem;line-height:1.6}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;max-width:1000px;margin:32px auto}
+    .team-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;text-align:center;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease}
+    .team-card:hover{transform:translateY(-8px);border-color:var(--primary)}
+    .team-avatar{width:80px;height:80px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.75rem;font-weight:700;color:#fff;margin:0 auto 20px;box-shadow:0 8px 16px rgba(10,132,255,0.2)}
+    .team-name{font-size:1rem;margin-bottom:4px}.team-role{font-size:.85rem;color:var(--on-surface-variant)}
+    .footer{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:64px 40px 24px;border-top:1px solid var(--glass-border);width:100%}.footer-content{max-width:100%;margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
+    .footer-links h4{font-size:.875rem;font-weight:600;margin-bottom:16px}.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-links a,.footer-links span{color:var(--on-surface-variant);font-size:.875rem}.footer-links a:hover{color:var(--primary)}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding-top:24px;margin-top:32px;border-top:1px solid var(--outline);font-size:.8rem;color:var(--on-surface-variant)}
+    @media(max-width:768px){.nav-links{display:none}.mobile-toggle{display:flex}.page-hero{padding:100px 16px 32px}.section{padding:48px 16px}.info-grid,.team-grid{grid-template-columns:1fr}.footer-content{flex-direction:column;text-align:center;gap:24px}.footer{padding:32px 16px 16px}.footer-links h4{margin-bottom:8px}}
+  </style>
+</head>
+<body data-lang="en">
+  <nav class="navbar">
+    <div class="scroll-progress" id="scrollBar"></div>
+    <div class="nav-container">
+    <a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+      <li><a href="services.html" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+      <li><a href="info.html" class="active" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+      <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="toggle-btn" id="langToggle"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="themeToggle"><span id="themeIcon">☀</span></button>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </div></nav>
+  <div class="mobile-menu" id="mobileMenu"><ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+    <li><a href="services.html" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+    <li><a href="info.html" class="active" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+    <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+  </ul></div>
+
+  <section class="page-hero">
+    <h1 data-en="About Us" data-bn="আমাদের সম্পর্কে">About Us</h1>
+    <p style="max-width:600px;margin:16px auto 32px" data-en="Driving digital innovation since 2020." data-bn="২০২০ সাল থেকে ডিজিটাল উদ্ভাবন পরিচালনা করছি।">Driving digital innovation since 2020.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Story" data-bn="আমাদের গল্প">Our Story</span>
+      <h2 data-en="Building Digital Success Since 2020" data-bn="২০২০ সাল থেকে ডিজিটাল সাফল্য তৈরি করছি">Building Digital Success Since 2020</h2>
+      <p style="margin-top:16px" data-en="AlphaSEO & Marketing was founded with a vision to help businesses navigate the complex digital landscape. What started as a small team passionate about SEO has grown into a full-service digital marketing agency serving clients across India and beyond." data-bn="AlphaSEO & Marketing প্রতিষ্ঠিত হয়েছিল ব্যবসাগুলিকে জটিল ডিজিটাল পরিবেশে নেভিগেট করতে সাহায্য করার দৃষ্টিভঙ্গি নিয়ে।">AlphaSEO & Marketing was founded with a vision to help businesses navigate the complex digital landscape.</p>
+    </div>
+    <div class="info-grid">
+      <div class="uniform-card"><div class="info-icon">◎</div><h3 class="info-title" data-en="Our Mission" data-bn="আমাদের লক্ষ্য">Our Mission</h3><p class="info-desc" data-en="To deliver measurable results through innovative digital strategies that drive growth and maximize ROI for our clients." data-bn="উদ্ভাবনী ডিজিটাল কৌশলের মাধ্যমে পরিমাপযোগ্য ফলাফল প্রদান করা।">To deliver measurable results through innovative digital strategies.</p></div>
+      <div class="uniform-card"><div class="info-icon">◈</div><h3 class="info-title" data-en="Our Vision" data-bn="আমাদের দৃষ্টি">Our Vision</h3><p class="info-desc" data-en="To be the most trusted digital marketing partner for businesses looking to establish a powerful online presence." data-bn="শক্তিশালী অনলাইন উপস্থিতি প্রতিষ্ঠা করতে চাওয়া ব্যবসাগুলির জন্য সবচেয়ে বিশ্বস্ত পার্টনার হওয়া।">To be the most trusted digital marketing partner for businesses.</p></div>
+      <div class="uniform-card"><div class="info-icon">⬡</div><h3 class="info-title" data-en="Our Values" data-bn="আমাদের মূল্যবোধ">Our Values</h3><p class="info-desc" data-en="Transparency, innovation, and client success are at the core of everything we do. We believe in building lasting partnerships." data-bn="স্বচ্ছতা, উদ্ভাবন এবং ক্লায়েন্ট সাফল্য আমাদের সব কিছুর মূলে।">Transparency, innovation, and client success are at the core of everything we do.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface-container)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Team" data-bn="আমাদের দল">Our Team</span>
+      <h2 data-en="Meet the Experts" data-bn="বিশেষজ্ঞদের সাথে পরিচিত হন">Meet the Experts</h2>
+    </div>
+    <div class="team-grid">
+      <div class="uniform-card"><div class="team-avatar">AR</div><h3 class="team-name">Arjun Roy</h3><p class="team-role" data-en="Founder & CEO" data-bn="প্রতিষ্ঠাতা ও সিইও">Founder & CEO</p></div>
+      <div class="uniform-card"><div class="team-avatar">PD</div><h3 class="team-name">Priya Das</h3><p class="team-role" data-en="SEO Director" data-bn="এসইও ডিরেক্টর">SEO Director</p></div>
+      <div class="uniform-card"><div class="team-avatar">SM</div><h3 class="team-name">Sourav Mukherjee</h3><p class="team-role" data-en="Marketing Lead" data-bn="মার্কেটিং লিড">Marketing Lead</p></div>
+      <div class="uniform-card"><div class="team-avatar">RB</div><h3 class="team-name">Riya Banerjee</h3><p class="team-role" data-en="Content Head" data-bn="কন্টেন্ট হেড">Content Head</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Clients" data-bn="আমাদের ক্লায়েন্ট">Our Clients</span>
+      <h2 data-en="Global Collaborations & Success Stories" data-bn="বিশ্বব্যাপী সহযোগিতা এবং সাফল্যের গল্প">Global Collaborations & Success Stories</h2>
+      <p style="margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto" data-en="We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation." data-bn="আমরা বিশ্বব্যাপী ২০০+ কোম্পানির সাথে কাজ করার সুযোগ পেয়েছি।">We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1100px;margin:0 auto">
+      <a href="https://antonioalessi.malibucycles.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.34-PM.jpeg" alt="Malibu Cycles" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://theorchidvillamalibu.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.36-PM.jpeg" alt="The Orchid Villa" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://ufcstore.pl/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM.jpeg" alt="UFC Store" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://malibucycles.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-2.jpeg" alt="Malibu Cycles Main" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://maliburanchcatering.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-1.jpeg" alt="Malibu Ranch Catering" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://lightslategray-penguin-123156.hostingersite.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-3.jpeg" alt="Hostinger Site Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://dirty-diana.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.32.47-PM-1.jpeg" alt="Dirty Diana" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <a href="https://irsdesign.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.47.10-PM.jpeg" alt="IRS Design Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      </a>
+      <!-- Additional project cards -->
+      <a href="https://malibucycles.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.34-PM.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
+      </a>
+      <a href="https://maliburanchcatering.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-1.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
+      </a>
+      <a href="https://theorchidvillamalibu.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.36-PM.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
+      </a>
+      <a href="https://dirty-diana.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.32.47-PM-1.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
+      </a>
+    </div>
+
+    <!-- Links Section -->
+    <div style="margin-top:64px;max-width:900px;margin-left:auto;margin-right:auto">
+      <div style="background:var(--surface-container);padding:32px;border-radius:24px;border:1px solid var(--outline);backdrop-filter:blur(10px)">
+        <h3 style="margin-bottom:24px;text-align:center" data-en="Project Directory" data-bn="প্রজেক্ট ডিরেক্টরি">Project Directory</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
+          <a href="https://antonioalessi.malibucycles.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🚲</span> <span>Malibu Cycles - Antonio Alessi</span>
+          </a>
+          <a href="https://theorchidvillamalibu.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🏡</span> <span>The Orchid Villa Malibu</span>
+          </a>
+          <a href="https://ufcstore.pl/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🥊</span> <span>UFC Store Poland</span>
+          </a>
+          <a href="https://malibucycles.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🚵</span> <span>Malibu Cycles Official</span>
+          </a>
+          <a href="https://maliburanchcatering.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🍽️</span> <span>Malibu Ranch Catering</span>
+          </a>
+          <a href="https://lightslategray-penguin-123156.hostingersite.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🌐</span> <span>Hostinger Site Project</span>
+          </a>
+          <a href="https://dirty-diana.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">✨</span> <span>Dirty Diana Official</span>
+          </a>
+          <a href="https://irsdesign.com/" target="_blank" style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease" class="project-link">
+            <span style="font-size:1.2rem">🛠️</span> <span>IRS Design Main</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="text-align:center">
+    <h2 data-en="Ready to Work With Us?" data-bn="আমাদের সাথে কাজ করতে প্রস্তুত?">Ready to Work With Us?</h2>
+    <p style="margin:16px auto 24px;max-width:500px" data-en="Let's discuss how we can help grow your business." data-bn="আসুন আলোচনা করি কিভাবে আমরা আপনার ব্যবসা বাড়াতে পারি।">Let's discuss how we can help grow your business.</p>
+    <a href="contact.html" class="btn btn-primary" data-en="Get in Touch" data-bn="যোগাযোগ করুন">Get in Touch</a>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="section-header">
+      <h2 data-en="Our Core Values" data-bn="আমাদের মূল আদর্শ">Our Core Values</h2>
+    </div>
+    <div style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));display:grid;gap:24px;max-width:1000px;margin:0 auto">
+      <div style="text-align:center;padding:32px;background:var(--background);border-radius:24px;border:1px solid var(--outline)">
+        <div style="font-size:2.5rem;margin-bottom:16px">🎯</div>
+        <h4 data-en="Precision" data-bn="নির্ভুলতা">Precision</h4>
+        <p style="font-size:0.85rem;margin-top:8px" data-en="Actionable data over guesses." data-bn="অনুমানের চেয়ে কার্যকর ডেটা।">Actionable data over guesses.</p>
+      </div>
+      <div style="text-align:center;padding:32px;background:var(--background);border-radius:24px;border:1px solid var(--outline)">
+        <div style="font-size:2.5rem;margin-bottom:16px">⚡</div>
+        <h4 data-en="Speed" data-bn="গতি">Speed</h4>
+        <p style="font-size:0.85rem;margin-top:8px" data-en="Rapid execution, faster results." data-bn="দ্রুত সম্পাদন, দ্রুত ফলাফল।">Rapid execution, faster results.</p>
+      </div>
+      <div style="text-align:center;padding:32px;background:var(--background);border-radius:24px;border:1px solid var(--outline)">
+        <div style="font-size:2.5rem;margin-bottom:16px">💎</div>
+        <h4 data-en="Quality" data-bn="মান">Quality</h4>
+        <p style="font-size:0.85rem;margin-top:8px" data-en="Premium work for premium clients." data-bn="প্রিমিয়াম ক্লায়েন্টদের জন্য সেরা কাজ।">Premium work for premium clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="footer-content">
+    <div class="footer-brand"><a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a><p data-en="Empowering businesses since 2020." data-bn="২০২০ সাল থেকে ব্যবসাকে শক্তিশালী করছি।">Empowering businesses since 2020.</p></div>
+    <div class="footer-links"><h4 data-en="Links" data-bn="লিঙ্ক">Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-links"><h4 data-en="Connect" data-bn="যোগাযোগ">Connect</h4><ul><li><a href="mailto:agencyroy0@gmail.com">agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045">+91 89065 81045</a></li><li><a href="https://wa.me/918906581045" target="_blank">WhatsApp</a></li><li><a href="https://t.me/+918906581045" target="_blank">Telegram</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© 2026 AlphaSEO & Marketing | Shantiniketan, Kolkata</p></div></footer>
+
+  <script>
+    const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
+    const getBrowserLang=()=>(navigator.language||'').startsWith('bn')?'bn':'en';
+    const initTheme=()=>{const t=localStorage.getItem('theme')||'light';html.dataset.theme=t;themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const initLang=()=>{const l=localStorage.getItem('language')||getBrowserLang();body.dataset.lang=l;updateLang(l)};
+    const toggleTheme=()=>{const t=html.dataset.theme==='dark'?'light':'dark';html.dataset.theme=t;localStorage.setItem('theme',t);themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const toggleLang=()=>{const l=body.dataset.lang==='en'?'bn':'en';body.dataset.lang=l;localStorage.setItem('language',l);updateLang(l)};
+    const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.textContent=el.dataset[l]||el.textContent)};
+    themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
+    const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
+    mobileToggle.onclick=()=>{mobileToggle.classList.toggle('active');mobileMenu.classList.toggle('active')};
+    
+    // Massive Interactivity Prop
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
+    let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
+    window.addEventListener('mousemove', (e)=>{
+      mouseX=e.clientX; mouseY=e.clientY;
+      cursorDot.style.opacity=cursorOutline.style.opacity=1;
+      cursorDot.style.transform=`translate(${mouseX-3}px, ${mouseY-3}px)`;
+    });
+    const animateCursor=()=>{
+      outlineX+=(mouseX-outlineX-20)*0.15; outlineY+=(mouseY-outlineY-20)*0.15;
+      cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
+      requestAnimationFrame(animateCursor);
+    }; animateCursor();
+    window.addEventListener('scroll', ()=>{ sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'; });
+    window.addEventListener('mousedown', (e)=>{
+      const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
+      document.body.appendChild(r); setTimeout(()=>r.remove(), 600);
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      el.addEventListener('mouseenter', ()=>cursorOutline.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', ()=>cursorOutline.classList.remove('cursor-hover'));
+    });
+    const observer = new IntersectionObserver((entries)=>{ entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, {threshold: 0.1});
+    document.querySelectorAll('.section, .info-card, .project-link').forEach(el=> { el.classList.add('reveal'); observer.observe(el); });
+    document.querySelectorAll('.info-card').forEach(card=>{
+      card.classList.add('tilt-card', 'shine-effect');
+      card.addEventListener('mousemove', (e)=>{
+        const box=card.getBoundingClientRect(); const x=e.clientX-box.left,y=e.clientY-box.top,cX=box.width/2,cY=box.height/2;
+        card.style.transform=`perspective(1000px) rotateX(${(y-cY)/cY*5}deg) rotateY(${(cX-x)/cX*5}deg) translateY(-8px)`;
+      });
+      card.addEventListener('mouseleave', ()=>card.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our digital marketing services - SEO, Social Media, PPC, Content Marketing.">
+  <title>Services | AlphaSEO & Marketing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+    :root{
+      --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#F2F2F7;--on-background:#1C1C1E;
+      --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
+      --outline:rgba(0,0,0,0.1);--outline-variant:rgba(0,0,0,0.05);
+      --glass-bg:rgba(255,255,255,0.15);--glass-border:rgba(255,255,255,0.6);--glass-blur:15px;
+      --rim-light:0 0 0 1px rgba(255,255,255,0.5), 0 0 0 1.5px rgba(255,255,255,0.2);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.12);
+      --grid-line:rgba(0,0,0,0.05);
+      --background-rgb:242,242,247;
+    }
+    [data-theme="dark"]{
+      --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#000;--on-background:#F2F2F7;
+      --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
+      --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
+      --glass-bg:rgba(28,28,30,0.7);--glass-border:rgba(255,255,255,0.1);--glass-blur:2px;
+      --hero-card-bg:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+      --rim-light:0 0 0 1px rgba(255,255,255,0.1), 0 0 0 1.5px rgba(255,255,255,0.05);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.6);
+      --grid-line:rgba(255,255,255,0.05);
+      --background-rgb:0,0,0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden}
+    .uniform-card{padding:40px 32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease;display:flex;flex-direction:column}
+    .uniform-card::after { display: none !important; }
+
+    .scroll-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg, var(--primary), #AF52DE);z-index:1001;width:0%;transition:width .1s ease}
+
+    /* Pricing Section Styles */
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .pricing-card{text-align:center;position:relative;overflow:hidden}
+    .price-value{font-size:3rem;font-weight:800;margin:24px 0;color:var(--primary)}
+    .price-features{list-style:none;padding:0;margin:0 0 32px;text-align:left}
+    .price-features li{padding:12px 0;border-bottom:1px solid var(--outline);display:flex;align-items:center;gap:12px;font-size:0.95rem}
+    .price-features li::before{content:"✓";color:var(--primary);font-weight:900}
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(10,132,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(94,92,230,0.1) 0%, transparent 50%),
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      z-index:-1;
+    }
+    h1,h2,h3{font-weight:600;line-height:1.2;color:var(--on-surface)}h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:1.1rem}p{color:var(--on-surface-variant);max-width:65ch}a{color:var(--primary);text-decoration:none}
+    
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 32px;background:var(--glass-bg);backdrop-filter:blur(15px) saturate(180%);-webkit-backdrop-filter:blur(15px) saturate(180%);border-bottom:1px solid var(--glass-border)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px}.nav-logo{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;color:#fff}.nav-title{font-size:1.125rem;font-weight:600;color:var(--on-surface)}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}.nav-links a{color:var(--on-surface-variant);font-weight:500;font-size:.9rem;padding:10px 16px;border-radius:20px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;align-items:center;gap:6px}.nav-links a:hover{color:var(--primary);background:rgba(10,132,255,.12);transform:scale(1.05) translateY(-1px)}.nav-links a.active{color:var(--primary);background:rgba(10,132,255,.08)}
+    .nav-actions{display:flex;align-items:center;gap:4px}.toggle-btn{width:40px;height:40px;border:1px solid var(--glass-border);border-radius:20px;background:var(--glass-bg);color:var(--on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);backdrop-filter:blur(5px)}.toggle-btn:hover{background:var(--primary);color:#fff;transform:scale(1.1);border-color:var(--primary)}
+    .mobile-toggle{display:none;flex-direction:column;gap:5px;padding:10px;background:var(--surface);border:none;border-radius:8px;cursor:pointer;z-index:1001}.mobile-toggle span{width:22px;height:2.5px;background:var(--on-surface);border-radius:2px;transition:all .3s ease}.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.mobile-toggle.active span:nth-child(2){opacity:0}.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:24px 16px;z-index:999;overflow-y:auto;animation:slideDown .3s ease;border:1px solid var(--glass-border);box-shadow:var(--glass-shadow)}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(10,132,255,0.4)}.btn-primary:hover{background:var(--primary-light)}
+    .page-hero{padding:180px 32px 80px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(var(--background-rgb), 0.7), rgba(var(--background-rgb), 0.7)), url('hero-bg.jpg');background-size:cover;background-position:center;background-attachment:fixed;border-bottom:1px solid var(--outline)}
+    .page-hero h1, .page-hero p{position:relative;z-index:1}
+    .section{padding:64px 32px}.section-header{text-align:center;max-width:600px;margin:0 auto 48px}.section-label{font-size:.8rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:block}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+    .service-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);transition:all .3s ease;backdrop-filter:blur(var(--glass-blur)) saturate(180%)}
+    .service-card:hover{border-color:var(--primary);transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(10,132,255,0.25), var(--rim-light)}
+    .service-icon{width:56px;height:56px;background:var(--primary);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin-bottom:24px;color:#fff;box-shadow:0 4px 12px rgba(10,132,255,0.3)}
+    .service-title{margin-bottom:8px}.service-desc{color:var(--on-surface-variant);font-size:.9rem;line-height:1.6;margin-bottom:12px}
+    .service-list{color:var(--on-surface-variant);font-size:.85rem;padding-left:20px}.service-list li{margin-bottom:4px}
+    .process-section{background:var(--surface-container)}.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .process-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);text-align:center}
+    .process-step{width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;margin:0 auto 20px;box-shadow:0 4px 12px rgba(10,132,255,0.3)}
+    .process-title{margin-bottom:8px}.process-desc{font-size:.875rem;color:var(--on-surface-variant)}
+    .footer{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:64px 40px 24px;border-top:1px solid var(--glass-border);width:100%;margin-left:0;margin-right:0;position:relative;left:0;right:0}.footer-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
+    .footer-links h4{font-size:.875rem;font-weight:600;margin-bottom:16px}.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-links a,.footer-links span{color:var(--on-surface-variant);font-size:.875rem}.footer-links a:hover{color:var(--primary)}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding-top:24px;margin-top:32px;border-top:1px solid var(--outline);font-size:.8rem;color:var(--on-surface-variant)}
+    @media(max-width:768px){.nav-links{display:none}.mobile-toggle{display:flex}.page-hero{padding:100px 16px 32px}.section{padding:48px 16px}.services-grid,.process-grid{grid-template-columns:1fr}.footer-content{flex-direction:column;text-align:center;gap:24px}.footer{padding:32px 16px 16px}.footer-links h4{margin-bottom:8px}}
+  </style>
+</head>
+<body data-lang="en">
+  <nav class="navbar">
+    <div class="scroll-progress" id="scrollBar"></div>
+    <div class="nav-container">
+    <a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+      <li><a href="services.html" class="active" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+      <li><a href="info.html" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+      <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="toggle-btn" id="langToggle"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="themeToggle"><span id="themeIcon">☀</span></button>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </div></nav>
+  <div class="mobile-menu" id="mobileMenu"><ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+    <li><a href="services.html" class="active" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+    <li><a href="info.html" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+    <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+  </ul></div>
+
+  <section class="page-hero">
+    <h1 data-en="Our Services" data-bn="আমাদের সেবাসমূহ">Our Services</h1>
+    <p style="max-width:600px;margin:16px auto 32px" data-en="Comprehensive digital marketing solutions to grow your business." data-bn="আপনার ব্যবসা বাড়াতে সম্পূর্ণ ডিজিটাল মার্কেটিং সমাধান।">Comprehensive digital marketing solutions to grow your business.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label" data-en="What We Offer" data-bn="আমরা কি অফার করি">What We Offer</span>
+      <h2 data-en="Complete Marketing Solutions" data-bn="সম্পূর্ণ মার্কেটিং সমাধান">Complete Marketing Solutions</h2>
+    </div>
+    <div class="services-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:1200px;margin:0 auto">
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" alt="Google" style="width:32px;height:32px">
+        </div>
+        <h3 class="service-title" data-en="SEO Optimization" data-bn="এসইও অপ্টিমাইজেশন">SEO Optimization</h3>
+        <p class="service-desc" data-en="Boost search rankings with proven strategies for maximum visibility." data-bn="সর্বোচ্চ দৃশ্যমানতার জন্য প্রমাণিত কৌশল।">Boost search rankings with proven strategies for maximum visibility.</p>
+        <ul class="service-list"><li data-en="Keyword Research" data-bn="কীওয়ার্ড রিসার্চ">Keyword Research</li><li data-en="On-Page SEO" data-bn="অন-পেজ এসইও">On-Page SEO</li><li data-en="Technical Audit" data-bn="টেকনিক্যাল অডিট">Technical Audit</li><li data-en="Link Building" data-bn="লিঙ্ক বিল্ডিং">Link Building</li></ul>
+      </div>
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(175,82,222,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#4267B2"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.597 1.325-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg>
+        </div>
+        <h3 class="service-title" data-en="Social Media Marketing" data-bn="সোশ্যাল মিডিয়া মার্কেটিং">Social Media Marketing</h3>
+        <p class="service-desc" data-en="Build powerful social presence across all platforms." data-bn="সমস্ত প্ল্যাটফর্মে শক্তিশালী উপস্থিতি।">Build powerful social presence across all platforms.</p>
+        <ul class="service-list"><li data-en="Content Creation" data-bn="কন্টেন্ট তৈরি">Content Creation</li><li data-en="Community Management" data-bn="কমিউনিটি ম্যানেজমেন্ট">Community Management</li><li data-en="Influencer Marketing" data-bn="ইনফ্লুয়েন্সার মার্কেটিং">Influencer Marketing</li><li data-en="Analytics" data-bn="অ্যানালিটিক্স">Analytics</li></ul>
+      </div>
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://www.vectorlogo.zone/logos/google_ads/google_ads-icon.svg" alt="PPC" style="width:36px;height:36px">
+        </div>
+        <h3 class="service-title" data-en="PPC Advertising" data-bn="পিপিসি বিজ্ঞাপন">PPC Advertising</h3>
+        <p class="service-desc" data-en="Maximize ROI with targeted ad campaigns." data-bn="টার্গেটেড বিজ্ঞাপনে ROI সর্বাধিক করুন।">Maximize ROI with targeted ad campaigns.</p>
+        <ul class="service-list"><li data-en="Google Ads" data-bn="গুগল অ্যাডস">Google Ads</li><li data-en="Facebook Ads" data-bn="ফেসবুক অ্যাডস">Facebook Ads</li><li data-en="Retargeting" data-bn="রিটার্গেটিং">Retargeting</li><li data-en="A/B Testing" data-bn="এ/বি টেস্টিং">A/B Testing</li></ul>
+      </div>
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(255,160,0,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#FF7A59"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        </div>
+        <h3 class="service-title" data-en="Content Marketing" data-bn="কন্টেন্ট মার্কেটিং">Content Marketing</h3>
+        <p class="service-desc" data-en="Tell your brand story with compelling content." data-bn="আকর্ষণীয় কন্টেন্ট দিয়ে ব্র্যান্ডের গল্প বলুন।">Tell your brand story with compelling content.</p>
+        <ul class="service-list"><li data-en="Blog Writing" data-bn="ব্লগ লেখা">Blog Writing</li><li data-en="Video Production" data-bn="ভিডিও প্রোডাকশন">Video Production</li><li data-en="Infographics" data-bn="ইনফোগ্রাফিক্স">Infographics</li><li data-en="Email Marketing" data-bn="ইমেইল মার্কেটিং">Email Marketing</li></ul>
+      </div>
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(30,176,199,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#21759B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/></svg>
+        </div>
+        <h3 class="service-title" data-en="Web Development" data-bn="ওয়েব ডেভেলপমেন্ট">Web Development</h3>
+        <p class="service-desc" data-en="Stunning websites that convert visitors." data-bn="ভিজিটরদের রূপান্তর করে এমন ওয়েবসাইট।">Stunning websites that convert visitors.</p>
+        <ul class="service-list"><li data-en="Custom Design" data-bn="কাস্টম ডিজাইন">Custom Design</li><li data-en="E-commerce" data-bn="ই-কমার্স">E-commerce</li><li data-en="Landing Pages" data-bn="ল্যান্ডিং পেজ">Landing Pages</li><li data-en="Maintenance" data-bn="মেইনটেনেন্স">Maintenance</li></ul>
+      </div>
+      <div class="uniform-card">
+        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" alt="Analytics" style="width:36px;height:36px">
+        </div>
+        <h3 class="service-title" data-en="Analytics & Reporting" data-bn="বিশ্লেষণ ও রিপোর্টিং">Analytics & Reporting</h3>
+        <p class="service-desc" data-en="Data-driven decisions for growth." data-bn="বৃদ্ধির জন্য ডেটা-চালিত সিদ্ধান্ত।">Data-driven decisions for growth.</p>
+        <ul class="service-list"><li data-en="Google Analytics" data-bn="গুগল অ্যানালিটিক্স">Google Analytics</li><li data-en="Custom Dashboards" data-bn="কাস্টম ড্যাশবোর্ড">Custom Dashboards</li><li data-en="Monthly Reports" data-bn="মাসিক রিপোর্ট">Monthly Reports</li><li data-en="Conversion Tracking" data-bn="কনভার্শন ট্র্যাকিং">Conversion Tracking</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="section-header">
+      <h2 data-en="Transparent Pricing Plans" data-bn="স্বচ্ছ মূল্য পরিকল্পনা">Transparent Pricing Plans</h2>
+      <p data-en="Choose the perfect plan for your business growth." data-bn="আপনার ব্যবসার বৃদ্ধির জন্য সঠিক পরিকল্পনা বেছে নিন।">Choose the perfect plan for your business growth.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="uniform-card pricing-card">
+        <h3 data-en="Essential Plan" data-bn="এসেন্সিয়াল প্ল্যান">Essential Plan</h3>
+        <div class="price-value" data-en="$350" data-bn="$৩৫০">$350</div>
+        <ul class="price-features">
+          <li data-en="6 Pages Website" data-bn="৬ পেজ ওয়েবসাইট">6 Pages Website</li>
+          <li data-en="Basic SEO" data-bn="বেসিক এসইও">Basic SEO</li>
+          <li data-en="Responsive Design" data-bn="রেসপনসিভ ডিজাইন">Responsive Design</li>
+          <li data-en="Contact Form" data-bn="কন্টাক্ট ফর্ম">Contact Form</li>
+          <li data-en="Hosting Setup" data-bn="হোস্টিং সেটআপ">Hosting Setup</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
+      </div>
+      <div class="uniform-card pricing-card" style="border-color:var(--primary);box-shadow:0 0 20px rgba(10,132,255,0.2)">
+        <div style="position:absolute;top:12px;right:12px;background:var(--primary);color:#fff;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700">POPULAR</div>
+        <h3 data-en="Elite Plan" data-bn="এলিট প্ল্যান">Elite Plan</h3>
+        <div class="price-value" data-en="$650" data-bn="$৬৫০">$650</div>
+        <ul class="price-features">
+          <li data-en="12 Pages Website" data-bn="১২ পেজ ওয়েবসাইট">12 Pages Website</li>
+          <li data-en="Advanced SEO" data-bn="অ্যাডভান্সড এসইও">Advanced SEO</li>
+          <li data-en="Content Optimization" data-bn="কন্টেন্ট অপ্টিমাইজেশন">Content Optimization</li>
+          <li data-en="Blog Setup" data-bn="ব্লগ সেটআপ">Blog Setup</li>
+          <li data-en="Social Pages Creation" data-bn="সোশ্যাল পেজ তৈরি">Social Pages Creation</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
+      </div>
+      <div class="uniform-card pricing-card">
+        <h3 data-en="Business Plan" data-bn="বিজনেস প্ল্যান">Business Plan</h3>
+        <div class="price-value" data-en="Custom" data-bn="কাস্টম">Custom</div>
+        <ul class="price-features">
+          <li data-en="Custom Website" data-bn="কাস্টম ওয়েবসাইট">Custom Website</li>
+          <li data-en="Full SEO Package" data-bn="সম্পূর্ণ এসইও প্যাকেজ">Full SEO Package</li>
+          <li data-en="Content Strategy" data-bn="কন্টেন্ট কৌশল">Content Strategy</li>
+          <li data-en="Performance Marketing" data-bn="পারফরম্যান্স মার্কেটিং">Performance Marketing</li>
+          <li data-en="Dedicated Support" data-bn="ডেডিকেটেড সাপোর্ট">Dedicated Support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Contact Us" data-bn="যোগাযোগ করুন">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:80px">
+      <h2 data-en="Service FAQs" data-bn="সেবা সংক্রান্ত প্রশ্ন">Service FAQs</h2>
+    </div>
+    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+      <div class="uniform-card" style="padding:24px;border-radius:16px">
+        <h4 style="margin-bottom:8px" data-en="How long until I see SEO results?" data-bn="এসইও ফলাফল দেখতে কতক্ষণ লাগবে?">How long until I see SEO results?</h4>
+        <p style="font-size:0.9rem" data-en="Typically, significant movement takes 3-6 months, but we focus on quick-win technical fixes in the first 30 days." data-bn="সাধারণত ৩-৬ মাস লাগে, তবে আমরা প্রথম ৩০ দিনে দ্রুত সমাধানযোগ্য কারিগরি দিকগুলোতে ফোকাস করি।">Typically, significant movement takes 3-6 months, but we focus on quick-win technical fixes in the first 30 days.</p>
+      </div>
+      <div class="uniform-card" style="padding:24px;border-radius:16px">
+        <h4 style="margin-bottom:8px" data-en="Do you handle content creation?" data-bn="আপনারা কি কন্টেন্ট তৈরি করেন?">Do you handle content creation?</h4>
+        <p style="font-size:0.9rem" data-en="Yes, our team includes professional copywriters who create SEO-optimized blogs, web copy, and social media posts." data-bn="হ্যাঁ, আমাদের টিমে পেশাদার কপিরাইটার রয়েছেন যারা এসইও-অপ্টিমাইজড ব্লগ এবং সোশ্যাল মিডিয়া পোস্ট তৈরি করেন।">Yes, our team includes professional copywriters who create SEO-optimized blogs, web copy, and social media posts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section" style="margin-top:80px;border-top:1px solid var(--outline);border-bottom:1px solid var(--outline);background:var(--surface)">
+    <div class="section-header">
+      <span class="section-label" data-en="How We Work" data-bn="আমরা কিভাবে কাজ করি">How We Work</span>
+      <h2 data-en="Our Process" data-bn="আমাদের প্রক্রিয়া">Our Process</h2>
+    </div>
+    <div class="process-grid">
+      <div class="uniform-card"><div class="process-step">01</div><h3 class="process-title" data-en="Discovery" data-bn="আবিষ্কার">Discovery</h3><p class="process-desc" data-en="Understanding your business and goals." data-bn="আপনার ব্যবসা ও লক্ষ্য বোঝা।">Understanding your business and goals.</p></div>
+      <div class="uniform-card"><div class="process-step">02</div><h3 class="process-title" data-en="Strategy" data-bn="কৌশল">Strategy</h3><p class="process-desc" data-en="Custom marketing plan for your needs." data-bn="আপনার চাহিদার জন্য কাস্টম প্ল্যান।">Custom marketing plan for your needs.</p></div>
+      <div class="uniform-card"><div class="process-step">03</div><h3 class="process-title" data-en="Execution" data-bn="বাস্তবায়ন">Execution</h3><p class="process-desc" data-en="Launching campaigns with precision." data-bn="নির্ভুলতার সাথে ক্যাম্পেইন চালু।">Launching campaigns with precision.</p></div>
+      <div class="uniform-card"><div class="process-step">04</div><h3 class="process-title" data-en="Optimization" data-bn="অপ্টিমাইজেশন">Optimization</h3><p class="process-desc" data-en="Continuous improvement for results." data-bn="ফলাফলের জন্য ক্রমাগত উন্নতি।">Continuous improvement for results.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <h2 data-en="Ready to Get Started?" data-bn="শুরু করতে প্রস্তুত?">Ready to Get Started?</h2>
+    <p style="margin:16px auto 24px;max-width:500px" data-en="Let's discuss which services are right for you." data-bn="আসুন আলোচনা করি কোন সেবা আপনার জন্য সঠিক।">Let's discuss which services are right for you.</p>
+    <a href="contact.html" class="btn btn-primary" data-en="Free Consultation" data-bn="বিনামূল্যে পরামর্শ">Free Consultation</a>
+  </section>
+
+  <footer class="footer"><div class="footer-content">
+    <div class="footer-brand"><a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a><p data-en="Empowering businesses since 2020." data-bn="২০২০ সাল থেকে ব্যবসাকে শক্তিশালী করছি।">Empowering businesses since 2020.</p></div>
+    <div class="footer-links"><h4 data-en="Links" data-bn="লিঙ্ক">Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-links"><h4 data-en="Connect" data-bn="যোগাযোগ">Connect</h4><ul><li><a href="mailto:agencyroy0@gmail.com">agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045">+91 89065 81045</a></li><li><a href="https://wa.me/918906581045" target="_blank">WhatsApp</a></li><li><a href="https://t.me/+918906581045" target="_blank">Telegram</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© 2026 AlphaSEO & Marketing | Shantiniketan, Kolkata</p></div></footer>
+
+  <script>
+    const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
+    const getBrowserLang=()=>(navigator.language||'').startsWith('bn')?'bn':'en';
+    const initTheme=()=>{const t=localStorage.getItem('theme')||'light';html.dataset.theme=t;themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const initLang=()=>{const l=localStorage.getItem('language')||getBrowserLang();body.dataset.lang=l;updateLang(l)};
+    const toggleTheme=()=>{const t=html.dataset.theme==='dark'?'light':'dark';html.dataset.theme=t;localStorage.setItem('theme',t);themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const toggleLang=()=>{const l=body.dataset.lang==='en'?'bn':'en';body.dataset.lang=l;localStorage.setItem('language',l);updateLang(l)};
+    const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.textContent=el.dataset[l]||el.textContent)};
+    themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
+    const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
+    mobileToggle.onclick=()=>{mobileToggle.classList.toggle('active');mobileMenu.classList.toggle('active')};
+    
+    // Massive Interactivity Prop
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
+    let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
+    window.addEventListener('mousemove', (e)=>{
+      mouseX=e.clientX; mouseY=e.clientY;
+      cursorDot.style.opacity=cursorOutline.style.opacity=1;
+      cursorDot.style.transform=`translate(${mouseX-3}px, ${mouseY-3}px)`;
+    });
+    const animateCursor=()=>{
+      outlineX+=(mouseX-outlineX-20)*0.15; outlineY+=(mouseY-outlineY-20)*0.15;
+      cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
+      requestAnimationFrame(animateCursor);
+    }; animateCursor();
+    window.addEventListener('scroll', ()=>{ sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'; });
+    window.addEventListener('mousedown', (e)=>{
+      const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
+      document.body.appendChild(r); setTimeout(()=>r.remove(), 600);
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      el.classList.add('magnetic');
+      el.addEventListener('mouseenter', ()=>cursorOutline.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', ()=>cursorOutline.classList.remove('cursor-hover'));
+      el.addEventListener('mousemove', (e)=>{
+        const box=el.getBoundingClientRect();
+        el.style.transform=`translate(${(e.clientX-box.left-box.width/2)*0.3}px, ${(e.clientY-box.top-box.height/2)*0.3}px)`;
+      });
+      el.addEventListener('mouseleave', ()=>el.style.transform='translate(0,0)');
+    });
+    const observer = new IntersectionObserver((entries)=>{ entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, {threshold: 0.1});
+    document.querySelectorAll('.section, .service-card, .process-card').forEach(el=> { el.classList.add('reveal'); observer.observe(el); });
+    document.querySelectorAll('.uniform-card').forEach(card=>{
+      // card.classList.add('tilt-card', 'shine-effect');
+      card.addEventListener('mousemove', (e)=>{
+        const box=card.getBoundingClientRect(); const x=e.clientX-box.left,y=e.clientY-box.top,cX=box.width/2,cY=box.height/2;
+        card.style.transform=`perspective(1000px) rotateX(${(y-cY)/cY*5}deg) rotateY(${(cX-x)/cX*5}deg) translateY(-8px)`;
+      });
+      card.addEventListener('mouseleave', ()=>card.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)');
+    });
+  </script>
+</body>
+</html>

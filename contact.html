@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AlphaSEO & Marketing - Get in touch for digital marketing solutions.">
+  <title>Contact Us | AlphaSEO & Marketing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+    :root{
+      --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#F2F2F7;--on-background:#1C1C1E;
+      --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
+      --outline:rgba(0,0,0,0.1);--outline-variant:rgba(0,0,0,0.05);
+      --glass-bg:rgba(255,255,255,0.15);--glass-border:rgba(255,255,255,0.6);--glass-blur:15px;
+      --rim-light:0 0 0 1px rgba(255,255,255,0.5), 0 0 0 1.5px rgba(255,255,255,0.2);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.12);
+      --grid-line:rgba(0,0,0,0.05);
+      --background-rgb:242,242,247;
+    }
+    [data-theme="dark"]{
+      --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#000;--on-background:#F2F2F7;
+      --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
+      --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
+      --glass-bg:rgba(28,28,30,0.7);--glass-border:rgba(255,255,255,0.1);--glass-blur:2px;
+      --hero-card-bg:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+      --rim-light:0 0 0 1px rgba(255,255,255,0.1), 0 0 0 1.5px rgba(255,255,255,0.05);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.6);
+      --grid-line:rgba(255,255,255,0.05);
+      --background-rgb:0,0,0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden}
+    .uniform-card{padding:40px 32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease;display:flex;flex-direction:column}
+    .uniform-card::after { display: none !important; }
+
+    .scroll-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg, var(--primary), #AF52DE);z-index:1001;width:0%;transition:width .1s ease}
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(10,132,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(94,92,230,0.1) 0%, transparent 50%),
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      z-index:-1;
+    }
+    h1,h2,h3{font-weight:600;line-height:1.2;color:var(--on-surface)}h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:1.1rem}p{color:var(--on-surface-variant);max-width:65ch}a{color:var(--primary);text-decoration:none}
+    
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 32px;background:var(--glass-bg);backdrop-filter:blur(15px) saturate(180%);-webkit-backdrop-filter:blur(15px) saturate(180%);border-bottom:1px solid var(--glass-border)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px}.nav-logo{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;color:#fff}.nav-title{font-size:1.125rem;font-weight:600;color:var(--on-surface)}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none}.nav-links a{color:var(--on-surface-variant);font-weight:500;font-size:.9rem;padding:10px 16px;border-radius:20px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;align-items:center;gap:6px}.nav-links a:hover{color:var(--primary);background:rgba(10,132,255,.12);transform:scale(1.05) translateY(-1px)}.nav-links a.active{color:var(--primary);background:rgba(10,132,255,.08)}
+    .nav-actions{display:flex;align-items:center;gap:4px}.toggle-btn{width:40px;height:40px;border:1px solid var(--glass-border);border-radius:20px;background:var(--glass-bg);color:var(--on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);backdrop-filter:blur(5px)}.toggle-btn:hover{background:var(--primary);color:#fff;transform:scale(1.1);border-color:var(--primary)}
+    .mobile-toggle{display:none;flex-direction:column;gap:5px;padding:10px;background:var(--surface);border:none;border-radius:8px;cursor:pointer;z-index:1001}.mobile-toggle span{width:22px;height:2.5px;background:var(--on-surface);border-radius:2px;transition:all .3s ease}.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.mobile-toggle.active span:nth-child(2){opacity:0}.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:24px 16px;z-index:999;overflow-y:auto;animation:slideDown .3s ease;border:1px solid var(--glass-border);box-shadow:var(--glass-shadow)}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(10,132,255,0.25)}.btn-primary:hover{background:var(--primary-light)}
+    .page-hero{padding:180px 32px 80px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(var(--background-rgb), 0.7), rgba(var(--background-rgb), 0.7)), url('hero-bg.jpg');background-size:cover;background-position:center;background-attachment:fixed;border-bottom:1px solid var(--outline)}
+    .page-hero h1, .page-hero p{position:relative;z-index:1}
+    .section{padding:64px 32px}
+    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;max-width:1100px;margin:0 auto}
+    .info-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);cursor:pointer;transition:all .3s ease;display:flex;align-items:flex-start;gap:20px}
+    .info-card:hover{transform:translateY(-8px);border-color:var(--primary);box-shadow:0 20px 40px rgba(10,132,255,0.25)}
+    .contact-form{padding:0 40px 40px 0}
+    .form-group{margin-bottom:24px}label{display:block;font-size:.875rem;font-weight:500;margin-bottom:8px;color:var(--on-surface)}
+    input,textarea{width:100%;padding:14px;background:var(--surface);border:1px solid var(--outline);border-radius:12px;font-family:inherit;color:var(--on-surface);transition:all .2s;backdrop-filter:blur(10px)}
+    input:focus,textarea:focus{outline:none;border-color:var(--primary);background:var(--glass-bg);box-shadow:0 0 0 4px rgba(10,132,255,0.1)}
+    .form-group textarea{resize:vertical;min-height:120px}
+    .contact-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:900px;margin:0 auto}
+    .info-icon{width:52px;height:52px;background:var(--primary);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#fff;flex-shrink:0}
+    .info-content h3{font-size:1.1rem;font-weight:600;margin-bottom:6px;color:var(--on-surface)}.info-content p,.info-content a{font-size:.95rem;color:var(--on-surface-variant);text-decoration:none}
+    .info-content a:hover{color:var(--primary)}
+    .footer{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:64px 40px 24px;border-top:1px solid var(--glass-border);width:100%}.footer-content{max-width:100%;margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
+    .footer-links h4{font-size:.875rem;font-weight:600;margin-bottom:16px}.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-links a,.footer-links span{color:var(--on-surface-variant);font-size:.875rem}.footer-links a:hover{color:var(--primary)}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding-top:24px;margin-top:32px;border-top:1px solid var(--outline);font-size:.8rem;color:var(--on-surface-variant)}
+    .brand-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 24px;border-radius:50px;color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s cubic-bezier(0.4,0,0.2,1);border:none;min-width:140px}
+    .btn-email{background:linear-gradient(135deg,#EA4335 0%,#C5221F 100%);box-shadow:0 4px 16px rgba(234,67,53,0.4)}.btn-call{background:linear-gradient(135deg,#34A853 0%,#1E8E3E 100%);box-shadow:0 4px 16px rgba(52,168,83,0.4)}.btn-whatsapp{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);box-shadow:0 4px 16px rgba(37,211,102,0.4)}.btn-telegram{background:linear-gradient(135deg,#0088cc 0%,#229ED9 100%);box-shadow:0 4px 16px rgba(0,136,204,0.4)}
+    .brand-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+    .brand-btn:active{transform:scale(0.97)}
+    .brand-btn svg{width:22px;height:22px;fill:currentColor}
+    .info-icon svg{width:26px;height:26px;fill:#fff}
+    .contact-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+    .contact-card{display:flex;flex-direction:column;padding:28px;background:linear-gradient(135deg,rgba(10,132,255,0.15) 0%,rgba(10,132,255,0.08) 100%);border:1px solid rgba(10,132,255,0.2);border-radius:20px;text-decoration:none;color:var(--on-surface);transition:all .3s ease;backdrop-filter:blur(10px)}
+    .contact-card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(10,132,255,0.2);border-color:rgba(10,132,255,0.4)}
+    .contact-card-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .contact-card-icon svg{width:24px;height:24px;fill:#fff}
+    .contact-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+    .contact-card p{font-size:.85rem;color:var(--on-surface-variant);margin-bottom:16px;flex-grow:1}
+    .contact-card-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;background:var(--surface);border:2px solid var(--outline);border-radius:50px;color:var(--on-surface);font-weight:600;font-size:.85rem;margin-top:auto;width:100%;box-sizing:border-box}
+    .contact-card:hover .contact-card-btn{background:var(--primary);color:#fff;border-color:var(--primary)}
+    @media(max-width:768px){.nav-links{display:none}.mobile-toggle{display:flex}.page-hero{padding:100px 16px 32px}.section{padding:48px 16px}.contact-grid{grid-template-columns:1fr}.footer-content{flex-direction:column;text-align:center;gap:24px}.footer{padding:32px 16px 16px}.footer-links h4{margin-bottom:8px}}
+  </style>
+</head>
+<body data-lang="en">
+  <nav class="navbar">
+    <div class="scroll-progress" id="scrollBar"></div>
+    <div class="nav-container">
+    <a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+      <li><a href="services.html" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+      <li><a href="info.html" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+      <li><a href="contact.html" class="active" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="toggle-btn" id="langToggle"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="themeToggle"><span id="themeIcon">☀</span></button>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </div></nav>
+  <div class="mobile-menu" id="mobileMenu"><ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+    <li><a href="services.html" data-en="Services" data-bn="সেবাসমূহ">Services</a></li>
+    <li><a href="info.html" data-en="About" data-bn="আমাদের সম্পর্কে">About</a></li>
+    <li><a href="contact.html" class="active" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+  </ul></div>
+
+  <section class="page-hero">
+    <h1 data-en="Contact Us" data-bn="যোগাযোগ করুন">Contact Us</h1>
+    <p style="max-width:500px;margin:16px auto 32px" data-en="Get in touch with our team for a free consultation." data-bn="বিনামূল্যে পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।">Get in touch with our team for a free consultation.</p>
+
+  </section>
+
+  <section class="section">
+    <div style="max-width:1000px;margin:0 auto">
+      <h2 style="text-align:center;margin-bottom:40px" data-en="Get in Touch For Free " data-bn="যোগাযোগ করুন">Get in Touch</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+        <a href="tel:+918906581045" class="contact-card hero-card-bg">
+          <h3>Call Us</h3>
+          <p>Speak directly with our team for quick assistance.</p>
+          <div class="contact-card-btn">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            +91 89065 81045
+          </div>
+        </a>
+        <a href="mailto:agencyroy0@gmail.com" class="contact-card hero-card-bg">
+          <h3>Email Us</h3>
+          <p>Send us your queries or project details via email.</p>
+          <div class="contact-card-btn">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            agencyroy0@gmail.com
+          </div>
+        </a>
+        <a href="https://wa.me/918906581045" target="_blank" class="contact-card hero-card-bg">
+          <h3>WhatsApp</h3>
+          <p>Chat with us instantly for quick support.</p>
+          <div class="contact-card-btn">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#25D366"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.72.44 3.34 1.2 4.76L2 22l5.24-1.2C8.66 21.56 10.28 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.5 14.5c-.2.55-1.15 1.05-1.55 1.1-.4.05-.9.1-2.85-.6-2.45-.9-4-3.4-4.15-3.55-.1-.15-.95-1.25-.95-2.4s.6-1.7.8-1.95c.2-.25.45-.3.6-.3h.45c.15 0 .35-.05.55.4.2.45.7 1.75.75 1.85.05.1.1.25 0 .4-.05.15-.1.25-.2.4-.1.15-.2.3-.3.4-.1.1-.25.25-.1.5.15.25.65 1.05 1.4 1.7.95.85 1.75 1.1 2 1.25.25.15.4.1.55-.1.15-.2.65-.75.8-1 .15-.25.35-.2.55-.15.2.05 1.35.65 1.55.75.2.1.4.2.45.3.05.1.05.6-.15 1.15z"/></svg>
+            Chat on WhatsApp
+          </div>
+        </a>
+        <a href="https://t.me/+918906581045" target="_blank" class="contact-card hero-card-bg">
+          <h3>Telegram</h3>
+          <p>Message us on Telegram for support.</p>
+          <div class="contact-card-btn">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#0088cc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2s-.15-.04-.21-.02c-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Message on Telegram
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:40px;width:100%;display:flex;justify-content:center">
+        <p style="color:var(--on-surface-variant);font-size:0.95rem;background:var(--surface);padding:8px 20px;border-radius:50px;border:1px solid var(--outline);backdrop-filter:blur(15px)" data-en="📍 Shantiniketan, Kolkata, West Bengal, India" data-bn="📍 শান্তিনিকেতন, কলকাতা, পশ্চিমবঙ্গ, ভারত">📍 Shantiniketan, Kolkata, West Bengal, India</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="footer-content">
+    <div class="footer-brand"><a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a><p data-en="Empowering businesses since 2020." data-bn="২০২০ সাল থেকে ব্যবসাকে শক্তিশালী করছি।">Empowering businesses since 2020.</p></div>
+    <div class="footer-links"><h4 data-en="Links" data-bn="লিঙ্ক">Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-links"><h4 data-en="Connect" data-bn="যোগাযোগ">Connect</h4><ul><li><a href="mailto:agencyroy0@gmail.com">agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045">+91 89065 81045</a></li><li><a href="https://wa.me/918906581045" target="_blank">WhatsApp</a></li><li><a href="https://t.me/+918906581045" target="_blank">Telegram</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© 2026 AlphaSEO & Marketing | Shantiniketan, Kolkata</p></div></footer>
+
+  <script>
+    const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
+    const getBrowserLang=()=>(navigator.language||'').startsWith('bn')?'bn':'en';
+    const initTheme=()=>{const t=localStorage.getItem('theme')||'light';html.dataset.theme=t;themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const initLang=()=>{const l=localStorage.getItem('language')||getBrowserLang();body.dataset.lang=l;updateLang(l)};
+    const toggleTheme=()=>{const t=html.dataset.theme==='dark'?'light':'dark';html.dataset.theme=t;localStorage.setItem('theme',t);themeIcon.textContent=t==='dark'?'☀':'☾'};
+    const toggleLang=()=>{const l=body.dataset.lang==='en'?'bn':'en';body.dataset.lang=l;localStorage.setItem('language',l);updateLang(l)};
+    const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.textContent=el.dataset[l]||el.textContent)};
+    themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
+    const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
+    mobileToggle.onclick=()=>{mobileToggle.classList.toggle('active');mobileMenu.classList.toggle('active')};
+    
+    // Massive Interactivity Prop
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
+    let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
+    window.addEventListener('mousemove', (e)=>{
+      mouseX=e.clientX; mouseY=e.clientY;
+      cursorDot.style.opacity=cursorOutline.style.opacity=1;
+      cursorDot.style.transform=`translate(${mouseX-3}px, ${mouseY-3}px)`;
+    });
+    const animateCursor=()=>{
+      outlineX+=(mouseX-outlineX-20)*0.15; outlineY+=(mouseY-outlineY-20)*0.15;
+      cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
+      requestAnimationFrame(animateCursor);
+    }; animateCursor();
+    window.addEventListener('scroll', ()=>{ sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'; });
+    window.addEventListener('mousedown', (e)=>{
+      const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
+      document.body.appendChild(r); setTimeout(()=>r.remove(), 600);
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      el.classList.add('magnetic');
+      el.addEventListener('mouseenter', ()=>cursorOutline.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', ()=>cursorOutline.classList.remove('cursor-hover'));
+      el.addEventListener('mousemove', (e)=>{
+        const box=el.getBoundingClientRect();
+        el.style.transform=`translate(${(e.clientX-box.left-box.width/2)*0.3}px, ${(e.clientY-box.top-box.height/2)*0.3}px)`;
+      });
+      el.addEventListener('mouseleave', ()=>el.style.transform='translate(0,0)');
+    });
+    const observer = new IntersectionObserver((entries)=>{ entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, {threshold: 0.1});
+    document.querySelectorAll('.section, .contact-card').forEach(el=> { el.classList.add('reveal'); observer.observe(el); });
+    document.getElementById('contactForm').onsubmit=(e)=>{e.preventDefault();alert('Thank you! We will contact you soon.');e.target.reset()};
+  </script>
+</body>
+</html>

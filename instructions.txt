@@ -1,0 +1,4 @@
+dont create any other files except the ones ive created in html
+
+
+put all files in same directory
