@@ -44,7 +44,10 @@
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden;width:100%}
+    html{overflow-x:hidden;width:100%}
+    .process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;max-width:1100px;margin:0 auto}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;max-width:1100px;margin:0 auto}
     body::before{
       content:"";
       position:fixed;
@@ -96,12 +99,12 @@
     .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surface);border:1px solid var(--outline-variant);border-radius:20px;font-size:.875rem;font-weight:500;color:var(--primary);margin-bottom:24px}
     .hero-title{margin-bottom:20px}.hero-subtitle{font-size:1.125rem;max-width:550px;margin:0 auto 32px}.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
     .section{padding:80px 32px}.section-header{text-align:center;max-width:600px;margin:0 auto 48px}.section-label{font-size:.8rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:block}
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1000px;margin:0 auto}
     .service-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);transition:all .3s ease;backdrop-filter:blur(var(--glass-blur)) saturate(180%)}
     .service-card:hover{border-color:var(--primary);transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(10,132,255,0.2), var(--rim-light)}
     .service-icon{width:56px;height:56px;background:var(--primary);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin-bottom:24px;color:#fff;box-shadow:0 4px 12px rgba(10,132,255,0.3)}.service-title{margin-bottom:8px}.service-desc{color:var(--on-surface-variant);font-size:.9rem;line-height:1.6}
     .stats-section{background:var(--primary);padding:64px 32px}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:32px;max-width:900px;margin:0 auto;text-align:center}.stat-item h3{font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:4px}.stat-item p{font-size:.9rem;color:rgba(255,255,255,.85)}
-    .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1000px;margin:0 auto}
     .testimonial-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%)}
     .testimonial-text{font-size:1rem;font-style:italic;margin-bottom:24px;line-height:1.7}
     .testimonial-author{display:flex;align-items:center;gap:16px}
@@ -172,7 +175,7 @@
       .hero-actions .btn{width:100%;max-width:280px;justify-content:center}
       .section{padding:48px 16px}
       .section-header h2{font-size:1.5rem}
-      .services-grid,.testimonials-grid{grid-template-columns:1fr}
+      .services-grid,.testimonials-grid,.process-grid,.features-grid{grid-template-columns:1fr}
       .uniform-card{padding:28px 20px}
       .stats-section{padding:48px 16px}
       .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}
@@ -334,7 +337,7 @@
       <h2 data-en="How We Work" data-bn="আমরা কিভাবে কাজ করি">How We Work</h2>
       <p style="margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto" data-en="We follow a systematic approach to ensure your business reaches its full potential through tailored digital strategies." data-bn="আমরা আপনার ব্যবসার সম্ভাবনা নিশ্চিত করতে একটি পদ্ধতিগত অনুসরণ করি।">We follow a systematic approach to ensure your business reaches its full potential through tailored digital strategies.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;max-width:1100px;margin:0 auto">
+    <div class="process-grid">
       <div class="uniform-card" style="text-align:center">
         <div style="width:64px;height:64px;background:linear-gradient(135deg,#0A84FF,#0066CC);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:1.5rem;color:#fff;font-weight:700">1</div>
         <h3 style="margin-bottom:16px" data-en="Strategy & Planning" data-bn="কৌশল এবং পরিকল্পনা">Strategy & Planning</h3>
@@ -358,7 +361,7 @@
       <span class="section-label" data-en="Why Choose Alpha" data-bn="কেন আলফা">Why Choose Alpha</span>
       <h2 data-en="Built for High-Growth Companies" data-bn="উচ্চ-বৃদ্ধি কোম্পানির জন্য নির্মিত">Built for High-Growth Companies</h2>
     </div>
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+    <div class="features-grid">
       <div style="padding:24px;border-left:4px solid var(--primary);background:var(--surface);border-radius:0 12px 12px 0;backdrop-filter:blur(10px)">
         <h4 style="margin-bottom:12px" data-en="Custom Strategies" data-bn="কাস্টম কৌশল">Custom Strategies</h4>
         <p style="font-size:0.9rem" data-en="We don't do cookie-cutter. Every campaign is engineered specifically for your market segment and competition." data-bn="আমরা সাধারণ কিছু করি না। প্রতিটি প্রচারণা আপনার মার্কেট সেগমেন্টের জন্য বিশেষভাবে তৈরি।">We don't do cookie-cutter. Every campaign is engineered specifically for your market segment and competition.</p>
@@ -580,7 +583,9 @@
     });
 
     // Click Ripple
+    // Click Ripple
     window.addEventListener('mousedown', (e)=>{
+      if(window.innerWidth < 768 || e.target.closest('.mobile-toggle') || e.target.closest('.nav-links')) return;
       const r=document.createElement('div');
       r.className='click-ripple';
       r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
