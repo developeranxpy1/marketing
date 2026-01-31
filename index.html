@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- LAST_UPDATED_SYSTEM_TIME: January 31, 2026 04:46 PM IST -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AlphaSEO & Marketing - Your trusted digital marketing partner in Kolkata.">
@@ -162,7 +163,7 @@
     @media(max-width:768px){
       .nav-links{display:none}
       .mobile-toggle{display:flex}
-      .mobile-menu.active{display:block}
+      .mobile-menu.active{display:flex}
       .mobile-menu .nav-links{display:flex;flex-direction:column;gap:8px}
       .hero{padding:100px 16px 48px;min-height:100vh;display:flex;align-items:center;justify-content:center}
       .hero-title{font-size:2rem !important}
@@ -487,21 +488,32 @@
     const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.textContent=el.dataset[l]||el.textContent)};
     themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
     const navbar=document.querySelector('.navbar'),mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
-    window.addEventListener('scroll', ()=>navbar.style.padding=scrollY>50?'8px 32px':'12px 32px');
+    window.addEventListener('scroll', ()=>{
+      if(window.innerWidth > 992) {
+        navbar.style.padding=scrollY>50?'8px 32px':'12px 32px';
+      } else if (window.innerWidth > 480) {
+        navbar.style.padding=scrollY>50?'8px 20px':'10px 20px';
+      } else {
+        navbar.style.padding='8px 12px';
+      }
+    });
     mobileToggle.addEventListener('click', (e)=>{
       e.stopPropagation();
       mobileToggle.classList.toggle('active');
       mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     });
     document.addEventListener('click', (e)=>{
       if(!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)){
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
     mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>{
       mobileToggle.classList.remove('active');
       mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
     });
 
     

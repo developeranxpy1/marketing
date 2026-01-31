@@ -88,7 +88,7 @@
     @media(max-width:768px){
       .nav-links{display:none}
       .mobile-toggle{display:flex}
-      .mobile-menu.active{display:block}
+      .mobile-menu.active{display:flex}
       .mobile-menu .nav-links{display:flex;flex-direction:column;gap:8px}
       .page-hero{padding:100px 16px 40px}
       .page-hero h1{font-size:1.75rem}
@@ -324,7 +324,24 @@
     const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.textContent=el.dataset[l]||el.textContent)};
     themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
     const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
-    mobileToggle.onclick=()=>{mobileToggle.classList.toggle('active');mobileMenu.classList.toggle('active')};
+    mobileToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      mobileToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    document.addEventListener('click', (e)=>{
+      if(!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)){
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+    mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>{
+      mobileToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
     
     // Massive Interactivity Prop
     const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
