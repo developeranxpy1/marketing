@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore our digital marketing services - SEO, Social Media, PPC, Content Marketing.">
   <title>Services | AlphaSEO & Marketing</title>
+  <meta name="theme-color" content="#4285F4">
+  <link rel="stylesheet" href="material-design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap'); */
     :root{
       --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
       --background:#F2F2F7;--on-background:#1C1C1E;
       --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
       --outline:rgba(0,0,0,0.3);--outline-variant:rgba(0,0,0,0.05);
@@ -20,6 +26,7 @@
     }
     [data-theme="dark"]{
       --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
       --background:#000;--on-background:#F2F2F7;
       --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
       --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
@@ -43,7 +50,7 @@
     .uniform-card{padding:40px 32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease;display:flex;flex-direction:column}
     .uniform-card::after { display: none !important; }
 
-    .scroll-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg, var(--primary), #AF52DE);z-index:1001;width:0%;transition:width .1s ease}
+
 
     /* Pricing Section Styles */
     .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1100px;margin:0 auto}
@@ -162,14 +169,21 @@
       .price-value{font-size:1.75rem}
       .btn{padding:10px 20px;font-size:0.8rem}
     }
+    /* Purple Theme Highlights */
+    .purple-card{border-color:#BF5AF2!important;box-shadow:0 0 30px rgba(191,90,242,0.3)!important}
+    .purple-card .popular-badge{background:#BF5AF2!important}
+    .purple-card .price-value{color:#BF5AF2!important}
+    .purple-card .price-features li::before{color:#BF5AF2!important}
+    .purple-card .btn-primary{background:#BF5AF2!important;color:#fff!important}
+    .purple-card .btn-primary:hover{background:#a342d4!important;box-shadow:0 8px 24px rgba(191,90,242,0.4)!important}
   </style>
   <link rel="stylesheet" href="modal.css">
 </head>
 <body data-lang="en">
   <nav class="navbar">
-    <div class="scroll-progress" id="scrollBar"></div>
+
     <div class="nav-container">
-    <a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a>
+    <a href="index.html" class="nav-brand" style="text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:#2d2d2d">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
     <ul class="nav-links">
       <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
       <li><a href="services.html" class="active" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
@@ -178,7 +192,7 @@
     </ul>
     <div class="nav-actions">
       <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;margin-right:8px;background:var(--primary);color:#fff;border:none;cursor:pointer;text-decoration:none" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
-      <button class="toggle-btn" id="langToggle"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
       <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
       <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
@@ -210,12 +224,17 @@
     </div>
     <div class="services-grid">
       <div class="uniform-card">
-        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
-          <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" alt="Google" style="width:32px;height:32px">
+        <div style="width:64px;height:64px;background:rgba(66,133,244,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
         </div>
-        <h3 class="service-title" data-en="SEO Optimization" data-bn="এসইও অপ্টিমাইজেশন">SEO Optimization</h3>
-        <p class="service-desc" data-en="Boost search rankings with proven strategies for maximum visibility." data-bn="সর্বোচ্চ দৃশ্যমানতার জন্য প্রমাণিত কৌশল।">Boost search rankings with proven strategies for maximum visibility.</p>
-        <ul class="service-list"><li data-en="Keyword Research" data-bn="কীওয়ার্ড রিসার্চ">Keyword Research</li><li data-en="On-Page SEO" data-bn="অন-পেজ এসইও">On-Page SEO</li><li data-en="Technical Audit" data-bn="টেকনিক্যাল অডিট">Technical Audit</li><li data-en="Link Building" data-bn="লিঙ্ক বিল্ডিং">Link Building</li></ul>
+        <h3 class="service-title" data-en="Google My Business" data-bn="গুগল মাই বিজনেস">Google My Business</h3>
+        <p class="service-desc" data-en="Dominate local search and attract nearby customers." data-bn="স্থানীয় সার্চে আধিপত্য বিস্তার করুন এবং কাছাকাছি গ্রাহকদের আকর্ষণ করুন।">Dominate local search and attract nearby customers.</p>
+        <ul class="service-list"><li data-en="Profile Optimization" data-bn="প্রোফাইল অপ্টিমাইজেশন">Profile Optimization</li><li data-en="Reviews Management" data-bn="রিভিউ ম্যানেজমেন্ট">Reviews Management</li><li data-en="Posts & Updates" data-bn="পোস্ট ও আপডেট">Posts & Updates</li><li data-en="Local SEO" data-bn="লোকাল এসইও">Local SEO</li></ul>
       </div>
       <div class="uniform-card">
         <div style="width:64px;height:64px;background:rgba(175,82,222,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
@@ -276,6 +295,45 @@
     </div>
   </section>
 
+  <!-- Technology Stack Section -->
+  <section class="section" style="background:var(--background)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Stack" data-bn="আমাদের স্ট্যাক">Our Stack</span>
+      <h2 data-en="Development Technologies" data-bn="ডেভেলপমেন্ট টেকনোলজি">Development Technologies</h2>
+      <p style="margin-top:16px" data-en="We use industry-leading technologies to deliver premium digital solutions." data-bn="আমরা প্রিমিয়াম ডিজিটাল সমাধান দিতে শীর্ষ প্রযুক্তি ব্যবহার করি।">We use industry-leading technologies to deliver premium digital solutions.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;max-width:900px;margin:0 auto">
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Flutter.png" alt="Flutter" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Flutter</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="PYTHON.png" alt="Python" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Python</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="MongoDB.png" alt="MongoDB" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">MongoDB</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Java.png" alt="Java" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Java</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="tech7Wordpress.png" alt="WordPress" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">WordPress</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Prestashop.png" alt="PrestaShop" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">PrestaShop</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="PyTorch.png" alt="PyTorch" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">AI/ML</div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" style="background:var(--surface)">
     <div class="section-header">
       <h2 data-en="Transparent Pricing Plans" data-bn="স্বচ্ছ মূল্য পরিকল্পনা">Transparent Pricing Plans</h2>
@@ -294,8 +352,8 @@
         </ul>
         <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
       </div>
-      <div class="uniform-card pricing-card" style="border-color:var(--primary);box-shadow:0 0 20px rgba(10,132,255,0.2)">
-        <div style="position:absolute;top:12px;right:12px;background:var(--primary);color:#fff;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700">POPULAR</div>
+      <div class="uniform-card pricing-card purple-card">
+        <div class="popular-badge" style="position:absolute;top:12px;right:12px;color:#fff;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700">POPULAR</div>
         <h3 data-en="Elite Plan" data-bn="এলিট প্ল্যান">Elite Plan</h3>
         <div class="price-value" data-en="₹45,000" data-bn="₹৪৫,০০০">₹45,000</div>
         <ul class="price-features">
@@ -355,11 +413,23 @@
     <a href="contact.html" class="btn btn-primary" data-en="Free Consultation" data-bn="বিনামূল্যে পরামর্শ">Free Consultation</a>
   </section>
 
-  <footer class="footer"><div class="footer-content">
-    <div class="footer-brand"><a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a><p data-en="Empowering businesses since 2020." data-bn="২০২০ সাল থেকে ব্যবসাকে শক্তিশালী করছি।">Empowering businesses since 2020.</p></div>
-    <div class="footer-links"><h4 data-en="Links" data-bn="লিঙ্ক">Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-links"><h4 data-en="Connect" data-bn="যোগাযোগ">Connect</h4><ul><li><a href="mailto:agencyroy0@gmail.com">agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045">+91 89065 81045</a></li><li><a href="https://wa.me/918906581045" target="_blank">WhatsApp</a></li><li><a href="https://t.me/+918906581045" target="_blank">Telegram</a></li></ul></div>
-  </div><div class="footer-bottom"><p>© 2026 AlphaSEO & Marketing | Shantiniketan, Kolkata</p></div></footer>
+  <footer class="footer" style="padding:56px 32px 24px">
+    <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:0 auto">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex;text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:#2d2d2d">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+        <p style="margin-bottom:16px" data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
+        <div style="display:flex;gap:12px;margin-top:16px">
+          <a href="https://www.instagram.com/alphaseo.in/" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s"><img src="ig.png" alt="Instagram" style="width:18px;height:18px"></a>
+          <a href="https://wa.me/918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">💬</a>
+          <a href="https://t.me/+918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">✈️</a>
+        </div>
+      </div>
+      <div class="footer-links"><h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4><ul><li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li><li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li><li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--outline);text-align:center"><p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p></div>
+  </footer>
 
   <script>
     const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),sunIcon=document.getElementById('sunIcon'),moonIcon=document.getElementById('moonIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
@@ -391,7 +461,7 @@
     });
     
     // Massive Interactivity Prop
-    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline');
     let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
     window.addEventListener('mousemove', (e)=>{
       mouseX=e.clientX; mouseY=e.clientY;
@@ -403,7 +473,6 @@
       cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
       requestAnimationFrame(animateCursor);
     }; animateCursor();
-    window.addEventListener('scroll', ()=>{ sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'; });
     window.addEventListener('mousedown', (e)=>{
       if(window.innerWidth < 768 || e.target.closest('.mobile-toggle') || e.target.closest('.nav-links')) return;
       const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
