@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn about AlphaSEO & Marketing - Your trusted digital marketing partner in Kolkata.">
   <title>About Us | AlphaSEO & Marketing</title>
+  <meta name="theme-color" content="#4285F4">
+  <link rel="stylesheet" href="material-design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap'); */
     :root{
       --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
       --background:#F2F2F7;--on-background:#1C1C1E;
       --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
       --outline:rgba(0,0,0,0.3);--outline-variant:rgba(0,0,0,0.05);
@@ -20,6 +26,7 @@
     }
     [data-theme="dark"]{
       --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
       --background:#000;--on-background:#F2F2F7;
       --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
       --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
@@ -148,9 +155,9 @@
 </head>
 <body data-lang="en">
   <nav class="navbar">
-    <div class="scroll-progress" id="scrollBar"></div>
+
     <div class="nav-container">
-    <a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a>
+    <a href="index.html" class="nav-brand" style="text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:#2d2d2d">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
     <ul class="nav-links">
       <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
       <li><a href="services.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
@@ -159,7 +166,7 @@
     </ul>
     <div class="nav-actions">
       <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;margin-right:8px;background:var(--primary);color:#fff;border:none;cursor:pointer;text-decoration:none" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
-      <button class="toggle-btn" id="langToggle"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
       <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
       <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
@@ -204,10 +211,39 @@
       <h2 data-en="Meet the Experts" data-bn="বিশেষজ্ঞদের সাথে পরিচিত হন">Meet the Experts</h2>
     </div>
     <div class="team-grid">
-      <div class="uniform-card"><div class="team-avatar">AR</div><h3 class="team-name">Arjun Roy</h3><p class="team-role" data-en="Founder & CEO" data-bn="প্রতিষ্ঠাতা ও সিইও">Founder & CEO</p></div>
-      <div class="uniform-card"><div class="team-avatar">PD</div><h3 class="team-name">Priya Das</h3><p class="team-role" data-en="SEO Director" data-bn="এসইও ডিরেক্টর">SEO Director</p></div>
-      <div class="uniform-card"><div class="team-avatar">SM</div><h3 class="team-name">Sourav Mukherjee</h3><p class="team-role" data-en="Marketing Lead" data-bn="মার্কেটিং লিড">Marketing Lead</p></div>
-      <div class="uniform-card"><div class="team-avatar">RB</div><h3 class="team-name">Riya Banerjee</h3><p class="team-role" data-en="Content Head" data-bn="কন্টেন্ট হেড">Content Head</p></div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="Debojyoti-Mitra.png" alt="Debojyoti Mitra" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Debojyoti Mitra</h3>
+        <p class="team-role" data-en="Founder & CEO" data-bn="প্রতিষ্ঠাতা ও সিইও">Founder & CEO</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-priya.png" alt="Priya Das" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Priya Das</h3>
+        <p class="team-role" data-en="SEO Director" data-bn="এসইও ডিরেক্টর">SEO Director</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-sourav.png" alt="Sourav Mukherjee" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Sourav Mukherjee</h3>
+        <p class="team-role" data-en="Marketing Lead" data-bn="মার্কেটিং লিড">Marketing Lead</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-riya.png" alt="Riya Banerjee" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Riya Banerjee</h3>
+        <p class="team-role" data-en="Content Head" data-bn="কন্টেন্ট হেড">Content Head</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITEX 2023 Credibility Section -->
+  <section class="section" style="background:var(--background)">
+    <div class="section-header">
+      <span class="section-label" data-en="Global Presence" data-bn="বৈশ্বিক উপস্থিতি">Global Presence</span>
+      <h2 data-en="GITEX GLOBAL 2023 Participation" data-bn="জাইটেক্স গ্লোবাল ২০২৩ অংশগ্রহণ">GITEX GLOBAL 2023 Participation</h2>
+      <p style="margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto" data-en="Our team represented AlphaSEO at GITEX Global 2023 in Dubai, the world's largest tech and startup event, connecting with industry leaders and showcasing our digital marketing innovations." data-bn="আমাদের টিম দুবাইতে GITEX Global 2023-এ AlphaSEO-কে প্রতিনিধিত্ব করেছে, যা বিশ্বের বৃহত্তম টেক ইভেন্ট।">Our team represented AlphaSEO at GITEX Global 2023 in Dubai, the world's largest tech and startup event, connecting with industry leaders and showcasing our digital marketing innovations.</p>
+    </div>
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <img src="Gitex.jpg" alt="AlphaSEO Team at GITEX Global 2023" style="width:100%;max-width:800px;border-radius:24px;box-shadow:0 16px 48px rgba(0,0,0,0.4);border:1px solid var(--glass-border)">
+      <p style="margin-top:16px;font-size:0.9rem;color:var(--on-surface-variant)" data-en="Team AlphaSEO at GITEX Global 2023, Dubai" data-bn="দুবাইতে জাইটেক্স গ্লোবাল ২০২৩-এ দল আলফাসিও">Team AlphaSEO at GITEX Global 2023, Dubai</p>
     </div>
   </section>
 
@@ -218,43 +254,47 @@
       <p style="margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto" data-en="We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation." data-bn="আমরা বিশ্বব্যাপী ২০০+ কোম্পানির সাথে কাজ করার সুযোগ পেয়েছি।">We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1100px;margin:0 auto">
-      <a href="https://antonioalessi.malibucycles.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.34-PM.jpeg" alt="Malibu Cycles" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="vision.jpg" alt="Vision Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://theorchidvillamalibu.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.36-PM.jpeg" alt="The Orchid Villa" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="oxxo1.jpg" alt="OXXO Brand" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://ufcstore.pl/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM.jpeg" alt="UFC Store" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="17-1.png" alt="Digital Marketing Campaign" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://malibucycles.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-2.jpeg" alt="Malibu Cycles Main" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="19-1.png" alt="Website Mockup" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://maliburanchcatering.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-1.jpeg" alt="Malibu Ranch Catering" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="20-1.png" alt="Marketing Analytics" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://lightslategray-penguin-123156.hostingersite.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-3.jpeg" alt="Hostinger Site Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="Banner-3.jpg" alt="Business Growth" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://dirty-diana.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.32.47-PM-1.jpeg" alt="Dirty Diana" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="21-1.png" alt="Social Media Campaign" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <a href="https://irsdesign.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.47.10-PM.jpeg" alt="IRS Design Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
+      <a href="#" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
+        <img src="Untitled-design-10.png" alt="E-commerce Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;transition:transform .3s ease">
       </a>
-      <!-- Additional project cards -->
-      <a href="https://malibucycles.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.34-PM.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
-      </a>
-      <a href="https://maliburanchcatering.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.23.05-PM-1.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
-      </a>
-      <a href="https://theorchidvillamalibu.com/" target="_blank" class="uniform-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.11.36-PM.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
-      </a>
-      <a href="https://dirty-diana.com/" target="_blank" class="info-card" style="padding:12px;overflow:hidden;text-decoration:none;display:block">
-        <img src="https://irsdesign.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-09-at-6.32.47-PM-1.jpeg" alt="Future Project" style="width:100%;height:280px;object-fit:cover;border-radius:12px;filter:grayscale(30%);transition:transform .3s ease">
-      </a>
+    </div>
+
+    <!-- Client Logos Grid -->
+    <div style="margin-top:64px;max-width:1000px;margin-left:auto;margin-right:auto">
+      <h3 style="text-align:center;margin-bottom:32px" data-en="Our Valued Clients" data-bn="আমাদের মূল্যবান ক্লায়েন্ট">Our Valued Clients</h3>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px">
+        <img src="ABC-logo.jpg" alt="ABC" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="Gainwell.png" alt="Gainwell" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="Ocera.png" alt="Ocera" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="OXXO.png" alt="OXXO" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="MW.png" alt="MW" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="Pinnacle-infotech.png" alt="Pinnacle" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="EduBengal-Colour.png" alt="EduBengal" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="kolkata-roll-corner-2.jpg" alt="Kolkata Roll Corner" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="halosb-2.jpg" alt="Halosb" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+        <img src="muslimacpl-2.jpg" alt="Muslimacpl" style="height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:0.9;transition:all .3s" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(20%)';this.style.opacity='0.9';this.style.transform='scale(1)'">
+      </div>
     </div>
 
     <!-- Links Section -->
@@ -319,11 +359,23 @@
     </div>
   </section>
 
-  <footer class="footer"><div class="footer-content">
-    <div class="footer-brand"><a href="index.html" class="nav-brand"><div class="nav-logo">α</div><span class="nav-title">AlphaSEO</span></a><p data-en="Empowering businesses since 2020." data-bn="২০২০ সাল থেকে ব্যবসাকে শক্তিশালী করছি।">Empowering businesses since 2020.</p></div>
-    <div class="footer-links"><h4 data-en="Links" data-bn="লিঙ্ক">Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-links"><h4 data-en="Connect" data-bn="যোগাযোগ">Connect</h4><ul><li><a href="mailto:agencyroy0@gmail.com">agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045">+91 89065 81045</a></li><li><a href="https://wa.me/918906581045" target="_blank">WhatsApp</a></li><li><a href="https://t.me/+918906581045" target="_blank">Telegram</a></li></ul></div>
-  </div><div class="footer-bottom"><p>© 2026 AlphaSEO & Marketing | Shantiniketan, Kolkata</p></div></footer>
+  <footer class="footer" style="padding:56px 32px 24px">
+    <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:0 auto">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex;text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:#2d2d2d">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+        <p style="margin-bottom:16px" data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
+        <div style="display:flex;gap:12px;margin-top:16px">
+          <a href="https://www.instagram.com/alphaseo.in/" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s"><img src="ig.png" alt="Instagram" style="width:18px;height:18px"></a>
+          <a href="https://wa.me/918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">💬</a>
+          <a href="https://t.me/+918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">✈️</a>
+        </div>
+      </div>
+      <div class="footer-links"><h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4><ul><li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li><li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li><li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--outline);text-align:center"><p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p></div>
+  </footer>
 
   <script>
     const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),sunIcon=document.getElementById('sunIcon'),moonIcon=document.getElementById('moonIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
@@ -355,7 +407,7 @@
     });
     
     // Massive Interactivity Prop
-    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline'), sp=document.getElementById('scrollProgress');
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline');
     let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
     window.addEventListener('mousemove', (e)=>{
       mouseX=e.clientX; mouseY=e.clientY;
@@ -367,7 +419,6 @@
       cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
       requestAnimationFrame(animateCursor);
     }; animateCursor();
-    window.addEventListener('scroll', ()=>{ sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'; });
     window.addEventListener('mousedown', (e)=>{
       if(window.innerWidth < 768 || e.target.closest('.mobile-toggle') || e.target.closest('.nav-links')) return;
       const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
