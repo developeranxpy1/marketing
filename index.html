@@ -81,9 +81,9 @@
     /* Massive Upgrades Phase 1: Visuals & Interactivity */
     .scroll-progress{position:absolute;top:0;left:0;height:3px;background:linear-gradient(90deg, var(--primary), var(--secondary));z-index:1001;width:0%;transition:width .1s ease}
     
-    .reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(0.2, 0.8, 0.2, 1)}
-    .reveal.active{opacity:1;transform:translateY(0)}
-    .magnetic{display:inline-block;transition:transform .2s cubic-bezier(0.2, 0.8, 0.2, 1)}
+    .reveal{opacity:0;transform:translate3d(0, 30px, 0);transition:all .8s cubic-bezier(0.2, 0.8, 0.2, 1);will-change:transform, opacity}
+    .reveal.active{opacity:1;transform:translate3d(0,0,0)}
+    .magnetic{display:inline-block;transition:transform .2s cubic-bezier(0.2, 0.8, 0.2, 1);will-change:transform}
     
     /* Custom Scrollbar */
     ::-webkit-scrollbar{width:8px}
@@ -103,12 +103,12 @@
     .mobile-menu .nav-links a:hover,.mobile-menu .nav-links a.active{color:var(--primary)}
     .mobile-cta-btn{display:flex;align-items:center;justify-content:center;width:calc(100% - 48px);margin:24px auto 0;padding:16px;background:var(--primary);color:#fff;border-radius:50px;font-weight:700;font-size:1.1rem;border:none;cursor:pointer;text-decoration:none;box-shadow:0 8px 24px rgba(10,132,255,0.3)}
     .mobile-menu-social{display:flex;gap:20px;margin-top:auto;padding-top:40px;justify-content:center;width:100%}
-    .mobile-menu-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:all .2s ease}
+    .mobile-menu-social a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:all .2s ease}
     .mobile-menu-social a:hover{background:var(--primary);transform:scale(1.1)}
-    .mobile-menu-social svg{width:18px;height:18px;fill:currentColor}
+    .mobile-menu-social svg{width:20px;height:20px;fill:currentColor}
     @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(10,132,255,0.4)}.btn-primary:hover{background:var(--primary-light)}.btn-outline:hover{background:var(--primary);color:var(--on-primary)}
-    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 32px;width:100%;position:relative;overflow:hidden;background-color:#fcfbf7;color:#1c1c1e}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn-outline{background:rgba(255,255,255,0.9);border:2px solid var(--primary);color:var(--primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(10,132,255,0.4)}.btn-primary:hover{background:var(--primary-light)}.btn-outline:hover{background:var(--primary);color:var(--on-primary)}
+    .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:270px 32px 80px;width:100%;position:relative;overflow:hidden;background-color:#fcfbf7;color:#1c1c1e}
     .hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('hero-bg.jpg') center/cover no-repeat;filter:blur(5px);transform:scale(1.05);z-index:0}
     .hero-content{max-width:900px;text-align:center;margin:0 auto;width:100%;position:relative;z-index:1}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.1);border-radius:20px;font-size:.875rem;font-weight:500;color:#333;margin-bottom:24px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
@@ -156,7 +156,7 @@
     .marquee-content:hover{animation-play-state:paused}
     .marquee-item{flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .3s ease;text-decoration:none !important;overflow:hidden}
     .marquee-item:hover{transform:scale(1.1);z-index:10;box-shadow:0 0 40px rgba(10,132,255,0.6);border-color:var(--primary-light)}
-    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-33.333%)}}
+    @keyframes marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-33.333%, 0, 0)}}
 
     @media(max-width:992px){
       .bento-grid{grid-template-columns:repeat(2,1fr)}
@@ -180,7 +180,7 @@
     /* Enhanced Mobile Responsiveness */
     @media(max-width:992px){
       .navbar{padding:10px 20px}
-      .hero{padding:120px 24px 60px}
+      .hero{padding:300px 24px 80px}
       .section{padding:60px 24px}
       .uniform-card{padding:32px 24px}
       .tools-grid{grid-template-columns:repeat(3,1fr) !important}
@@ -190,7 +190,7 @@
       .mobile-toggle{display:flex}
       .mobile-menu.active{display:flex}
       .mobile-menu .nav-links{display:flex;flex-direction:column;gap:8px}
-      .hero{padding:100px 16px 48px;min-height:100vh;display:flex;align-items:center;justify-content:center}
+      .hero{padding:270px 16px 64px;min-height:100vh;display:flex;align-items:flex-start;justify-content:center}
       .hero-title{font-size:2.85rem !important}
       .hero-subtitle{font-size:1rem !important}
       .hero-actions{flex-direction:column;align-items:center;gap:12px;width:100%}
@@ -215,7 +215,7 @@
       .nav-title{font-size:1rem}
       .nav-logo{width:36px;height:36px;font-size:1.1rem}
       .toggle-btn{width:36px;height:36px;font-size:0.75rem}
-      .hero{padding:90px 12px 40px}
+      .hero{padding:250px 12px 60px}
       .hero-title{font-size:1.75rem !important;line-height:1.3}
       .hero-subtitle{font-size:0.9rem !important;padding:0 8px}
       .hero-badge{padding:6px 12px;font-size:0.75rem}
@@ -293,9 +293,9 @@
     </div>
   </div>
 
-  <section class="hero" style="min-height:100vh;display:flex;align-items:center;justify-content:center">
-    <div class="nav-container" style="display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center">
-      <div class="hero-content" style="text-align:center;margin:0 auto">
+  <section class="hero">
+    <div class="nav-container" style="display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;width:100%">
+      <div class="hero-content">
         <!-- <div class="hero-badge" data-en="#1 Digital Marketing Agency" data-bn="#১ ডিজিটাল মার্কেটিং এজেন্সি">#1 Digital Marketing Agency</div> -->
         <h1 class="hero-title" style="font-size:clamp(3rem, 6vw, 5rem);" data-en="Transform Your <br><em>Digital Presence</em>" data-bn="আপনার <br><em>ডিজিটাল উপস্থিতি</em><br> রূপান্তর করুন">Transform Your <br><em>Digital Presence</em></h1>
         <p class="hero-subtitle" style="margin:0 auto 32px" data-en="&ldquo;We help businesses grow with cutting-edge SEO strategies, innovative marketing campaigns, and data-driven solutions.&rdquo;" data-bn="&ldquo;আমরা অত্যাধুনিক SEO কৌশল এবং উদ্ভাবনী মার্কেটিং প্রচারণা দিয়ে ব্যবসা বৃদ্ধিতে সাহায্য করি।&rdquo;">&ldquo;We help businesses grow with cutting-edge SEO strategies, innovative marketing campaigns, and data-driven solutions.&rdquo;</p>
@@ -304,7 +304,7 @@
           <a href="services.html" class="btn btn-outline" data-en="Our Services" data-bn="আমাদের সেবাসমূহ">Our Services</a>
         </div>
       </div>
-      <img src="hero-illustration.png" alt="Digital Marketing Team" style="max-width:700px;max-height:400px;width:100%;margin-top:40px;border-radius:24px;object-fit:contain">
+
     </div>
   </section>
 
@@ -316,21 +316,21 @@
     <div class="services-grid">
       <div class="uniform-card" style="overflow:hidden;text-align:center">
         <div style="width:100%;height:280px;background:#f8f9fa;border-radius:20px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="seo-illustration.png" alt="SEO" style="height:250px;object-fit:contain">
+          <img src="seo-illustration.png" alt="SEO" width="250" height="250" loading="lazy" style="height:250px;object-fit:contain">
         </div>
         <h3 class="service-title" style="text-align:center" data-en="SEO Optimization" data-bn="এসইও অপ্টিমাইজেশন">SEO Optimization</h3>
         <p class="service-desc" style="text-align:center" data-en="Boost search rankings with proven strategies that drive organic traffic." data-bn="অর্গানিক ট্রাফিক আকর্ষণ করে এমন প্রমাণিত কৌশল।">Boost search rankings with proven strategies that drive organic traffic.</p>
       </div>
       <div class="uniform-card" style="overflow:hidden;text-align:center">
         <div style="width:100%;height:280px;background:#f8f9fa;border-radius:20px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="social-illustration.png" alt="Social Media" style="height:250px;object-fit:contain">
+          <img src="social-illustration.png" alt="Social Media" width="250" height="250" loading="lazy" style="height:250px;object-fit:contain">
         </div>
         <h3 class="service-title" style="text-align:center" data-en="Social Media" data-bn="সোশ্যাল মিডিয়া">Social Media</h3>
         <p class="service-desc" style="text-align:center" data-en="Engage audiences with compelling content that builds communities." data-bn="আকর্ষণীয় কন্টেন্ট দিয়ে দর্শকদের সাথে যুক্ত হন।">Engage audiences with compelling content that builds communities.</p>
       </div>
       <div class="uniform-card" style="overflow:hidden;text-align:center">
         <div style="width:100%;height:280px;background:#f8f9fa;border-radius:20px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="analytics-illustration.png" alt="Analytics" style="height:250px;object-fit:contain">
+          <img src="analytics-illustration.png" alt="Analytics" width="250" height="250" loading="lazy" style="height:250px;object-fit:contain">
         </div>
         <h3 class="service-title" style="text-align:center" data-en="Analytics" data-bn="বিশ্লেষণ">Analytics</h3>
         <p class="service-desc" style="text-align:center" data-en="Data-driven decisions for maximum ROI and business growth." data-bn="ROI এবং ব্যবসা বৃদ্ধির জন্য ডেটা-চালিত সিদ্ধান্ত।">Data-driven decisions for maximum ROI and business growth.</p>
@@ -396,7 +396,7 @@
         <img src="Pinnacle-infotech.png" alt="Pinnacle" style="max-height:36px;max-width:90px;object-fit:contain">
       </div>
       <div style="background:#fff;border-radius:12px;padding:16px 24px;display:flex;align-items:center;justify-content:center;min-height:60px;min-width:120px;transition:all .3s;box-shadow:0 4px 12px rgba(0,0,0,0.08)" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-        <img src="EduBengal-Colour.png" alt="EduBengal" style="max-height:36px;max-width:90px;object-fit:contain">
+        <img src="EduBengal-Colour.png" alt="EduBengal" width="90" height="36" loading="lazy" style="max-height:36px;max-width:90px;object-fit:contain">
       </div>
     </div>
   </section>
