@@ -6,6 +6,7 @@
   <meta name="description" content="Explore our digital marketing services - SEO, Social Media, PPC, Content Marketing.">
   <title>Services | AlphaSEO & Marketing</title>
   <meta name="theme-color" content="#4285F4">
+  <link rel="icon" href="logo-final.svg" type="image/svg+xml">
   <link rel="stylesheet" href="material-design.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,7 +343,7 @@
     <div class="pricing-grid">
       <div class="uniform-card pricing-card">
         <h3 data-en="Essential Plan" data-bn="এসেন্সিয়াল প্ল্যান">Essential Plan</h3>
-        <div class="price-value" data-en="₹13,333" data-bn="₹১৩,৩৩৩">₹13,333</div>
+        <div class="price-value" data-en="₹13,333" data-bn="₹১৩,৩৩৩" data-usd="$199" data-inr="₹13,333">₹13,333</div>
         <ul class="price-features">
           <li data-en="6 Pages Website" data-bn="৬ পেজ ওয়েবসাইট">6 Pages Website</li>
           <li data-en="Basic SEO" data-bn="বেসিক এসইও">Basic SEO</li>
@@ -355,7 +356,7 @@
       <div class="uniform-card pricing-card purple-card">
         <div class="popular-badge" style="position:absolute;top:12px;right:12px;color:#fff;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700">POPULAR</div>
         <h3 data-en="Elite Plan" data-bn="এলিট প্ল্যান">Elite Plan</h3>
-        <div class="price-value" data-en="₹30,000" data-bn="₹৩০,০০০">₹30,000</div>
+        <div class="price-value" data-en="₹30,000" data-bn="₹৩০,০০০" data-usd="$399" data-inr="₹30,000">₹30,000</div>
         <ul class="price-features">
           <li data-en="12 Pages Website" data-bn="১২ পেজ ওয়েবসাইট">12 Pages Website</li>
           <li data-en="Advanced SEO" data-bn="অ্যাডভান্সড এসইও">Advanced SEO</li>
@@ -498,6 +499,39 @@
       });
       card.addEventListener('mouseleave', ()=>card.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)');
     });
+
+    // Dynamic Pricing Logic
+    (async function() {
+      const priceElements = document.querySelectorAll('.price-value[data-usd]');
+      if (!priceElements.length) return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const forcedCountry = urlParams.get('country');
+      
+      let countryCode = 'IN'; // Default to India
+
+      if (forcedCountry) {
+        countryCode = forcedCountry.toUpperCase();
+      } else {
+        try {
+          const response = await fetch('https://ipapi.co/json/');
+          const data = await response.json();
+          countryCode = data.country_code || 'IN';
+        } catch (error) {
+          console.error('Error fetching country:', error);
+          // Fallback to INR (default)
+        }
+      }
+
+      const isIndia = countryCode === 'IN';
+      
+      priceElements.forEach(el => {
+        const priceText = isIndia ? el.dataset.inr : el.dataset.usd;
+        el.textContent = priceText;
+        // Update data-en attribute for language toggling compatibility
+        el.setAttribute('data-en', priceText);
+      });
+    })();
   </script>
 
   <!-- Modal Logic -->
