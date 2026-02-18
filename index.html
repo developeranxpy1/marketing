@@ -51,8 +51,8 @@
       --background-rgb:0,0,0;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden;width:100%}
+    html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
+    body{font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden;width:100%;-webkit-overflow-scrolling:touch}
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: var(--background); }
@@ -108,7 +108,7 @@
     .mobile-menu-social svg{width:18px;height:18px;fill:currentColor}
     @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(10,132,255,0.4)}.btn-primary:hover{background:var(--primary-light)}.btn-outline:hover{background:var(--primary);color:var(--on-primary)}
-    .hero{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:180px 32px 80px;width:100%;position:relative;overflow:hidden;background-color:#fcfbf7;color:#1c1c1e}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 32px;width:100%;position:relative;overflow:hidden;background-color:#fcfbf7;color:#1c1c1e}
     .hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('hero-bg.jpg') center/cover no-repeat;filter:blur(5px);transform:scale(1.05);z-index:0}
     .hero-content{max-width:900px;text-align:center;margin:0 auto;width:100%;position:relative;z-index:1}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.1);border-radius:20px;font-size:.875rem;font-weight:500;color:#333;margin-bottom:24px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
