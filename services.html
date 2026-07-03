@@ -3,367 +3,675 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AlphaSEO & Marketing provides expert digital marketing services in Kolkata: SEO, Social Media, PPC, Web Development, Content Marketing, and more.">
-  <title>Our Services | AlphaSEO & Marketing</title>
-  <meta property="og:title" content="Our Services | AlphaSEO & Marketing">
-  <meta property="og:description" content="Comprehensive digital marketing services to grow your business online.">
-  <meta property="og:image" content="https://alphaseo.agency/og-image.jpg">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Explore our digital marketing services - SEO, Social Media, PPC, Content Marketing.">
+  <title>Services | AlphaSEO & Marketing</title>
   <meta name="theme-color" content="#4285F4">
-  <link rel="canonical" href="https://alphaseo.agency/services.html">
+  <link rel="icon" href="logo-final.svg" type="image/svg+xml">
   <link rel="stylesheet" href="material-design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    details.faq-item{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:all .3s ease}
-    details.faq-item[open]{border-color:var(--primary)}
-    details.faq-item summary{padding:20px 24px;cursor:pointer;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;align-items:center;color:var(--on-surface);list-style:none}
-    details.faq-item summary::-webkit-details-marker{display:none}
-    details.faq-item summary::after{content:"+";font-size:1.5rem;font-weight:300;transition:transform .3s ease;color:var(--primary)}
-    details.faq-item[open] summary::after{transform:rotate(45deg)}
-    details.faq-item .faq-answer{padding:0 24px 20px;font-size:.9rem;color:var(--on-surface-variant);line-height:1.7}
-    .service-list{list-style:none;padding:0;margin:16px 0 0;text-align:left}
-    .service-list li{padding:8px 0;display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--on-surface-variant);border-bottom:1px solid var(--outline)}
-    .service-list li:last-child{border-bottom:none}
-    .service-list li::before{content:"\2713";color:var(--primary);font-weight:900;font-size:.9rem}
-    .pricing-badge{position:absolute;top:16px;right:16px;padding:6px 14px;background:var(--primary);color:#fff;font-size:.7rem;font-weight:700;border-radius:50px;text-transform:uppercase;letter-spacing:.5px}
-    .faq-grid{max-width:700px;margin:0 auto}
+    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap'); */
+    :root{
+      --primary:#0A84FF;--primary-light:#409CFF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
+      --background:#F2F2F7;--on-background:#1C1C1E;
+      --surface:rgba(255,255,255,0.4);--on-surface:#1C1C1E;--on-surface-variant:#636366;
+      --outline:rgba(0,0,0,0.3);--outline-variant:rgba(0,0,0,0.05);
+      --glass-bg:rgba(255,255,255,0.15);--glass-border:rgba(255,255,255,0.6);--glass-blur:15px;
+      --rim-light:0 0 0 1px rgba(255,255,255,0.5), 0 0 0 1.5px rgba(255,255,255,0.2);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.12);
+      --grid-line:rgba(0,0,0,0.05);
+      --background-rgb:242,242,247;
+    }
+    [data-theme="dark"]{
+      --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --secondary:#BF5AF2;--secondary-light:#D48FFF;--secondary-dark:#8E44AD;
+      --background:#000;--on-background:#F2F2F7;
+      --surface:rgba(28,28,30,0.4);--on-surface:#F2F2F7;--on-surface-variant:#AEAEB2;
+      --outline:rgba(255,255,255,0.1);--outline-variant:rgba(255,255,255,0.05);
+      --glass-bg:rgba(28,28,30,0.7);--glass-border:rgba(255,255,255,0.1);--glass-blur:2px;
+      --hero-card-bg:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+      --rim-light:0 0 0 1px rgba(255,255,255,0.1), 0 0 0 1.5px rgba(255,255,255,0.05);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.6);
+      --grid-line:rgba(255,255,255,0.05);
+      --background-rgb:0,0,0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;background:var(--background);color:var(--on-background);line-height:1.5;min-height:100vh;transition:all .3s;overflow-x:hidden;width:100%}
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--outline); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--on-surface-variant); }
+    html{overflow-x:hidden;width:100%}
+    .uniform-card{padding:40px 32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);transition:all .3s ease;display:flex;flex-direction:column}
+    .uniform-card::after { display: none !important; }
+
+
+
+    /* Pricing Section Styles */
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .pricing-card{text-align:center;position:relative;overflow:hidden}
+    .price-value{font-size:3rem;font-weight:800;margin:24px 0;color:var(--primary)}
+    .price-features{list-style:none;padding:0;margin:0 0 32px;text-align:left}
+    .price-features li{padding:12px 0;border-bottom:1px solid var(--outline);display:flex;align-items:center;gap:12px;font-size:0.95rem}
+    .price-features li::before{content:"✓";color:var(--primary);font-weight:900}
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(10,132,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(94,92,230,0.1) 0%, transparent 50%),
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      z-index:-1;
+    }
+    h1,h2,h3{font-weight:600;line-height:1.2;color:var(--on-surface)}h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:1.1rem}p{color:var(--on-surface-variant);max-width:65ch}a{color:var(--primary);text-decoration:none}
+    
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 32px;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);border-bottom:1px solid var(--glass-border)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px}.nav-logo{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;color:#fff}.nav-title{font-size:1.125rem;font-weight:600;color:var(--on-surface)}
+    .nav-links{display:flex;align-items:center;gap:12px;list-style:none}.nav-links a{color:var(--on-surface);font-weight:600;font-size:.85rem;padding:8px 16px;border-radius:50px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;align-items:center;gap:6px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(5px)}.nav-links a:hover{color:#fff;background:var(--primary);transform:translateY(-2px);border-color:var(--primary);box-shadow:0 4px 12px rgba(10,132,255,0.3)}.nav-links a.active{color:var(--primary);background:transparent;border:2px solid var(--primary);font-weight:700} .nav-links a svg{width:14px;height:14px;stroke-width:2.5;fill:none}
+    .nav-actions{display:flex;align-items:center;gap:12px}.toggle-btn{width:40px;height:40px;border:1px solid var(--glass-border);border-radius:20px;background:var(--glass-bg);color:var(--on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);backdrop-filter:blur(5px)}.toggle-btn:hover{background:var(--primary);color:#fff;transform:scale(1.1);border-color:var(--primary)}
+    .mobile-toggle{display:none;flex-direction:column;gap:5px;padding:10px;background:var(--surface);border:none;border-radius:8px;cursor:pointer;z-index:1001}.mobile-toggle span{width:22px;height:2.5px;background:var(--on-surface);border-radius:2px;transition:all .3s ease}.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.mobile-toggle.active span:nth-child(2){opacity:0}.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#1a1a1a;padding:60px 24px 40px;z-index:998;overflow-y:auto;flex-direction:column;align-items:center;justify-content:center}
+    .mobile-menu.active{display:flex}
+    .mobile-menu .nav-links{flex-direction:column;gap:0;display:flex;align-items:center;list-style:none;padding:0;margin:0}
+    .mobile-menu .nav-links li{list-style:none;width:100%;text-align:center}
+    .mobile-menu .nav-links a{display:block;padding:18px 24px;font-size:1.1rem;font-weight:500;color:#fff;text-decoration:none;letter-spacing:0.5px;transition:color .2s ease;background:transparent;border:none;border-radius:0}
+    .mobile-menu .nav-links a:hover,.mobile-menu .nav-links a.active{color:var(--primary)}
+    .mobile-cta-btn{display:flex;align-items:center;justify-content:center;width:calc(100% - 48px);margin:24px auto 0;padding:16px;background:var(--primary);color:#fff;border-radius:50px;font-weight:700;font-size:1.1rem;border:none;cursor:pointer;text-decoration:none;box-shadow:0 8px 24px rgba(10,132,255,0.3)}
+    .mobile-menu-social{display:flex;gap:20px;margin-top:auto;padding-top:40px;justify-content:center;width:100%}
+    .mobile-menu-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:all .2s ease}
+    .mobile-menu-social a:hover{background:var(--primary);transform:scale(1.1)}
+    .mobile-menu-social svg{width:18px;height:18px;fill:currentColor}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(10,132,255,0.4)}.btn-primary:hover{background:var(--primary-light)}
+    .page-hero{padding:180px 32px 80px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(var(--background-rgb), 0.7), rgba(var(--background-rgb), 0.7)), url('hero-bg.jpg');background-size:cover;background-position:center;background-attachment:fixed;border-bottom:1px solid var(--outline)}
+    .page-hero h1, .page-hero p{position:relative;z-index:1}
+    .section{padding:64px 32px}.section-header{text-align:center;max-width:600px;margin:0 auto 48px}.section-label{font-size:.8rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:block}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+    .service-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);transition:all .3s ease;backdrop-filter:blur(var(--glass-blur)) saturate(180%)}
+    .service-card:hover{border-color:var(--primary);transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(10,132,255,0.25), var(--rim-light)}
+    .service-icon{width:56px;height:56px;background:var(--primary);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin-bottom:24px;color:#fff;box-shadow:0 4px 12px rgba(10,132,255,0.3)}
+    .service-title{margin-bottom:8px}.service-desc{color:var(--on-surface-variant);font-size:.9rem;line-height:1.6;margin-bottom:12px}
+    .service-list{color:var(--on-surface-variant);font-size:.85rem;padding-left:20px}.service-list li{margin-bottom:4px}
+    .process-section{background:var(--surface-container)}.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .process-card{padding:32px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--glass-shadow), var(--rim-light);backdrop-filter:blur(var(--glass-blur)) saturate(180%);text-align:center}
+    .process-step{width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;margin:0 auto 20px;box-shadow:0 4px 12px rgba(10,132,255,0.3)}
+    .process-title{margin-bottom:8px}.process-desc{font-size:.875rem;color:var(--on-surface-variant)}
+    .footer{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:64px 40px 24px;border-top:1px solid var(--glass-border);width:100%;margin-left:0;margin-right:0;position:relative;left:0;right:0}.footer-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
+    .footer-links h4{font-size:.875rem;font-weight:600;margin-bottom:16px}.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-links a,.footer-links span{color:var(--on-surface-variant);font-size:.875rem}.footer-links a:hover{color:var(--primary)}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding-top:24px;margin-top:32px;border-top:1px solid var(--outline);font-size:.8rem;color:var(--on-surface-variant)}
+    /* Enhanced Mobile Responsiveness */
+    @media(max-width:992px){
+      .navbar{padding:10px 20px}
+      .page-hero{padding:140px 24px 60px}
+      .section{padding:56px 24px}
+      .uniform-card{padding:32px 24px}
+      .pricing-grid{gap:20px}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .mobile-toggle{display:flex}
+      .mobile-menu.active{display:flex}
+      .mobile-menu .nav-links{display:flex;flex-direction:column;gap:8px}
+      .page-hero{padding:100px 16px 40px}
+      .page-hero h1{font-size:1.75rem}
+      .page-hero p{font-size:0.9rem}
+      .section{padding:48px 16px}
+      .section-header h2{font-size:1.5rem}
+      .services-grid,.process-grid{grid-template-columns:1fr}
+      .uniform-card{padding:28px 20px}
+      .pricing-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}
+      .pricing-card{padding:32px 24px}
+      .price-value{font-size:2.5rem}
+      .price-features li{padding:10px 0;font-size:0.9rem}
+      .footer-content{flex-direction:column;text-align:center;gap:24px}
+      .footer{padding:32px 16px 16px}
+      .footer-links h4{margin-bottom:8px}
+      .cta-section{padding:48px 16px !important;margin-top:48px !important}
+    }
+    @media(max-width:480px){
+      .navbar{padding:8px 12px}
+      .nav-title{font-size:1rem}
+      .nav-logo{width:36px;height:36px;font-size:1.1rem}
+      .toggle-btn{width:36px;height:36px;font-size:0.75rem}
+      .page-hero{padding:90px 12px 32px}
+      .page-hero h1{font-size:1.5rem}
+      .section{padding:40px 12px}
+      .section-header{margin-bottom:32px}
+      .section-label{font-size:0.7rem}
+      .uniform-card{padding:24px 16px;border-radius:20px}
+      .service-title{font-size:1rem}
+      .service-desc{font-size:0.85rem}
+      .service-list{font-size:0.8rem;padding-left:16px}
+      .service-list li{margin-bottom:3px}
+      .pricing-card{padding:28px 20px}
+      .price-value{font-size:2rem}
+      .price-features li{padding:8px 0;font-size:0.85rem}
+      .process-step{width:36px;height:36px;font-size:0.85rem}
+      .process-title{font-size:1rem}
+      .process-desc{font-size:0.8rem}
+      .btn{padding:12px 24px;font-size:0.85rem}
+      .footer-bottom p{font-size:0.7rem}
+      .mobile-menu{top:56px;padding:16px 12px}
+      .mobile-menu .nav-links a{padding:14px 16px;font-size:1rem}
+    }
+    @media(max-width:360px){
+      .page-hero h1{font-size:1.35rem}
+      .section-header h2{font-size:1.25rem}
+      .uniform-card{padding:20px 14px}
+      .price-value{font-size:1.75rem}
+      .btn{padding:10px 20px;font-size:0.8rem}
+    }
+    /* Purple Theme Highlights */
+    .purple-card{border-color:#BF5AF2!important;box-shadow:0 0 30px rgba(191,90,242,0.3)!important}
+    .purple-card .popular-badge{background:#BF5AF2!important}
+    .purple-card .price-value{color:#BF5AF2!important}
+    .purple-card .price-features li::before{color:#BF5AF2!important}
+    .purple-card .btn-primary{background:#BF5AF2!important;color:#fff!important}
+    .purple-card .btn-primary:hover{background:#a342d4!important;box-shadow:0 8px 24px rgba(191,90,242,0.4)!important}
   </style>
-  <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "whnbwbfssq");</script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "whnbwbfssq");
+  </script>
+
 </head>
-<body>
+<body data-lang="en">
   <nav class="navbar">
+
     <div class="nav-container">
-      <a href="index.html" class="nav-brand"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
-      <ul class="nav-links">
-        <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
-        <li><a href="services.html" class="active"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
-        <li><a href="info.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
-        <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
-        <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
-        <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-        <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
-      </div>
+    <a href="index.html" class="nav-brand" style="text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
+      <li><a href="services.html" class="active" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+      <li><a href="info.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> <span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+      <li><a href="contact.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;margin-right:8px;background:var(--primary);color:#fff;border:none;cursor:pointer;text-decoration:none" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
+      <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
-  </nav>
+  </div></nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
-      <li><a href="services.html" class="active"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
-      <li><a href="info.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
-      <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+      <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
+      <li><a href="services.html" class="active" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+      <li><a href="info.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> <span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+      <li><a href="contact.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
     </ul>
     <a href="sendinfo.html" class="mobile-cta-btn" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
     <div class="mobile-menu-social">
       <a href="https://facebook.com" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.597 1.325-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="ig.png" alt="Instagram" style="width:40px;height:40px;border-radius:0;object-fit:contain"></a>
       <a href="https://twitter.com" target="_blank" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
     </div>
   </div>
 
   <section class="page-hero">
     <h1 data-en="Our Services" data-bn="আমাদের সেবাসমূহ">Our Services</h1>
-    <p style="max-width:600px;margin:16px auto 0" data-en="We deliver data-driven digital marketing solutions that help your business grow, attract customers, and dominate your market." data-bn="আমরা ডেটা-চালিত ডিজিটাল মার্কেটিং সমাধান প্রদান করি যা আপনার ব্যবসাকে বাড়াতে, গ্রাহক আকর্ষণ করতে এবং আপনার বাজারে আধিপত্য বিস্তার করতে সহায়তা করে।">We deliver data-driven digital marketing solutions that help your business grow, attract customers, and dominate your market.</p>
+    <p style="max-width:600px;margin:16px auto 32px" data-en="Comprehensive digital marketing solutions to grow your business." data-bn="আপনার ব্যবসা বাড়াতে সম্পূর্ণ ডিজিটাল মার্কেটিং সমাধান।">Comprehensive digital marketing solutions to grow your business.</p>
   </section>
 
   <section class="section">
     <div class="section-header">
       <span class="section-label" data-en="What We Offer" data-bn="আমরা কি অফার করি">What We Offer</span>
-      <h2 data-en="Complete Digital Marketing Services" data-bn="সম্পূর্ণ ডিজিটাল মার্কেটিং সেবা">Complete Digital Marketing Services</h2>
-      <p style="margin-top:16px" data-en="From local visibility to global reach, we provide end-to-end solutions tailored to your business needs." data-bn="স্থানীয় দৃশ্যমানতা থেকে বৈশ্বিক পৌঁছানো পর্যন্ত, আমরা আপনার ব্যবসার প্রয়োজন অনুযায়ী শেষ-থেকে-শেষ সমাধান প্রদান করি।">From local visibility to global reach, we provide end-to-end solutions tailored to your business needs.</p>
+      <h2 data-en="Complete Marketing Solutions" data-bn="সম্পূর্ণ মার্কেটিং সমাধান">Complete Marketing Solutions</h2>
     </div>
     <div class="services-grid">
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div style="width:64px;height:64px;background:rgba(66,133,244,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
         </div>
         <h3 class="service-title" data-en="Google My Business" data-bn="গুগল মাই বিজনেস">Google My Business</h3>
-        <p class="service-desc" data-en="Optimize your Google Business Profile to dominate local search and attract nearby customers." data-bn="স্থানীয় সার্চে আধিপত্য করতে এবং কাছের গ্রাহকদের আকর্ষণ করতে আপনার গুগল বিজনেস প্রোফাইল অপ্টিমাইজ করুন।">Optimize your Google Business Profile to dominate local search and attract nearby customers.</p>
-        <ul class="service-list">
-          <li data-en="Profile optimization &amp; verification" data-bn="প্রোফাইল অপ্টিমাইজেশন ও যাচাইকরণ">Profile optimization &amp; verification</li>
-          <li data-en="Review management &amp; responses" data-bn="রিভিউ ব্যবস্থাপনা ও প্রতিক্রিয়া">Review management &amp; responses</li>
-          <li data-en="Posts, offers &amp; updates" data-bn="পোস্ট, অফার ও আপডেট">Posts, offers &amp; updates</li>
-          <li data-en="Insights &amp; performance tracking" data-bn="অন্তর্দৃষ্টি ও কর্মক্ষমতা ট্র্যাকিং">Insights &amp; performance tracking</li>
-          <li data-en="Local SEO integration" data-bn="স্থানীয় SEO সংহতকরণ">Local SEO integration</li>
-        </ul>
+        <p class="service-desc" data-en="Dominate local search and attract nearby customers." data-bn="স্থানীয় সার্চে আধিপত্য বিস্তার করুন এবং কাছাকাছি গ্রাহকদের আকর্ষণ করুন।">Dominate local search and attract nearby customers.</p>
+        <ul class="service-list"><li data-en="Profile Optimization" data-bn="প্রোফাইল অপ্টিমাইজেশন">Profile Optimization</li><li data-en="Reviews Management" data-bn="রিভিউ ম্যানেজমেন্ট">Reviews Management</li><li data-en="Posts & Updates" data-bn="পোস্ট ও আপডেট">Posts & Updates</li><li data-en="Local SEO" data-bn="লোকাল এসইও">Local SEO</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        <div style="width:64px;height:64px;background:rgba(175,82,222,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#4267B2"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.597 1.325-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg>
         </div>
         <h3 class="service-title" data-en="Social Media Marketing" data-bn="সোশ্যাল মিডিয়া মার্কেটিং">Social Media Marketing</h3>
-        <p class="service-desc" data-en="Build engaged communities and drive brand awareness across every major social platform." data-bn="প্রতিটি প্রধান সোশ্যাল প্ল্যাটফর্মে নিযুক্ত সম্প্রদায় তৈরি করুন এবং ব্র্যান্ড সচেতনতা বাড়ান।">Build engaged communities and drive brand awareness across every major social platform.</p>
-        <ul class="service-list">
-          <li data-en="Content creation &amp; curation" data-bn="কন্টেন্ট তৈরি ও কিউরেশন">Content creation &amp; curation</li>
-          <li data-en="Community management" data-bn="কমিউনিটি ব্যবস্থাপনা">Community management</li>
-          <li data-en="Paid social ad campaigns" data-bn="পেইড সোশ্যাল বিজ্ঞাপন প্রচারণা">Paid social ad campaigns</li>
-          <li data-en="Influencer outreach" data-bn="ইনফ্লুয়েন্সার আউটরিচ">Influencer outreach</li>
-          <li data-en="Performance analytics &amp; reporting" data-bn="কর্মক্ষমতা বিশ্লেষণ ও রিপোর্টিং">Performance analytics &amp; reporting</li>
-        </ul>
+        <p class="service-desc" data-en="Build powerful social presence across all platforms." data-bn="সমস্ত প্ল্যাটফর্মে শক্তিশালী উপস্থিতি।">Build powerful social presence across all platforms.</p>
+        <ul class="service-list"><li data-en="Content Creation" data-bn="কন্টেন্ট তৈরি">Content Creation</li><li data-en="Community Management" data-bn="কমিউনিটি ম্যানেজমেন্ট">Community Management</li><li data-en="Influencer Marketing" data-bn="ইনফ্লুয়েন্সার মার্কেটিং">Influencer Marketing</li><li data-en="Analytics" data-bn="অ্যানালিটিক্স">Analytics</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://www.vectorlogo.zone/logos/google_ads/google_ads-icon.svg" alt="PPC" style="width:36px;height:36px">
         </div>
-        <h3 class="service-title" data-en="PPC Advertising" data-bn="PPC বিজ্ঞাপন">PPC Advertising</h3>
-        <p class="service-desc" data-en="High-ROI pay-per-click campaigns on Google, Meta, and beyond that deliver measurable results." data-bn="Google, Meta এবং অন্যান্য平台上 উচ্চ-ROI পে-পার-ক্লিক প্রচারণা যা পরিমাপযোগ্য ফলাফল দেয়।">High-ROI pay-per-click campaigns on Google, Meta, and beyond that deliver measurable results.</p>
-        <ul class="service-list">
-          <li data-en="Keyword research &amp; strategy" data-bn="কীওয়ার্ড গবেষণা ও কৌশল">Keyword research &amp; strategy</li>
-          <li data-en="Ad copywriting &amp; creative" data-bn="বিজ্ঞাপন কপিরাইটিং ও ক্রিয়েটিভ">Ad copywriting &amp; creative</li>
-          <li data-en="A/B testing &amp; optimization" data-bn="A/B টেস্টিং ও অপ্টিমাইজেশন">A/B testing &amp; optimization</li>
-          <li data-en="Budget management &amp; bid strategy" data-bn="বাজেট ব্যবস্থাপনা ও বিড কৌশল">Budget management &amp; bid strategy</li>
-          <li data-en="Conversion tracking &amp; attribution" data-bn="কনভার্সন ট্র্যাকিং ও অ্যাট্রিবিউশন">Conversion tracking &amp; attribution</li>
-        </ul>
+        <h3 class="service-title" data-en="PPC Advertising" data-bn="পিপিসি বিজ্ঞাপন">PPC Advertising</h3>
+        <p class="service-desc" data-en="Maximize ROI with targeted ad campaigns." data-bn="টার্গেটেড বিজ্ঞাপনে ROI সর্বাধিক করুন।">Maximize ROI with targeted ad campaigns.</p>
+        <ul class="service-list"><li data-en="Google Ads" data-bn="গুগল অ্যাডস">Google Ads</li><li data-en="Facebook Ads" data-bn="ফেসবুক অ্যাডস">Facebook Ads</li><li data-en="Retargeting" data-bn="রিটার্গেটিং">Retargeting</li><li data-en="A/B Testing" data-bn="এ/বি টেস্টিং">A/B Testing</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <div style="width:64px;height:64px;background:rgba(255,160,0,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#FF7A59"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
         </div>
         <h3 class="service-title" data-en="Content Marketing" data-bn="কন্টেন্ট মার্কেটিং">Content Marketing</h3>
-        <p class="service-desc" data-en="Strategic content that builds authority, drives traffic, and converts leads into loyal customers." data-bn="কৌশলগত কন্টেন্ট যা কর্তৃত্ব প্রতিষ্ঠা করে, ট্রাফিক চালিত করে এবং লিডকে বিশ্বস্ত গ্রাহকে রূপান্তর করে।">Strategic content that builds authority, drives traffic, and converts leads into loyal customers.</p>
-        <ul class="service-list">
-          <li data-en="Blog writing &amp; SEO content" data-bn="ব্লগ লেখা ও SEO কন্টেন্ট">Blog writing &amp; SEO content</li>
-          <li data-en="Video production &amp; editing" data-bn="ভিডিও প্রযোজনা ও সম্পাদনা">Video production &amp; editing</li>
-          <li data-en="Infographics &amp; visual assets" data-bn="ইনফোগ্রাফিক্স ও ভিজ্যুয়াল সম্পদ">Infographics &amp; visual assets</li>
-          <li data-en="Email marketing campaigns" data-bn="ইমেল মার্কেটিং প্রচারণা">Email marketing campaigns</li>
-          <li data-en="Content strategy &amp; calendar" data-bn="কন্টেন্ট কৌশল ও ক্যালেন্ডার">Content strategy &amp; calendar</li>
-        </ul>
+        <p class="service-desc" data-en="Tell your brand story with compelling content." data-bn="আকর্ষণীয় কন্টেন্ট দিয়ে ব্র্যান্ডের গল্প বলুন।">Tell your brand story with compelling content.</p>
+        <ul class="service-list"><li data-en="Blog Writing" data-bn="ব্লগ লেখা">Blog Writing</li><li data-en="Video Production" data-bn="ভিডিও প্রোডাকশন">Video Production</li><li data-en="Infographics" data-bn="ইনফোগ্রাফিক্স">Infographics</li><li data-en="Email Marketing" data-bn="ইমেইল মার্কেটিং">Email Marketing</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <div style="width:64px;height:64px;background:rgba(30,176,199,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#21759B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/></svg>
         </div>
         <h3 class="service-title" data-en="Web Development" data-bn="ওয়েব ডেভেলপমেন্ট">Web Development</h3>
-        <p class="service-desc" data-en="High-performance websites and web apps built for speed, conversions, and seamless user experience." data-bn="গতি, রূপান্তর এবং নিরবচ্ছিন্ন ব্যবহারকারীর অভিজ্ঞতার জন্য তৈরি উচ্চ-পারফরম্যান্স ওয়েবসাইট ও ওয়েব অ্যাপ।">High-performance websites and web apps built for speed, conversions, and seamless user experience.</p>
-        <ul class="service-list">
-          <li data-en="Custom website development" data-bn="কাস্টম ওয়েবসাইট ডেভেলপমেন্ট">Custom website development</li>
-          <li data-en="E-commerce store setup" data-bn="ই-কমার্স স্টোর সেটআপ">E-commerce store setup</li>
-          <li data-en="CMS integration (WordPress, etc.)" data-bn="CMS সংহতকরণ (WordPress, ইত্যাদি)">CMS integration (WordPress, etc.)</li>
-          <li data-en="Mobile responsive design" data-bn="মোবাইল রেস্পন্সিভ ডিজাইন">Mobile responsive design</li>
-          <li data-en="Performance &amp; speed optimization" data-bn="পারফরম্যান্স ও স্পিড অপ্টিমাইজেশন">Performance &amp; speed optimization</li>
-        </ul>
+        <p class="service-desc" data-en="Stunning websites that convert visitors." data-bn="ভিজিটরদের রূপান্তর করে এমন ওয়েবসাইট।">Stunning websites that convert visitors.</p>
+        <ul class="service-list"><li data-en="Custom Design" data-bn="কাস্টম ডিজাইন">Custom Design</li><li data-en="E-commerce" data-bn="ই-কমার্স">E-commerce</li><li data-en="Landing Pages" data-bn="ল্যান্ডিং পেজ">Landing Pages</li><li data-en="Maintenance" data-bn="মেইনটেনেন্স">Maintenance</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <div style="width:64px;height:64px;background:rgba(10,132,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" alt="Analytics" style="width:36px;height:36px">
         </div>
-        <h3 class="service-title" data-en="Analytics &amp; Reporting" data-bn="বিশ্লেষণ ও রিপোর্টিং">Analytics &amp; Reporting</h3>
-        <p class="service-desc" data-en="Data-driven insights and transparent reporting to power your marketing decisions and maximize ROI." data-bn="আপনার বিপণন সিদ্ধান্ত চালিত করতে এবং ROI সর্বাধিক করতে ডেটা-চালিত অন্তর্দৃষ্টি ও স্বচ্ছ রিপোর্টিং।">Data-driven insights and transparent reporting to power your marketing decisions and maximize ROI.</p>
-        <ul class="service-list">
-          <li data-en="Real-time custom dashboards" data-bn="রিয়েল-টাইম কাস্টম ড্যাশবোর্ড">Real-time custom dashboards</li>
-          <li data-en="Monthly performance reports" data-bn="মাসিক কর্মক্ষমতা রিপোর্ট">Monthly performance reports</li>
-          <li data-en="KPI tracking &amp; goal setting" data-bn="KPI ট্র্যাকিং ও লক্ষ্য নির্ধারণ">KPI tracking &amp; goal setting</li>
-          <li data-en="Funnel &amp; attribution analysis" data-bn="ফানেল ও অ্যাট্রিবিউশন বিশ্লেষণ">Funnel &amp; attribution analysis</li>
-          <li data-en="Actionable growth recommendations" data-bn="কার্যকরী বৃদ্ধির সুপারিশ">Actionable growth recommendations</li>
-        </ul>
+        <h3 class="service-title" data-en="Analytics & Reporting" data-bn="বিশ্লেষণ ও রিপোর্টিং">Analytics & Reporting</h3>
+        <p class="service-desc" data-en="Data-driven decisions for growth." data-bn="বৃদ্ধির জন্য ডেটা-চালিত সিদ্ধান্ত।">Data-driven decisions for growth.</p>
+        <ul class="service-list"><li data-en="Google Analytics" data-bn="গুগল অ্যানালিটিক্স">Google Analytics</li><li data-en="Custom Dashboards" data-bn="কাস্টম ড্যাশবোর্ড">Custom Dashboards</li><li data-en="Monthly Reports" data-bn="মাসিক রিপোর্ট">Monthly Reports</li><li data-en="Conversion Tracking" data-bn="কনভার্শন ট্র্যাকিং">Conversion Tracking</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4z"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 14h8"/></svg>
+        <div style="width:64px;height:64px;background:rgba(255,149,0,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#FF9500"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.14 16.14l-2.58-4.57c-.24-.42-.8-.57-1.23-.34l-1.63.88 1.6 2.84c.24.42.79.57 1.22.34l2.62-1.42c.42-.23.57-.79.33-1.22-.23-.42-.79-.57-1.22-.33l-.11.06zM7 7.25h2.5V10H7V7.25zM7 11h2.5v2.75H7V11zm4 0h2.5v2.75H11V11zm4 0h2.5v2.75H15V11zm-8 4h2.5v2.75H7V15zm4 0h2.5v2.75H11V15zm4-8h2.5v2.75H15V7h-7v2.75h7V7z"/></svg>
         </div>
         <h3 class="service-title" data-en="Conversion Optimization" data-bn="কনভার্সন অপ্টিমাইজেশন">Conversion Optimization</h3>
-        <p class="service-desc" data-en="Turn more visitors into paying customers with data-backed CRO strategies and continuous experimentation." data-bn="ডেটা-সমর্থিত CRO কৌশল এবং ক্রমাগত পরীক্ষা-নিরীক্ষার মাধ্যমে আরও দর্শককে গ্রাহকে রূপান্তর করুন।">Turn more visitors into paying customers with data-backed CRO strategies and continuous experimentation.</p>
-        <ul class="service-list">
-          <li data-en="A/B &amp; multivariate testing" data-bn="A/B ও মাল্টিভেরিয়েট টেস্টিং">A/B &amp; multivariate testing</li>
-          <li data-en="UX audit &amp; heatmap analysis" data-bn="UX অডিট ও হিটম্যাপ বিশ্লেষণ">UX audit &amp; heatmap analysis</li>
-          <li data-en="Landing page optimization" data-bn="ল্যান্ডিং পেজ অপ্টিমাইজেশন">Landing page optimization</li>
-          <li data-en="Checkout &amp; funnel improvement" data-bn="চেকআউট ও ফানেল উন্নতি">Checkout &amp; funnel improvement</li>
-          <li data-en="CRO strategy &amp; roadmap" data-bn="CRO কৌশল ও রোডম্যাপ">CRO strategy &amp; roadmap</li>
-        </ul>
+        <p class="service-desc" data-en="Turn more visitors into customers with data-backed strategies." data-bn="ডেটা-ব্যাকড কৌশলগুলির মাধ্যমে আরো ভিজিটরকে কাস্টমারে পরিণত করুন।">Turn more visitors into customers with data-backed strategies.</p>
+        <ul class="service-list"><li data-en="Funnel Analysis" data-bn="ফানেল বিশ্লেষণ">Funnel Analysis</li><li data-en="A/B Testing" data-bn="এ/বি টেস্টিং">A/B Testing</li><li data-en="UX Audits" data-bn="ইউএক্স অডিট">UX Audits</li><li data-en="Heatmap Tracking" data-bn="হিটম্যাপ ট্র্যাকিং">Heatmap Tracking</li></ul>
       </div>
       <div class="uniform-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <div style="width:64px;height:64px;background:rgba(255,45,85,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#FF2D55"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
         </div>
-        <h3 class="service-title" data-en="Brand &amp; Identity" data-bn="ব্র্যান্ড ও আইডেন্টিটি">Brand &amp; Identity</h3>
-        <p class="service-desc" data-en="Build a memorable brand that stands out, connects emotionally, and drives long-term customer loyalty." data-bn="একটি স্মরণীয় ব্র্যান্ড তৈরি করুন যা আলাদা হয়, আবেগগতভাবে সংযোগ স্থাপন করে এবং দীর্ঘমেয়াদী গ্রাহক আনুগত্য চালিত করে।">Build a memorable brand that stands out, connects emotionally, and drives long-term customer loyalty.</p>
-        <ul class="service-list">
-          <li data-en="Logo &amp; visual identity design" data-bn="লোগো ও ভিজ্যুয়াল আইডেন্টিটি ডিজাইন">Logo &amp; visual identity design</li>
-          <li data-en="Brand guidelines &amp; strategy" data-bn="ব্র্যান্ড গাইডলাইন ও কৌশল">Brand guidelines &amp; strategy</li>
-          <li data-en="Brand messaging &amp; voice" data-bn="ব্র্যান্ড মেসেজিং ও ভয়েস">Brand messaging &amp; voice</li>
-          <li data-en="Market positioning" data-bn="মার্কেট পজিশনিং">Market positioning</li>
-          <li data-en="Visual asset creation" data-bn="ভিজ্যুয়াল সম্পদ তৈরি">Visual asset creation</li>
-        </ul>
+        <h3 class="service-title" data-en="Brand & Identity" data-bn="ব্র্যান্ড এবং পরিচয়">Brand & Identity</h3>
+        <p class="service-desc" data-en="Create a memorable brand that resonates with your audience." data-bn="একটি স্মরণীয় ব্র্যান্ড তৈরি করুন যা আপনার দর্শকদের সাথে অনুরণিত হয়।">Create a memorable brand that resonates with your audience.</p>
+        <ul class="service-list"><li data-en="Logo Design" data-bn="লোগো ডিজাইন">Logo Design</li><li data-en="Brand Guidelines" data-bn="ব্র্যান্ড নির্দেশিকা">Brand Guidelines</li><li data-en="Visual Identity" data-bn="ভিজ্যুয়াল আইডেন্টিটি">Visual Identity</li><li data-en="Brand Strategy" data-bn="ব্র্যান্ড কৌশল">Brand Strategy</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section -->
+  <section class="section" style="background:var(--background)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Stack" data-bn="আমাদের স্ট্যাক">Our Stack</span>
+      <h2 data-en="Development Technologies" data-bn="ডেভেলপমেন্ট টেকনোলজি">Development Technologies</h2>
+      <p style="margin-top:16px" data-en="We use industry-leading technologies to deliver premium digital solutions." data-bn="আমরা প্রিমিয়াম ডিজিটাল সমাধান দিতে শীর্ষ প্রযুক্তি ব্যবহার করি।">We use industry-leading technologies to deliver premium digital solutions.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;max-width:900px;margin:0 auto">
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Flutter.png" alt="Flutter" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Flutter</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="PYTHON.png" alt="Python" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Python</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="MongoDB.png" alt="MongoDB" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">MongoDB</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Java.png" alt="Java" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">Java</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="tech7Wordpress.png" alt="WordPress" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">WordPress</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="Prestashop.png" alt="PrestaShop" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">PrestaShop</div>
+      </div>
+      <div class="uniform-card" style="padding:20px;text-align:center;min-width:90px">
+        <img src="PyTorch.png" alt="PyTorch" style="width:44px;height:44px;object-fit:contain;margin-bottom:8px">
+        <div style="font-weight:700;font-size:0.7rem">AI/ML</div>
       </div>
     </div>
   </section>
 
   <section class="section" style="background:var(--surface)">
     <div class="section-header">
-      <span class="section-label" data-en="Technology Stack" data-bn="প্রযুক্তি স্ট্যাক">Technology Stack</span>
-      <h2 data-en="Tools &amp; Technologies We Master" data-bn="আমরা যে সরঞ্জাম ও প্রযুক্তি দক্ষ">Tools &amp; Technologies We Master</h2>
-      <p style="margin-top:16px" data-en="We leverage cutting-edge technologies to build high-performance websites, mobile apps, and AI-powered solutions." data-bn="আমরা উচ্চ-পারফরম্যান্স ওয়েবসাইট, মোবাইল অ্যাপ এবং AI-চালিত সমাধান তৈরি করতে অত্যাধুনিক প্রযুক্তি ব্যবহার করি।">We leverage cutting-edge technologies to build high-performance websites, mobile apps, and AI-powered solutions.</p>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1100px;margin:0 auto">
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="Flutter.png" alt="Flutter" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">Flutter</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="PYTHON.png" alt="Python" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">Python</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="MongoDB.png" alt="MongoDB" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">MongoDB</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="Java.png" alt="Java" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">Java</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="tech7Wordpress.png" alt="WordPress" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">WordPress</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="Prestashop.png" alt="PrestaShop" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">PrestaShop</div></div>
-      <div class="uniform-card" style="padding:24px;text-align:center;min-width:100px"><img src="PyTorch.png" alt="AI/ML" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px"><div style="font-weight:700;font-size:.75rem">AI/ML</div></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <span class="section-label" data-en="Pricing" data-bn="মূল্য তালিকা">Pricing</span>
-      <h2 data-en="Transparent Plans for Every Business" data-bn="প্রতিটি ব্যবসার জন্য স্বচ্ছ পরিকল্পনা">Transparent Plans for Every Business</h2>
-      <p style="margin-top:16px" data-en="Choose the plan that fits your goals. All plans include a free initial consultation and monthly reporting." data-bn="আপনার লক্ষ্য অনুযায়ী পরিকল্পনা বেছে নিন। সমস্ত পরিকল্পনায় বিনামূল্যে প্রাথমিক পরামর্শ এবং মাসিক রিপোর্টিং অন্তর্ভুক্ত।">Choose the plan that fits your goals. All plans include a free initial consultation and monthly reporting.</p>
+      <h2 data-en="Transparent Pricing Plans" data-bn="স্বচ্ছ মূল্য পরিকল্পনা">Transparent Pricing Plans</h2>
+      <p data-en="Choose the perfect plan for your business growth." data-bn="আপনার ব্যবসার বৃদ্ধির জন্য সঠিক পরিকল্পনা বেছে নিন।">Choose the perfect plan for your business growth.</p>
     </div>
     <div class="pricing-grid">
       <div class="uniform-card pricing-card">
-        <h3 data-en="Essential" data-bn="এসেনশিয়াল">Essential</h3>
-        <div class="price-value">₹13,333</div>
-        <p style="font-size:.85rem;color:var(--on-surface-variant);margin-bottom:24px" data-en="per month" data-bn="প্রতি মাসে">per month</p>
+        <h3 data-en="Essential Plan" data-bn="এসেন্সিয়াল প্ল্যান">Essential Plan</h3>
+        <div class="price-value" data-en="₹13,333" data-bn="₹১৩,৩৩৩" data-usd="$199" data-inr="₹13,333">₹13,333</div>
         <ul class="price-features">
-          <li data-en="Basic SEO audit &amp; keyword research" data-bn="মৌলিক SEO অডিট ও কীওয়ার্ড গবেষণা">Basic SEO audit &amp; keyword research</li>
-          <li data-en="Up to 5 keywords tracking" data-bn="৫টি কীওয়ার্ড ট্র্যাকিং">Up to 5 keywords tracking</li>
-          <li data-en="Monthly social media posts (8 posts)" data-bn="মাসিক সোশ্যাল মিডিয়া পোস্ট (৮টি পোস্ট)">Monthly social media posts (8 posts)</li>
-          <li data-en="Google My Business setup &amp; optimization" data-bn="গুগল মাই বিজনেস সেটআপ ও অপ্টিমাইজেশন">Google My Business setup &amp; optimization</li>
-          <li data-en="Monthly performance report" data-bn="মাসিক কর্মক্ষমতা রিপোর্ট">Monthly performance report</li>
+          <li data-en="6 Pages Website" data-bn="৬ পেজ ওয়েবসাইট">6 Pages Website</li>
+          <li data-en="Basic SEO" data-bn="বেসিক এসইও">Basic SEO</li>
+          <li data-en="Responsive Design" data-bn="রেসপনসিভ ডিজাইন">Responsive Design</li>
+          <li data-en="Contact Form" data-bn="কন্টাক্ট ফর্ম">Contact Form</li>
+          <li data-en="Hosting Setup" data-bn="হোস্টিং সেটআপ">Hosting Setup</li>
         </ul>
-        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
       </div>
-      <div class="uniform-card pricing-card">
-        <span class="pricing-badge" data-en="Popular" data-bn="জনপ্রিয়">Popular</span>
-        <h3 data-en="Elite" data-bn="এলিট">Elite</h3>
-        <div class="price-value">₹30,000</div>
-        <p style="font-size:.85rem;color:var(--on-surface-variant);margin-bottom:24px" data-en="per month" data-bn="প্রতি মাসে">per month</p>
+      <div class="uniform-card pricing-card purple-card">
+        <div class="popular-badge" style="position:absolute;top:12px;right:12px;color:#fff;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700">POPULAR</div>
+        <h3 data-en="Elite Plan" data-bn="এলিট প্ল্যান">Elite Plan</h3>
+        <div class="price-value" data-en="₹30,000" data-bn="₹৩০,০০০" data-usd="$399" data-inr="₹30,000">₹30,000</div>
         <ul class="price-features">
-          <li data-en="Advanced SEO with technical audit" data-bn="উন্নত SEO ও টেকনিক্যাল অডিট">Advanced SEO with technical audit</li>
-          <li data-en="Up to 15 keywords tracking" data-bn="১৫টি কীওয়ার্ড ট্র্যাকিং">Up to 15 keywords tracking</li>
-          <li data-en="Full social media management (4 platforms)" data-bn="পূর্ণ সোশ্যাল মিডিয়া ব্যবস্থাপনা (৪ প্ল্যাটফর্ম)">Full social media management (4 platforms)</li>
-          <li data-en="PPC campaign management (Google &amp; Meta)" data-bn="PPC প্রচারণা ব্যবস্থাপনা (Google ও Meta)">PPC campaign management (Google &amp; Meta)</li>
-          <li data-en="Content marketing (4 blogs + 2 videos/month)" data-bn="কন্টেন্ট মার্কেটিং (৪ ব্লগ + ২ ভিডিও/মাস)">Content marketing (4 blogs + 2 videos/month)</li>
-          <li data-en="Monthly analytics &amp; insights report" data-bn="মাসিক বিশ্লেষণ ও অন্তর্দৃষ্টি রিপোর্ট">Monthly analytics &amp; insights report</li>
-          <li data-en="Priority email &amp; phone support" data-bn="অগ্রাধিকার ইমেল ও ফোন সহায়তা">Priority email &amp; phone support</li>
+          <li data-en="12 Pages Website" data-bn="১২ পেজ ওয়েবসাইট">12 Pages Website</li>
+          <li data-en="Advanced SEO" data-bn="অ্যাডভান্সড এসইও">Advanced SEO</li>
+          <li data-en="Content Optimization" data-bn="কন্টেন্ট অপ্টিমাইজেশন">Content Optimization</li>
+          <li data-en="Blog Setup" data-bn="ব্লগ সেটআপ">Blog Setup</li>
+          <li data-en="Social Pages Creation" data-bn="সোশ্যাল পেজ তৈরি">Social Pages Creation</li>
         </ul>
         <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Get Started" data-bn="শুরু করুন">Get Started</a>
       </div>
       <div class="uniform-card pricing-card">
-        <h3 data-en="Business" data-bn="বিজনেস">Business</h3>
+        <h3 data-en="Business Plan" data-bn="বিজনেস প্ল্যান">Business Plan</h3>
         <div class="price-value" data-en="Custom" data-bn="কাস্টম">Custom</div>
-        <p style="font-size:.85rem;color:var(--on-surface-variant);margin-bottom:24px" data-en="tailored to your needs" data-bn="আপনার প্রয়োজন অনুযায়ী">tailored to your needs</p>
         <ul class="price-features">
-          <li data-en="Full digital marketing strategy" data-bn="সম্পূর্ণ ডিজিটাল মার্কেটিং কৌশল">Full digital marketing strategy</li>
-          <li data-en="Unlimited keyword tracking" data-bn="আনলিমিটেড কীওয়ার্ড ট্র্যাকিং">Unlimited keyword tracking</li>
-          <li data-en="Multi-channel marketing (all platforms)" data-bn="মাল্টি-চ্যানেল মার্কেটিং (সব প্ল্যাটফর্ম)">Multi-channel marketing (all platforms)</li>
-          <li data-en="Custom web development &amp; design" data-bn="কাস্টম ওয়েব ডেভেলপমেন্ট ও ডিজাইন">Custom web development &amp; design</li>
-          <li data-en="Dedicated account manager" data-bn="ডেডিকেটেড অ্যাকাউন্ট ম্যানেজার">Dedicated account manager</li>
-          <li data-en="Real-time reporting &amp; dashboard" data-bn="রিয়েল-টাইম রিপোর্টিং ও ড্যাশবোর্ড">Real-time reporting &amp; dashboard</li>
-          <li data-en="24/7 priority support" data-bn="২৪/৭ অগ্রাধিকার সহায়তা">24/7 priority support</li>
+          <li data-en="Custom Website" data-bn="কাস্টম ওয়েবসাইট">Custom Website</li>
+          <li data-en="Full SEO Package" data-bn="সম্পূর্ণ এসইও প্যাকেজ">Full SEO Package</li>
+          <li data-en="Content Strategy" data-bn="কন্টেন্ট কৌশল">Content Strategy</li>
+          <li data-en="Performance Marketing" data-bn="পারফরম্যান্স মার্কেটিং">Performance Marketing</li>
+          <li data-en="Dedicated Support" data-bn="ডেডিকেটেড সাপোর্ট">Dedicated Support</li>
         </ul>
-        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center" data-en="Contact Us" data-bn="যোগাযোগ করুন">Contact Us</a>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Contact Us" data-bn="যোগাযোগ করুন">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:80px">
+      <h2 data-en="Service FAQs" data-bn="সেবা সংক্রান্ত প্রশ্ন">Service FAQs</h2>
+    </div>
+    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+      <div class="uniform-card" style="padding:24px;border-radius:16px">
+        <h4 style="margin-bottom:8px" data-en="How long until I see SEO results?" data-bn="এসইও ফলাফল দেখতে কতক্ষণ লাগবে?">How long until I see SEO results?</h4>
+        <p style="font-size:0.9rem" data-en="Typically, significant movement takes 3-6 months, but we focus on quick-win technical fixes in the first 30 days." data-bn="সাধারণত ৩-৬ মাস লাগে, তবে আমরা প্রথম ৩০ দিনে দ্রুত সমাধানযোগ্য কারিগরি দিকগুলোতে ফোকাস করি।">Typically, significant movement takes 3-6 months, but we focus on quick-win technical fixes in the first 30 days.</p>
+      </div>
+      <div class="uniform-card" style="padding:24px;border-radius:16px">
+        <h4 style="margin-bottom:8px" data-en="Do you handle content creation?" data-bn="আপনারা কি কন্টেন্ট তৈরি করেন?">Do you handle content creation?</h4>
+        <p style="font-size:0.9rem" data-en="Yes, our team includes professional copywriters who create SEO-optimized blogs, web copy, and social media posts." data-bn="হ্যাঁ, আমাদের টিমে পেশাদার কপিরাইটার রয়েছেন যারা এসইও-অপ্টিমাইজড ব্লগ এবং সোশ্যাল মিডিয়া পোস্ট তৈরি করেন।">Yes, our team includes professional copywriters who create SEO-optimized blogs, web copy, and social media posts.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--surface)">
+  <section class="section cta-section" style="margin-top:80px;border-top:1px solid var(--outline);border-bottom:1px solid var(--outline);background:var(--surface)">
     <div class="section-header">
-      <span class="section-label" data-en="FAQ" data-bn="প্রায়শই জিজ্ঞাসিত প্রশ্ন">FAQ</span>
-      <h2 data-en="Frequently Asked Questions" data-bn="প্রায়শই জিজ্ঞাসিত প্রশ্ন">Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-grid">
-      <details class="faq-item">
-        <summary data-en="What services does AlphaSEO &amp; Marketing provide?" data-bn="AlphaSEO &amp; Marketing কী কী সেবা প্রদান করে?">What services does AlphaSEO &amp; Marketing provide?</summary>
-        <div class="faq-answer" data-en="We offer end-to-end digital marketing services including SEO, Google My Business management, social media marketing, PPC advertising, content marketing, web development, analytics &amp; reporting, conversion optimization, and brand identity. Every service is tailored to your specific business goals and industry." data-bn="আমরা শেষ-থেকে-শেষ ডিজিটাল মার্কেটিং সেবা প্রদান করি যার মধ্যে রয়েছে SEO, গুগল মাই বিজনেস ব্যবস্থাপনা, সোশ্যাল মিডিয়া মার্কেটিং, PPC বিজ্ঞাপন, কন্টেন্ট মার্কেটিং, ওয়েব ডেভেলপমেন্ট, বিশ্লেষণ ও রিপোর্টিং, কনভার্সন অপ্টিমাইজেশন এবং ব্র্যান্ড আইডেন্টিটি। প্রতিটি সেবা আপনার নির্দিষ্ট ব্যবসায়িক লক্ষ্য এবং শিল্প অনুযায়ী তৈরি করা হয়।">We offer end-to-end digital marketing services including SEO, Google My Business management, social media marketing, PPC advertising, content marketing, web development, analytics &amp; reporting, conversion optimization, and brand identity. Every service is tailored to your specific business goals and industry.</div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="How long does it take to see results?" data-bn="ফলাফল দেখতে কত সময় লাগে?">How long does it take to see results?</summary>
-        <div class="faq-answer" data-en="Timelines vary by service. SEO typically takes 3-6 months to show significant organic growth. PPC ads can deliver traffic within days. Social media engagement often improves within the first month. We set realistic milestones and keep you updated with transparent monthly reports showing exactly what we've achieved." data-bn="সময়সীমা সেবা অনুযায়ী পরিবর্তিত হয়। SEO সাধারণত উল্লেখযোগ্য জৈব বৃদ্ধি দেখাতে ৩-৬ মাস সময় নেয়। PPC বিজ্ঞাপন দিনের মধ্যে ট্রাফিক দিতে পারে। সোশ্যাল মিডিয়া ব্যস্ততা প্রায়ই প্রথম মাসের মধ্যে উন্নতি করে। আমরা বাস্তবসম্মত মাইলফলক নির্ধারণ করি এবং স্বচ্ছ মাসিক রিপোর্ট দিয়ে আপনাকে আপডেট রাখি যা আমরা কী অর্জন করেছি তা দেখায়।">Timelines vary by service. SEO typically takes 3-6 months to show significant organic growth. PPC ads can deliver traffic within days. Social media engagement often improves within the first month. We set realistic milestones and keep you updated with transparent monthly reports showing exactly what we've achieved.</div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="Do you offer customized pricing?" data-bn="আপনারা কি কাস্টমাইজড মূল্য অফার করেন?">Do you offer customized pricing?</summary>
-        <div class="faq-answer" data-en="Yes. Our Business plan is fully custom, and even our Essential and Elite plans can be tailored with add-on services. We believe in transparent pricing — no hidden fees, no long-term lock-ins unless you choose. Contact us for a free consultation and we'll build a package that fits your budget." data-bn="হ্যাঁ। আমাদের বিজনেস প্ল্যান সম্পূর্ণ কাস্টম, এবং আমাদের এসেনশিয়াল এবং এলিট প্ল্যানও অ্যাড-অন সেবার সাথে তৈরি করা যেতে পারে। আমরা স্বচ্ছ মূল্য নির্ধারণে বিশ্বাস করি — কোন লুকানো ফি নেই, আপনি না চাইলে দীর্ঘমেয়াদী বাঁধাই নেই। বিনামূল্যে পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন এবং আমরা আপনার বাজেট অনুযায়ী একটি প্যাকেজ তৈরি করব।">Yes. Our Business plan is fully custom, and even our Essential and Elite plans can be tailored with add-on services. We believe in transparent pricing — no hidden fees, no long-term lock-ins unless you choose. Contact us for a free consultation and we'll build a package that fits your budget.</div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="How do you measure success?" data-bn="আপনারা কীভাবে সাফল্য পরিমাপ করেন?">How do you measure success?</summary>
-        <div class="faq-answer" data-en="We use data-driven KPIs tailored to your goals — organic traffic, keyword rankings, conversion rates, ROAS, engagement metrics, lead generation, and revenue attribution. You get access to real-time dashboards and monthly reports so you can see exactly how your investment is performing." data-bn="আমরা আপনার লক্ষ্য অনুযায়ী ডেটা-চালিত KPI ব্যবহার করি — জৈব ট্রাফিক, কীওয়ার্ড র্যাঙ্কিং, কনভার্সন রেট, ROAS, ব্যস্ততা মেট্রিক্স, লিড জেনারেশন এবং রাজস্ব অ্যাট্রিবিউশন। আপনি রিয়েল-টাইম ড্যাশবোর্ড এবং মাসিক রিপোর্টে অ্যাক্সেস পান যাতে আপনি দেখতে পারেন আপনার বিনিয়োগ কীভাবে পারফর্ম করছে।">We use data-driven KPIs tailored to your goals — organic traffic, keyword rankings, conversion rates, ROAS, engagement metrics, lead generation, and revenue attribution. You get access to real-time dashboards and monthly reports so you can see exactly how your investment is performing.</div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="What makes AlphaSEO different?" data-bn="AlphaSEO কে কী আলাদা করে?">What makes AlphaSEO different?</summary>
-        <div class="faq-answer" data-en="We combine local market expertise with global best practices. Every strategy is custom-built — no templates. We provide transparent reporting, dedicated account management, and honest advice. We're a boutique agency that treats every client as a partnership, not just another account." data-bn="আমরা স্থানীয় বাজার দক্ষতা এবং বৈশ্বিক সেরা অনুশীলনগুলিকে একত্রিত করি। প্রতিটি কৌশল কাস্টম-বিল্ট — কোন টেমপ্লেট নেই। আমরা স্বচ্ছ রিপোর্টিং, ডেডিকেটেড অ্যাকাউন্ট ম্যানেজমেন্ট এবং সৎ পরামর্শ প্রদান করি। আমরা একটি বুটিক এজেন্সি যা প্রতিটি ক্লায়েন্টকে একটি অংশীদারিত্ব হিসাবে বিবেচনা করে, শুধু আরেকটি অ্যাকাউন্ট নয়।">We combine local market expertise with global best practices. Every strategy is custom-built — no templates. We provide transparent reporting, dedicated account management, and honest advice. We're a boutique agency that treats every client as a partnership, not just another account.</div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="How do I get started?" data-bn="আমি কিভাবে শুরু করব?">How do I get started?</summary>
-        <div class="faq-answer" data-en="Getting started is simple. Click the 'Let's Talk' button on this page, call us at +91 89065 81045, or email agencyroy0@gmail.com. We'll schedule a free consultation to understand your business, discuss your goals, and propose a tailored strategy. No obligation, no pressure." data-bn="শুরু করা সহজ। এই পৃষ্ঠায় 'কথা বলুন' বাটনে ক্লিক করুন, আমাদের +91 89065 81045 নম্বরে কল করুন বা agencyroy0@gmail.com এ ইমেল করুন। আমরা আপনার ব্যবসা বোঝার জন্য একটি বিনামূল্যে পরামর্শের সময় নির্ধারণ করব, আপনার লক্ষ্য নিয়ে আলোচনা করব এবং একটি উপযুক্ত কৌশল প্রস্তাব করব। কোন বাধ্যবাধকতা নেই, কোন চাপ নেই।">Getting started is simple. Click the 'Let's Talk' button on this page, call us at +91 89065 81045, or email agencyroy0@gmail.com. We'll schedule a free consultation to understand your business, discuss your goals, and propose a tailored strategy. No obligation, no pressure.</div>
-      </details>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <span class="section-label" data-en="Our Process" data-bn="আমাদের প্রক্রিয়া">Our Process</span>
-      <h2 data-en="How We Deliver Results" data-bn="আমরা কীভাবে ফলাফল দিই">How We Deliver Results</h2>
-      <p style="margin-top:16px" data-en="Our proven 4-step methodology ensures every campaign is built on strategy, executed with precision, and optimized for maximum ROI." data-bn="আমাদের প্রমাণিত ৪-ধাপের পদ্ধতি নিশ্চিত করে যে প্রতিটি প্রচারণা কৌশলের উপর নির্মিত, নির্ভুলতার সাথে কার্যকর এবং সর্বোচ্চ ROI-র জন্য অপ্টিমাইজ করা।">Our proven 4-step methodology ensures every campaign is built on strategy, executed with precision, and optimized for maximum ROI.</p>
+      <span class="section-label" data-en="How We Work" data-bn="আমরা কিভাবে কাজ করি">How We Work</span>
+      <h2 data-en="Our Process" data-bn="আমাদের প্রক্রিয়া">Our Process</h2>
     </div>
     <div class="process-grid">
-      <div class="process-card">
-        <div class="process-step" style="background:linear-gradient(135deg,#0A84FF,#0066CC)">1</div>
-        <h3 style="margin-bottom:16px" data-en="Discovery" data-bn="আবিষ্কার">Discovery</h3>
-        <p style="font-size:.9rem" data-en="We deep-dive into your business, industry, competitors, and audience to uncover growth opportunities and define clear objectives." data-bn="আমরা আপনার ব্যবসা, শিল্প, প্রতিযোগী এবং দর্শকদের গভীরভাবে বিশ্লেষণ করি বৃদ্ধির সুযোগ খুঁজে বের করতে এবং স্পষ্ট লক্ষ্য নির্ধারণ করতে।">We deep-dive into your business, industry, competitors, and audience to uncover growth opportunities and define clear objectives.</p>
-      </div>
-      <div class="process-card">
-        <div class="process-step" style="background:linear-gradient(135deg,#AF52DE,#8E2DE2)">2</div>
-        <h3 style="margin-bottom:16px" data-en="Strategy" data-bn="কৌশল">Strategy</h3>
-        <p style="font-size:.9rem" data-en="We create a tailored, data-driven marketing roadmap that aligns with your goals, budget, and timeline for maximum impact." data-bn="আমরা আপনার লক্ষ্য, বাজেট এবং সময়সীমার সাথে সামঞ্জস্যপূর্ণ একটি উপযোগী, ডেটা-চালিত মার্কেটিং রোডম্যাপ তৈরি করি সর্বোচ্চ প্রভাবের জন্য।">We create a tailored, data-driven marketing roadmap that aligns with your goals, budget, and timeline for maximum impact.</p>
-      </div>
-      <div class="process-card">
-        <div class="process-step" style="background:linear-gradient(135deg,#30B0C7,#1E90FF)">3</div>
-        <h3 style="margin-bottom:16px" data-en="Execution" data-bn="কার্যকর">Execution</h3>
-        <p style="font-size:.9rem" data-en="Our expert team implements the strategy across SEO, social, ads, content, and development channels with precision and care." data-bn="আমাদের বিশেষজ্ঞ দল SEO, সোশ্যাল, বিজ্ঞাপন, কন্টেন্ট এবং ডেভেলপমেন্ট চ্যানেল জুড়ে নির্ভুলতা এবং যত্ন সহ কৌশলটি বাস্তবায়ন করে।">Our expert team implements the strategy across SEO, social, ads, content, and development channels with precision and care.</p>
-      </div>
-      <div class="process-card">
-        <div class="process-step" style="background:linear-gradient(135deg,#34C759,#28A745)">4</div>
-        <h3 style="margin-bottom:16px" data-en="Optimization" data-bn="অপ্টিমাইজেশন">Optimization</h3>
-        <p style="font-size:.9rem" data-en="We continuously monitor performance, analyze data, and refine campaigns to improve results and maximize your ROI over time." data-bn="আমরা ক্রমাগত কর্মক্ষমতা পর্যবেক্ষণ করি, ডেটা বিশ্লেষণ করি এবং ফলাফল উন্নত করতে এবং সময়ের সাথে আপনার ROI সর্বাধিক করতে প্রচারণা পরিমার্জন করি।">We continuously monitor performance, analyze data, and refine campaigns to improve results and maximize your ROI over time.</p>
-      </div>
+      <div class="uniform-card"><div class="process-step">01</div><h3 class="process-title" data-en="Discovery" data-bn="আবিষ্কার">Discovery</h3><p class="process-desc" data-en="Understanding your business and goals." data-bn="আপনার ব্যবসা ও লক্ষ্য বোঝা।">Understanding your business and goals.</p></div>
+      <div class="uniform-card"><div class="process-step">02</div><h3 class="process-title" data-en="Strategy" data-bn="কৌশল">Strategy</h3><p class="process-desc" data-en="Custom marketing plan for your needs." data-bn="আপনার চাহিদার জন্য কাস্টম প্ল্যান।">Custom marketing plan for your needs.</p></div>
+      <div class="uniform-card"><div class="process-step">03</div><h3 class="process-title" data-en="Execution" data-bn="বাস্তবায়ন">Execution</h3><p class="process-desc" data-en="Launching campaigns with precision." data-bn="নির্ভুলতার সাথে ক্যাম্পেইন চালু।">Launching campaigns with precision.</p></div>
+      <div class="uniform-card"><div class="process-step">04</div><h3 class="process-title" data-en="Optimization" data-bn="অপ্টিমাইজেশন">Optimization</h3><p class="process-desc" data-en="Continuous improvement for results." data-bn="ফলাফলের জন্য ক্রমাগত উন্নতি।">Continuous improvement for results.</p></div>
     </div>
   </section>
 
-  <section class="section cta-section">
-    <h2 data-en="Ready to Grow Your Business?" data-bn="আপনার ব্যবসা বাড়াতে প্রস্তুত?">Ready to Grow Your Business?</h2>
-    <p style="margin:16px auto 24px;max-width:500px" data-en="Let's discuss how AlphaSEO can help you achieve your digital marketing goals. Get a free consultation today." data-bn="আসুন আলোচনা করি কিভাবে AlphaSEO আপনার ডিজিটাল মার্কেটিং লক্ষ্য অর্জনে সাহায্য করতে পারে। আজই বিনামূল্যে পরামর্শ নিন।">Let's discuss how AlphaSEO can help you achieve your digital marketing goals. Get a free consultation today.</p>
-    <a href="contact.html" class="btn btn-primary" data-en="Claim Free Consultation" data-bn="বিনামূল্যে পরামর্শ নিন">Claim Free Consultation</a>
+  <section class="section" style="text-align:center">
+    <h2 data-en="Ready to Get Started?" data-bn="শুরু করতে প্রস্তুত?">Ready to Get Started?</h2>
+    <p style="margin:16px auto 24px;max-width:500px" data-en="Let's discuss which services are right for you." data-bn="আসুন আলোচনা করি কোন সেবা আপনার জন্য সঠিক।">Let's discuss which services are right for you.</p>
+    <a href="contact.html" class="btn btn-primary" data-en="Free Consultation" data-bn="বিনামূল্যে পরামর্শ">Free Consultation</a>
   </section>
 
-  <footer class="footer">
-    <div class="footer-content">
+  <footer class="footer" style="padding:56px 32px 24px">
+    <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:0 auto">
       <div class="footer-brand">
-        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
-        <p data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/alphaseo.in/" target="_blank"><img src="ig.png" alt="Instagram"></a>
-          <a href="https://wa.me/918906581045" target="_blank" style="font-size:1rem">💬</a>
-          <a href="https://t.me/+918906581045" target="_blank" style="font-size:1rem">✈️</a>
+        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex;text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+        <p style="margin-bottom:16px" data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
+        <div style="display:flex;gap:12px;margin-top:16px">
+          <a href="https://www.instagram.com/alphaseo.in/" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s"><img src="ig.png" alt="Instagram" style="width:18px;height:18px"></a>
+          <a href="https://wa.me/918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">💬</a>
+          <a href="https://t.me/+918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">✈️</a>
         </div>
       </div>
-      <div class="footer-links">
-        <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul>
-      </div>
-      <div class="footer-links">
-        <h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4>
-        <ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul>
-      </div>
-      <div class="footer-links">
-        <h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4>
-        <ul>
-          <li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li>
-          <li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li>
-          <li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li>
-          <li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li>
-        </ul>
-      </div>
+      <div class="footer-links"><h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4><ul><li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li><li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li><li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p>
-    </div>
+    <div class="footer-bottom" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--outline);text-align:center"><p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p></div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),sunIcon=document.getElementById('sunIcon'),moonIcon=document.getElementById('moonIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
+    const getBrowserLang=()=>(navigator.language||'').startsWith('bn')?'bn':'en';
+    const initTheme=()=>{const t=localStorage.getItem('theme')||'light';html.dataset.theme=t;sunIcon.style.display=t==='dark'?'none':'block';moonIcon.style.display=t==='dark'?'block':'none'};
+    const initLang=()=>{const l=localStorage.getItem('language')||getBrowserLang();body.dataset.lang=l;updateLang(l)};
+    const toggleTheme=()=>{const t=html.dataset.theme==='dark'?'light':'dark';html.dataset.theme=t;localStorage.setItem('theme',t);sunIcon.style.display=t==='dark'?'none':'block';moonIcon.style.display=t==='dark'?'block':'none'};
+    const toggleLang=()=>{const l=body.dataset.lang==='en'?'bn':'en';body.dataset.lang=l;localStorage.setItem('language',l);updateLang(l)};
+    const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.innerHTML=el.dataset[l]||el.innerHTML)};
+    themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
+    const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
+    mobileToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      mobileToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    document.addEventListener('click', (e)=>{
+      if(!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)){
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+    mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>{
+      mobileToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    // Massive Interactivity Prop
+    const cursorDot=document.getElementById('cursor-dot'), cursorOutline=document.getElementById('cursor-outline');
+    let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
+    window.addEventListener('mousemove', (e)=>{
+      mouseX=e.clientX; mouseY=e.clientY;
+      cursorDot.style.opacity=cursorOutline.style.opacity=1;
+      cursorDot.style.transform=`translate(${mouseX-3}px, ${mouseY-3}px)`;
+    });
+    const animateCursor=()=>{
+      outlineX+=(mouseX-outlineX-20)*0.15; outlineY+=(mouseY-outlineY-20)*0.15;
+      cursorOutline.style.transform=`translate(${outlineX}px, ${outlineY}px)`;
+      requestAnimationFrame(animateCursor);
+    }; animateCursor();
+    window.addEventListener('mousedown', (e)=>{
+      if(window.innerWidth < 768 || e.target.closest('.mobile-toggle') || e.target.closest('.nav-links')) return;
+      const r=document.createElement('div'); r.className='click-ripple'; r.style.left=e.clientX+'px'; r.style.top=e.clientY+'px';
+      document.body.appendChild(r); setTimeout(()=>r.remove(), 600);
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      el.classList.add('magnetic');
+      el.addEventListener('mouseenter', ()=>cursorOutline.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', ()=>cursorOutline.classList.remove('cursor-hover'));
+      el.addEventListener('mousemove', (e)=>{
+        const box=el.getBoundingClientRect();
+        el.style.transform=`translate(${(e.clientX-box.left-box.width/2)*0.3}px, ${(e.clientY-box.top-box.height/2)*0.3}px)`;
+      });
+      el.addEventListener('mouseleave', ()=>el.style.transform='translate(0,0)');
+    });
+    const observer = new IntersectionObserver((entries)=>{ entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, {threshold: 0.1});
+    document.querySelectorAll('.section, .service-card, .process-card').forEach(el=> { el.classList.add('reveal'); observer.observe(el); });
+    document.querySelectorAll('.uniform-card').forEach(card=>{
+      // card.classList.add('tilt-card', 'shine-effect');
+      card.addEventListener('mousemove', (e)=>{
+        const box=card.getBoundingClientRect(); const x=e.clientX-box.left,y=e.clientY-box.top,cX=box.width/2,cY=box.height/2;
+        card.style.transform=`perspective(1000px) rotateX(${(y-cY)/cY*5}deg) rotateY(${(cX-x)/cX*5}deg) translateY(-8px)`;
+      });
+      card.addEventListener('mouseleave', ()=>card.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)');
+    });
+
+    // Dynamic Pricing Logic
+    (async function() {
+      const priceElements = document.querySelectorAll('.price-value[data-usd]');
+      if (!priceElements.length) return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const forcedCountry = urlParams.get('country');
+      
+      let countryCode = 'IN'; // Default to India
+
+      if (forcedCountry) {
+        countryCode = forcedCountry.toUpperCase();
+      } else {
+        try {
+          const response = await fetch('https://ipapi.co/json/');
+          const data = await response.json();
+          countryCode = data.country_code || 'IN';
+        } catch (error) {
+          console.error('Error fetching country:', error);
+          // Fallback to INR (default)
+        }
+      }
+
+      const isIndia = countryCode === 'IN';
+      
+      priceElements.forEach(el => {
+        const priceText = isIndia ? el.dataset.inr : el.dataset.usd;
+        el.textContent = priceText;
+        // Update data-en attribute for language toggling compatibility
+        el.setAttribute('data-en', priceText);
+      });
+    })();
+  </script>
+
+  <!-- Modal Logic -->
+  <script>
+    const modalOverlay = document.getElementById('auditModal');
+    function openModal() {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+  </script>
+
+  <!-- Audit Modal HTML -->
+  <div class="modal-overlay" id="auditModal">
+    <div class="audit-modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-content">
+        <h2 class="modal-title" data-en="Get Your Free Marketing Audit" data-bn="আপনার ফ্রি মার্কেটিং অডিট পান">Get Your Free Marketing Audit</h2>
+        <form class="audit-form" id="auditForm">
+          <div class="form-group">
+            <label class="form-label"><span data-en="First Name" data-bn="নামের প্রথম অংশ">First Name</span></label>
+            <input type="text" name="firstName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Last Name" data-bn="নামের শেষ অংশ">Last Name</span></label>
+            <input type="text" name="lastName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Email" data-bn="ইমেল">Email</span></label>
+            <input type="text" name="email" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Phone Number" data-bn="ফোন নম্বর">Phone Number</span></label>
+            <div style="display:flex;gap:10px">
+              <select name="countryCode" class="form-select" style="width:120px">
+                <option>India (+91)</option>
+                <option>USA (+1)</option>
+                <option>UK (+44)</option>
+                <option>Canada (+1)</option>
+                <option>Australia (+61)</option>
+                <option>UAE (+971)</option>
+              </select>
+              <input type="text" name="phone" class="form-input" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Company Name" data-bn="কোম্পানির নাম">Company Name</span></label>
+            <input type="text" name="company" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Website" data-bn="ওয়েবসাইট">Website</span></label>
+            <input type="text" name="website" class="form-input" placeholder="example.com">
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label"><span data-en="Annual Revenue" data-bn="বার্ষিক আয়">Annual Revenue</span></label>
+            <select name="revenue" class="form-select">
+              <option value="" disabled selected data-en="Please Select" data-bn="অনুগ্রহ করে নির্বাচন করুন">Please Select</option>
+              <option value="0-5l">< ₹5 Lakhs</option>
+              <option value="5l-25l">₹5 Lakhs - ₹25 Lakhs</option>
+              <option value="25l-1cr">₹25 Lakhs - ₹1 Crore</option>
+              <option value="1cr+">₹1 Crore+</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label"><span data-en="What can we do for you?" data-bn="আমরা আপনার জন্য কি করতে পারি?">What can we do for you?</span></label>
+            <textarea name="message" class="form-textarea"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <button type="submit" class="submit-btn" style="width:100%" data-en="SUBMIT" data-bn="জমা দিন">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const revenueSelect = document.querySelector('select[name="revenue"]');
+    const countrySelect = document.querySelector('select[name="countryCode"]');
+    
+    const inrOptions = `<option value="" disabled selected>Please Select</option><option value="Under 5L">Under ₹5 Lakhs</option><option value="5L-25L">₹5 Lakhs - ₹25 Lakhs</option><option value="25L-1Cr">₹25 Lakhs - ₹1 Crore</option><option value="1Cr+">₹1 Crore+</option>`;
+    const usdOptions = `<option value="" disabled selected>Please Select</option><option value="Under 100K">Under $100,000</option><option value="100K-500K">$100,000 - $500,000</option><option value="500K-1M">$500,000 - $1M</option><option value="1M+">$1M+</option>`;
+    
+    function updateRevenueOptions() {
+      revenueSelect.innerHTML = countrySelect.value.includes('+91') ? inrOptions : usdOptions;
+    }
+    countrySelect.addEventListener('change', updateRevenueOptions);
+    updateRevenueOptions();
+    
+    function escapeHtml(t) { return t ? String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : 'N/A'; }
+    
+    document.getElementById('auditForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'SENDING...';
+      submitBtn.disabled = true;
+
+      try {
+        let ip = 'Unknown';
+        try { const r = await fetch('https://api.ipify.org?format=json'); ip = (await r.json()).ip; } catch(e){}
+        
+        const platform = navigator.userAgent;
+        const data = Object.fromEntries(new FormData(this).entries());
+        
+        const message = `🚀 <b>New Audit Request (Services)</b>\n\n👤 <b>Name:</b> ${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}\n📧 <b>Email:</b> ${escapeHtml(data.email)}\n📱 <b>Phone:</b> ${escapeHtml(data.countryCode)} ${escapeHtml(data.phone)}\n🏢 <b>Company:</b> ${escapeHtml(data.company)}\n🌐 <b>Website:</b> ${escapeHtml(data.website)}\n💰 <b>Revenue:</b> ${escapeHtml(data.revenue)}\n📝 <b>Message:</b> ${escapeHtml(data.message)}\n\n📍 <b>IP:</b> ${ip}\n💻 <b>Platform:</b> ${escapeHtml(platform)}`;
+
+        const response = await fetch('https://api.telegram.org/bot8188593577:AAE0P4XvHr04V3DZs9vuJ8JiBfvpaDMYfM/sendMessage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: '1910774592', text: message, parse_mode: 'HTML' })
+        });
+
+        if (response.ok) {
+           window.location.href = 'thankyou.html';
+        } else {
+          console.error('Telegram Error:', await response.json());
+          alert('Something went wrong. Please try again.');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending request.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>

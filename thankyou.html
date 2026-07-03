@@ -3,30 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thank you for submitting your marketing audit request. We'll be in touch shortly!">
   <title>Thank You | AlphaSEO & Marketing</title>
   <meta name="theme-color" content="#4285F4">
   <link rel="stylesheet" href="material-design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .section.thankyou-section{padding:140px 32px 64px;max-width:800px;margin:0 auto}
+    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap'); */
+    :root{
+      --primary:#0A84FF;--primary-light:#409CFF;--on-primary:#ffffff;
+      --background:#f5f7fa;--background-rgb:245,247,250;--on-background:#1c1c1e;
+      --surface:#ffffff;--on-surface:#1c1c1e;
+      --surface-variant:#e5e5ea;--on-surface-variant:#3a3a3c;
+      --outline:rgba(0,0,0,0.3);--outline-variant:#e5e5ea;
+      --glass-bg:rgba(255,255,255,0.15);--glass-border:rgba(255,255,255,0.6);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.12);--rim-light:inset 0 1px 1px rgba(255,255,255,0.5);
+      --grid-line:rgba(0,0,0,0.08);
+      --glass-blur:15px;
+      --background-rgb:245,247,250;
+    }
+    [data-theme="dark"]{
+      --primary:#0A84FF;--primary-light:#64D2FF;--primary-dark:#0066CC;--on-primary:#fff;
+      --background:#000000;--background-rgb:0,0,0;--on-background:#f5f7fa;
+      --surface:rgba(28,28,30,0.4);--on-surface:#f5f7fa;
+      --surface-variant:#2c2c2e;--on-surface-variant:#d1d1d6;
+      --outline:#3a3a3c;--outline-variant:#2c2c2e;
+      --glass-bg:rgba(28,28,30,0.7);--glass-border:rgba(255,255,255,0.1);
+      --glass-shadow:0 12px 48px rgba(0,0,0,0.6);--rim-light:inset 0 1px 1px rgba(255,255,255,0.05);
+      --glass-blur:15px;
+      --grid-line:rgba(255,255,255,0.1);
+      --background-rgb:0,0,0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    
+    body{font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;background:var(--background);color:var(--on-background);line-height:1.6;min-height:100vh;overflow-x:hidden;width:100%}
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--outline); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--on-surface-variant); }
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(10,132,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(94,92,230,0.1) 0%, transparent 50%);
+      background-size: 100% 100%, 100% 100%;
+      z-index:-1;
+    }
+    
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 32px;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);border-bottom:1px solid var(--glass-border)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px}.nav-logo{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;color:#fff}.nav-title{font-size:1.125rem;font-weight:600;color:var(--on-surface)}
+    .nav-links{display:flex;align-items:center;gap:12px;list-style:none}.nav-links a{color:var(--on-surface);font-weight:600;font-size:.85rem;padding:8px 16px;border-radius:50px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;align-items:center;gap:6px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(5px)}.nav-links a:hover{color:#fff;background:var(--primary);transform:translateY(-2px);border-color:var(--primary);box-shadow:0 4px 12px rgba(10,132,255,0.3)}.nav-links a.active{color:var(--primary);background:transparent;border:2px solid var(--primary);font-weight:700} .nav-links a svg{width:14px;height:14px;stroke-width:2.5;fill:none}
+    .nav-actions{display:flex;align-items:center;gap:12px}.toggle-btn{width:40px;height:40px;border:1px solid var(--glass-border);border-radius:20px;background:var(--glass-bg);color:var(--on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);backdrop-filter:blur(5px)}.toggle-btn:hover{background:var(--primary);color:#fff;transform:scale(1.1);border-color:var(--primary)}
+    .mobile-toggle{display:none;flex-direction:column;gap:5px;padding:10px;background:var(--surface);border:none;border-radius:8px;cursor:pointer;z-index:1001}.mobile-toggle span{width:22px;height:2.5px;background:var(--on-surface);border-radius:2px;transition:all .3s ease}.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.mobile-toggle.active span:nth-child(2){opacity:0}.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#1a1a1a;padding:60px 24px 40px;z-index:998;overflow-y:auto;flex-direction:column;align-items:center;justify-content:center}
+    .mobile-menu.active{display:flex}
+    .mobile-menu .nav-links{flex-direction:column;gap:0;display:flex;align-items:center;list-style:none;padding:0;margin:0}
+    .mobile-menu .nav-links li{list-style:none;width:100%;text-align:center}
+    .mobile-menu .nav-links a{display:block;padding:18px 24px;font-size:1.1rem;font-weight:500;color:#fff;text-decoration:none;letter-spacing:0.5px;transition:color .2s ease;background:transparent;border:none;border-radius:0}
+    .mobile-menu .nav-links a:hover,.mobile-menu .nav-links a.active{color:var(--primary)}
+    .mobile-cta-btn{display:flex;align-items:center;justify-content:center;width:calc(100% - 48px);margin:24px auto 0;padding:16px;background:var(--primary);color:#fff;border-radius:50px;font-weight:700;font-size:1.1rem;border:none;cursor:pointer;text-decoration:none;box-shadow:0 8px 24px rgba(10,132,255,0.3)}
+    .mobile-menu-social{display:flex;gap:20px;margin-top:auto;padding-top:40px;justify-content:center;width:100%}
+    .mobile-menu-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:all .2s ease}
+    .mobile-menu-social a:hover{background:var(--primary);transform:scale(1.1)}
+    .mobile-menu-social svg{width:18px;height:18px;fill:currentColor}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:none;border-radius:24px;font-family:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:all .15s;text-decoration:none}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(10,132,255,0.25)}.btn-primary:hover{background:var(--primary-light)}
+
+    
+    .section{padding:120px 32px 64px;max-width:800px;margin:0 auto}
     .check-icon{width:80px;height:80px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 32px;box-shadow:0 0 0 10px rgba(10,132,255,0.15)}
     .check-icon svg{width:40px;height:40px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-    h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;text-align:center;margin-bottom:16px;background:linear-gradient(135deg,var(--on-surface) 0%,var(--on-surface-variant) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    
+    h1{font-size:clamp(2rem, 5vw, 3.5rem);font-weight:800;text-align:center;margin-bottom:16px;background:linear-gradient(135deg, var(--on-surface) 0%, var(--on-surface-variant) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .subtitle{text-align:center;font-size:1.2rem;color:var(--on-surface-variant);margin-bottom:64px}
+    
     .content-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;padding:48px;box-shadow:var(--glass-shadow);backdrop-filter:blur(20px)}
     .intro-text{font-size:1.1rem;margin-bottom:32px;color:var(--on-surface)}
     .highlight{color:var(--primary);font-weight:600}
+    
     .steps-list{list-style:none;display:flex;flex-direction:column;gap:40px;margin-top:48px;position:relative}
     .steps-list::before{content:'';position:absolute;top:0;bottom:0;left:24px;width:2px;background:var(--outline);z-index:0}
     .step-item{display:flex;gap:24px;position:relative;z-index:1}
     .step-number{width:50px;height:50px;background:var(--surface);border:2px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary);flex-shrink:0;background:var(--background)}
     .step-content h3{font-size:1.15rem;margin-bottom:8px;color:var(--on-surface)}
     .step-content p{color:var(--on-surface-variant);font-size:0.95rem;line-height:1.6}
-    .back-home{display:inline-block;padding:12px 32px;background:var(--primary);color:#fff;border-radius:50px;text-decoration:none;font-weight:600;transition:all .15s}
-    .back-home:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(10,132,255,.4)}
-    @media(max-width:768px){.section.thankyou-section{padding:100px 24px 48px}.content-card{padding:32px 24px}.steps-list::before{left:19px}.step-number{width:40px;height:40px;font-size:0.9rem}h1{font-size:2rem}}
-    @media(max-width:480px){.section.thankyou-section{padding:90px 16px 40px}.content-card{padding:24px 16px}}
+    
+    .footer{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);padding:64px 40px 24px;border-top:1px solid var(--glass-border);width:100%;margin-top:80px}
+    .footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+    .footer-brand p{margin-top:16px;font-size:0.9rem;color:var(--on-surface-variant);max-width:300px}
+    .footer-links h4{font-size:1.1rem;margin-bottom:24px;color:var(--on-surface)}
+    .footer-links ul{list-style:none}.footer-links li{margin-bottom:12px}
+    .footer-links a{color:var(--on-surface-variant);text-decoration:none;transition:color .2s;font-size:0.95rem}.footer-links a:hover{color:var(--primary)}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding-top:24px;margin-top:32px;border-top:1px solid var(--outline);font-size:.8rem;color:var(--on-surface-variant)}
+    @media(max-width:768px){
+      .footer-content{grid-template-columns:1fr;gap:32px;text-align:center}
+      .footer-brand p{margin:16px auto 0}
+    }
+
+    @media(max-width:768px){
+      .section{padding:100px 24px 48px}
+      .content-card{padding:32px 24px}
+      .steps-list::before{left:19px}
+      .step-number{width:40px;height:40px;font-size:0.9rem}
+      .nav-links{display:none}
+      h1{font-size:2rem}
+    }
   </style>
+
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -34,77 +121,78 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "whnbwbfssq");
   </script>
+
 </head>
 <body>
   <nav class="navbar">
+    <div class="scroll-progress" id="scrollBar"></div>
     <div class="nav-container">
-      <a href="index.html" class="nav-brand"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
-      <ul class="nav-links">
-        <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
-        <li><a href="services.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
-        <li><a href="info.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
-        <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
-        <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
-        <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-        <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
-      </div>
+    <a href="index.html" class="nav-brand" style="text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
+      <li><a href="services.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+      <li><a href="info.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> <span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+      <li><a href="contact.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;margin-right:8px;background:var(--primary);color:#fff;border:none;cursor:pointer;text-decoration:none" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
+      <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
+      <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
-  </nav>
+  </div></nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
-      <li><a href="services.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
-      <li><a href="info.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
-      <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+      <li><a href="index.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> <span data-en="Home" data-bn="হোম">Home</span></a></li>
+      <li><a href="services.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+      <li><a href="info.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> <span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+      <li><a href="contact.html" style="display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
     </ul>
     <a href="sendinfo.html" class="mobile-cta-btn" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
     <div class="mobile-menu-social">
       <a href="https://facebook.com" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.597 1.325-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="ig.png" alt="Instagram" style="width:40px;height:40px;border-radius:0;object-fit:contain"></a>
       <a href="https://twitter.com" target="_blank" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
     </div>
   </div>
 
-  <section class="section thankyou-section">
+  <section class="section">
     <div class="check-icon">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
     </div>
     <h1><span data-en="Yes! Application Received." data-bn="হ্যাঁ! আবেদন গৃহীত হয়েছে।">Yes! Application Received.</span></h1>
     <p class="subtitle" data-en="Thank you for submitting the form. You just made an amazing decision for your marketing!" data-bn="ফর্মটি জমা দেওয়ার জন্য ধন্যবাদ। আপনি আপনার মার্কেটিংয়ের জন্য একটি দুর্দান্ত সিদ্ধান্ত নিয়েছেন!">Thank you for submitting the form. You just made an amazing decision for your marketing!</p>
-
+    
     <div class="content-card">
       <p class="intro-text">
-        <span data-en="It looks like you&rsquo;re right in our " data-bn="মনে হচ্ছে আপনি আমাদের ">It looks like you&rsquo;re right in our </span><span class="highlight" data-en="SWEET SPOT" data-bn="সুইট স্পট">SWEET SPOT</span><span data-en=". We absolutely love working with businesses of your size and our track record of killer results proves it. We will only onboard 10 new clients this month, we can&rsquo;t wait to see if you&rsquo;re one of them." data-bn="। আমরা আপনার আকারের ব্যবসার সাথে কাজ করতে পছন্দ করি এবং আমাদের দুর্দান্ত ফলাফলের রেকর্ড তা প্রমাণ করে। আমরা এই মাসে মাত্র ১০ জন নতুন ক্লায়েন্ট নেব, আপনি তাদের মধ্যে একজন কিনা তা দেখার জন্য আমরা অপেক্ষা করছি।">. We absolutely love working with businesses of your size and our track record of killer results proves it. We will only onboard 10 new clients this month, we can&rsquo;t wait to see if you&rsquo;re one of them.</span>
+        <span data-en="It looks like you’re right in our " data-bn="মনে হচ্ছে আপনি আমাদের ">It looks like you’re right in our </span><span class="highlight" data-en="SWEET SPOT" data-bn="সুইট স্পট">SWEET SPOT</span><span data-en=". We absolutely love working with businesses of your size and our track record of killer results proves it. We will only onboard 10 new clients this month, we can’t wait to see if you’re one of them." data-bn=" এ আছেন। আমরা আপনার আকারের ব্যবসার সাথে কাজ করতে পছন্দ করি এবং আমাদের দুর্দান্ত ফলাফলের রেকর্ড তা প্রমাণ করে। আমরা এই মাসে মাত্র ১০ জন নতুন ক্লায়েন্ট নেব, আপনি তাদের মধ্যে একজন কিনা তা দেখার জন্য আমরা অপেক্ষা করছি।">. We absolutely love working with businesses of your size and our track record of killer results proves it. We will only onboard 10 new clients this month, we can’t wait to see if you’re one of them.</span>
       </p>
       <p class="intro-text" style="margin-bottom:8px"><strong data-en="Alpha SEO & Marketing" data-bn="আলফা এসইও এবং মার্কেটিং">Alpha SEO & Marketing</strong></p>
       <p style="color:var(--on-surface-variant);font-size:0.9rem" data-en="VP of Sales & Marketing" data-bn="ভিপি, সেলস অ্যান্ড মার্কেটিং">VP of Sales & Marketing</p>
-
+      
       <div style="margin:48px 0;height:1px;background:var(--outline)"></div>
-
+      
       <h2 style="text-align:center;margin-bottom:32px" data-en="What Happens Next?" data-bn="পরবর্তী পদক্ষেপ কী?">What Happens Next?</h2>
-
+      
       <div class="steps-list">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-content">
             <h3 data-en="We get to know you better." data-bn="আমরা আপনাকে আরও ভালো করে জানব।">We get to know you better.</h3>
-            <p data-en="We&rsquo;ll call you! The purpose of the initial call is to understand more about your business and how we can best help you." data-bn="আমরা আপনাকে কল করব! প্রাথমিক কলের উদ্দেশ্য হল আপনার ব্যবসা সম্পর্কে আরও বোঝা এবং আমরা কীভাবে আপনাকে সবচেয়ে ভালো সাহায্য করতে পারি।">We&rsquo;ll call you! The purpose of the initial call is to understand more about your business and how we can best help you.</p>
+            <p data-en="We’ll call you! The purpose of the initial call is to understand more about your business and how we can best help you." data-bn="আমরা আপনাকে কল করব! প্রাথমিক কলের উদ্দেশ্য হল আপনার ব্যবসা সম্পর্কে আরও বোঝা এবং আমরা কীভাবে আপনাকে সবচেয়ে ভালো সাহায্য করতে পারি।">We’ll call you! The purpose of the initial call is to understand more about your business and how we can best help you.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-number">2</div>
           <div class="step-content">
             <h3 data-en="Are we a good fit?" data-bn="আমরা কি উপযুক্ত?">Are we a good fit?</h3>
-            <p data-en="Whether we end up working together or not, we&rsquo;re committed to providing excellent marketing advice to everyone we speak with." data-bn="আমরা একসাথে কাজ করি বা না করি, আমরা যাদের সাথে কথা বলি তাদের প্রত্যেককে দুর্দান্ত মার্কেটিং পরামর্শ দিতে প্রতিশ্রুতিবদ্ধ।">Whether we end up working together or not, we&rsquo;re committed to providing excellent marketing advice to everyone we speak with.</p>
+            <p data-en="Whether we end up working together or not, we’re committed to providing excellent marketing advice to everyone we speak with." data-bn="আমরা একসাথে কাজ করি বা না করি, আমরা যাদের সাথে কথা বলি তাদের প্রত্যেককে দুর্দান্ত মার্কেটিং পরামর্শ দিতে প্রতিশ্রুতিবদ্ধ।">Whether we end up working together or not, we’re committed to providing excellent marketing advice to everyone we speak with.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h3 data-en="You&rsquo;ll meet with one of our AMAZING strategists." data-bn="আপনি আমাদের একজন দুর্দান্ত কৌশলবিদ এর সাথে দেখা করবেন।">You&rsquo;ll meet with one of our AMAZING strategists.</h3>
+            <h3 data-en="You’ll meet with one of our AMAZING strategists." data-bn="আপনি আমাদের একজন দুর্দান্ত কৌশলবিদ এর সাথে দেখা করবেন।">You’ll meet with one of our AMAZING strategists.</h3>
             <p data-en="We take our time to hand pick the strategist that is best suited to your industry and marketing needs." data-bn="আমরা আপনার শিল্প এবং মার্কেটিং প্রয়োজনের জন্য সবচেয়ে উপযুক্ত কৌশলবিদ বেছে নিতে সময় নিই।">We take our time to hand pick the strategist that is best suited to your industry and marketing needs.</p>
           </div>
         </div>
@@ -119,7 +207,7 @@
           <div class="step-number">5</div>
           <div class="step-content">
             <h3 data-en="We assemble your marketing team." data-bn="আমরা আপনার মার্কেটিং টিম গঠন করি।">We assemble your marketing team.</h3>
-            <p data-en="As one of the leading SEO and marketing companies, we employ and retain top talent so they can bring game-changing results to your business (We gathered all the experts so you don&rsquo;t have to)." data-bn="শীর্ষস্থানীয় এসইও এবং মার্কেটিং কোম্পানিগুলির মধ্যে একটি হিসাবে, আমরা সেরা প্রতিভাদের নিয়োগ করি এবং ধরে রাখি যাতে তারা আপনার ব্যবসার জন্য যুগান্তকারী ফলাফল আনতে পারে (আমরা সমস্ত বিশেষজ্ঞদের একত্রিত করেছি যাতে আপনাকে করতে না হয়)।">As one of the leading SEO and marketing companies, we employ and retain top talent so they can bring game-changing results to your business (We gathered all the experts so you don&rsquo;t have to).</p>
+            <p data-en="As one of the leading SEO and marketing companies, we employ and retain top talent so they can bring game-changing results to your business (We gathered all the experts so you don’t have to)." data-bn="শীর্ষস্থানীয় এসইও এবং মার্কেটিং কোম্পানিগুলির মধ্যে একটি হিসাবে, আমরা সেরা প্রতিভাদের নিয়োগ করি এবং ধরে রাখি যাতে তারা আপনার ব্যবসার জন্য যুগান্তকারী ফলাফল আনতে পারে (আমরা সমস্ত বিশেষজ্ঞদের একত্রিত করেছি যাতে আপনাকে করতে না হয়)।">As one of the leading SEO and marketing companies, we employ and retain top talent so they can bring game-changing results to your business (We gathered all the experts so you don’t have to).</p>
           </div>
         </div>
         <div class="step-item">
@@ -137,60 +225,209 @@
           </div>
         </div>
       </div>
-
+      
       <div style="text-align:center;margin-top:48px">
-        <a href="index.html" class="back-home" data-en="Back to Home" data-bn="হোমে ফিরে যান">Back to Home</a>
+        <a href="index.html" style="display:inline-block;padding:12px 32px;background:var(--primary);color:#fff;border-radius:50px;text-decoration:none;font-weight:600" data-en="Back to Home" data-bn="হোমে ফিরে যান">Back to Home</a>
       </div>
     </div>
   </section>
 
+  <!-- Trust Indicators Section -->
   <section style="padding:48px 32px;text-align:center;max-width:900px;margin:0 auto">
-    <p style="font-size:.9rem;color:var(--on-surface-variant);margin-bottom:24px;font-weight:500" data-en="Join 200+ Happy Clients Worldwide" data-bn="বিশ্বব্যাপী ২০০+ খুশি ক্লায়েন্টের সাথে যোগ দিন">Join 200+ Happy Clients Worldwide</p>
+    <p style="font-size:0.9rem;color:var(--on-surface-variant);margin-bottom:24px;font-weight:500" data-en="Join 200+ Happy Clients Worldwide" data-bn="বিশ্বব্যাপী ২০০+ খুশি ক্লায়েন্টের সাথে যোগ দিন">Join 200+ Happy Clients Worldwide</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px">
       <img src="ABC-logo.jpg" alt="ABC" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
       <img src="Gainwell.png" alt="Gainwell" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
       <img src="Ocera.png" alt="Ocera" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
       <img src="OXXO.png" alt="OXXO" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
-      <img src="MW.png" alt="MW" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
-      <img src="Pinnacle-infotech.png" alt="Pinnacle" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
       <img src="EduBengal-Colour.png" alt="EduBengal" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
+      <img src="Pinnacle-infotech.png" alt="Pinnacle" style="height:40px;width:auto;object-fit:contain;filter:grayscale(30%);opacity:0.75;transition:all .4s cubic-bezier(0.4,0,0.2,1)" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='1';this.style.transform='translateY(-4px)'" onmouseout="this.style.filter='grayscale(30%)';this.style.opacity='0.75';this.style.transform='translateY(0)'">
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-content">
+  <footer class="footer" style="padding:56px 32px 24px">
+    <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:0 auto">
       <div class="footer-brand">
-        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
-        <p data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/alphaseo.in/" target="_blank"><img src="ig.png" alt="Instagram"></a>
-          <a href="https://wa.me/918906581045" target="_blank" style="font-size:1rem">💬</a>
-          <a href="https://t.me/+918906581045" target="_blank" style="font-size:1rem">✈️</a>
+        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex;text-decoration:none"><span style="font-weight:800;font-size:1.25rem;letter-spacing:-0.5px"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+        <p style="margin-bottom:16px" data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
+        <div style="display:flex;gap:12px;margin-top:16px">
+          <a href="https://www.instagram.com/alphaseo.in/" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s"><img src="ig.png" alt="Instagram" style="width:18px;height:18px"></a>
+          <a href="https://wa.me/918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">💬</a>
+          <a href="https://t.me/+918906581045" target="_blank" style="width:36px;height:36px;background:var(--surface-container);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem">✈️</a>
         </div>
       </div>
-      <div class="footer-links">
-        <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul>
-      </div>
-      <div class="footer-links">
-        <h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4>
-        <ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul>
-      </div>
-      <div class="footer-links">
-        <h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4>
-        <ul>
-          <li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li>
-          <li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li>
-          <li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li>
-          <li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li>
-        </ul>
-      </div>
+      <div class="footer-links"><h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads & PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul></div>
+      <div class="footer-links"><h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4><ul><li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li><li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li><li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li><li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p>
-    </div>
+    <div class="footer-bottom" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--outline);text-align:center"><p>© 2026 AlphaSEO & Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p></div>
   </footer>
+  <script>
+    const html=document.documentElement,body=document.body,themeToggle=document.getElementById('themeToggle'),sunIcon=document.getElementById('sunIcon'),moonIcon=document.getElementById('moonIcon'),langToggle=document.getElementById('langToggle'),langIcon=document.getElementById('langIcon');
+    const getBrowserLang=()=>(navigator.language||'').startsWith('bn')?'bn':'en';
+    const initTheme=()=>{const t=localStorage.getItem('theme')||'light';html.dataset.theme=t;sunIcon.style.display=t==='dark'?'none':'block';moonIcon.style.display=t==='dark'?'block':'none'};
+    const initLang=()=>{const l=localStorage.getItem('language')||getBrowserLang();body.dataset.lang=l;updateLang(l)};
+    const toggleTheme=()=>{const t=html.dataset.theme==='dark'?'light':'dark';html.dataset.theme=t;localStorage.setItem('theme',t);sunIcon.style.display=t==='dark'?'none':'block';moonIcon.style.display=t==='dark'?'block':'none'};
+    const toggleLang=()=>{const l=body.dataset.lang==='en'?'bn':'en';body.dataset.lang=l;localStorage.setItem('language',l);updateLang(l)};
+    const updateLang=(l)=>{langIcon.textContent=l.toUpperCase();document.querySelectorAll('[data-en][data-bn]').forEach(el=>el.innerHTML=el.dataset[l]||el.innerHTML)};
+    themeToggle.onclick=toggleTheme;langToggle.onclick=toggleLang;initTheme();initLang();
+    const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
+    mobileToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      mobileToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    document.addEventListener('click', (e)=>{
+      if(!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)){
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
 
-  <script src="main.js"></script>
+
+  </script>
+
+  <style>
+
+  </style>
+
+  <!-- Modal Logic -->
+  <script>
+    const modalOverlay = document.getElementById('auditModal');
+    function openModal() {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+  </script>
+
+  <!-- Audit Modal HTML -->
+  <div class="modal-overlay" id="auditModal">
+    <div class="audit-modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-content">
+        <h2 class="modal-title">Get Your Free Marketing Audit</h2>
+        <form class="audit-form" id="auditForm">
+          <div class="form-group">
+            <label class="form-label"><span data-en="First Name" data-bn="নামের প্রথম অংশ">First Name</span></label>
+            <input type="text" name="firstName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Last Name" data-bn="নামের শেষ অংশ">Last Name</span></label>
+            <input type="text" name="lastName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Email" data-bn="ইমেল">Email</span></label>
+            <input type="text" name="email" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Phone Number" data-bn="ফোন নম্বর">Phone Number</span></label>
+            <div style="display:flex;gap:10px">
+              <select name="countryCode" class="form-select" style="width:120px">
+                <option>India (+91)</option>
+                <option>USA (+1)</option>
+                <option>UK (+44)</option>
+                <option>Canada (+1)</option>
+                <option>Australia (+61)</option>
+                <option>UAE (+971)</option>
+              </select>
+              <input type="text" name="phone" class="form-input" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Company Name" data-bn="কোম্পানির নাম">Company Name</span></label>
+            <input type="text" name="company" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-en="Website" data-bn="ওয়েবসাইট">Website</span></label>
+            <input type="text" name="website" class="form-input" placeholder="example.com">
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label"><span data-en="Annual Revenue" data-bn="বার্ষিক আয়">Annual Revenue</span></label>
+            <select name="revenue" class="form-select">
+              <option value="" disabled selected data-en="Please Select" data-bn="অনুগ্রহ করে নির্বাচন করুন">Please Select</option>
+              <option value="0-5l">< ₹5 Lakhs</option>
+              <option value="5l-25l">₹5 Lakhs - ₹25 Lakhs</option>
+              <option value="25l-1cr">₹25 Lakhs - ₹1 Crore</option>
+              <option value="1cr+">₹1 Crore+</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label"><span data-en="What can we do for you?" data-bn="আমরা আপনার জন্য কি করতে পারি?">What can we do for you?</span></label>
+            <textarea name="message" class="form-textarea"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <button type="submit" class="submit-btn" style="width:100%" data-en="SUBMIT" data-bn="জমা দিন">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const revenueSelect = document.querySelector('select[name="revenue"]');
+    const countrySelect = document.querySelector('select[name="countryCode"]');
+    
+    const inrOptions = `<option value="" disabled selected>Please Select</option><option value="Under 5L">Under ₹5 Lakhs</option><option value="5L-25L">₹5 Lakhs - ₹25 Lakhs</option><option value="25L-1Cr">₹25 Lakhs - ₹1 Crore</option><option value="1Cr+">₹1 Crore+</option>`;
+    const usdOptions = `<option value="" disabled selected>Please Select</option><option value="Under 100K">Under $100,000</option><option value="100K-500K">$100,000 - $500,000</option><option value="500K-1M">$500,000 - $1M</option><option value="1M+">$1M+</option>`;
+    
+    function updateRevenueOptions() {
+      revenueSelect.innerHTML = countrySelect.value.includes('+91') ? inrOptions : usdOptions;
+    }
+    countrySelect.addEventListener('change', updateRevenueOptions);
+    updateRevenueOptions();
+    
+    function escapeHtml(t) { return t ? String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : 'N/A'; }
+    
+    document.getElementById('auditForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'SENDING...';
+      submitBtn.disabled = true;
+
+      try {
+        let ip = 'Unknown';
+        try { const r = await fetch('https://api.ipify.org?format=json'); ip = (await r.json()).ip; } catch(e){}
+        
+        const platform = navigator.userAgent;
+        const data = Object.fromEntries(new FormData(this).entries());
+        
+        const message = `🚀 <b>New Audit Request (Thank You)</b>\n\n👤 <b>Name:</b> ${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}\n📧 <b>Email:</b> ${escapeHtml(data.email)}\n📱 <b>Phone:</b> ${escapeHtml(data.countryCode)} ${escapeHtml(data.phone)}\n🏢 <b>Company:</b> ${escapeHtml(data.company)}\n🌐 <b>Website:</b> ${escapeHtml(data.website)}\n💰 <b>Revenue:</b> ${escapeHtml(data.revenue)}\n📝 <b>Message:</b> ${escapeHtml(data.message)}\n\n📍 <b>IP:</b> ${ip}\n💻 <b>Platform:</b> ${escapeHtml(platform)}`;
+
+        // Encoded credentials (base64)
+        const _t = atob('ODE4ODU5MzU3NzpBQUUwUDRYdkhyMDRWM0Raczkwdnk1SmlCZnZwYURNWWZN');
+        const _c = atob('MTkxMDc3NDU5Mg==');
+        
+        const response = await fetch('https://api.telegram.org/bot' + _t + '/sendMessage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: _c, text: message, parse_mode: 'HTML' })
+        });
+
+        if (response.ok) {
+           alert('Request sent successfully!');
+           closeModal();
+           this.reset();
+        } else {
+          console.error('Telegram Error:', await response.json());
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending request.');
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
