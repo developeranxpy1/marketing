@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about AlphaSEO & Marketing - Your trusted digital marketing partner in Kolkata.">
+  <title>About Us | AlphaSEO & Marketing</title>
+  <meta property="og:title" content="About AlphaSEO & Marketing | Top Agency in Kolkata">
+  <meta property="og:description" content="Driving digital innovation since 2020. Meet our team of experts.">
+  <meta property="og:image" content="https://alphaseo.agency/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4285F4">
+  <link rel="canonical" href="https://alphaseo.agency/info.html">
+  <link rel="stylesheet" href="material-design.css">
+  <style>
+    .collab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+    .collab-grid .uniform-card{padding:12px;overflow:hidden}
+    .collab-grid img{width:100%;height:260px;object-fit:cover;border-radius:12px;transition:transform .3s ease;display:block}
+    .collab-grid .uniform-card:hover img{transform:scale(1.05)}
+    .client-logos-wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px}
+    .client-logos-wrap img{height:56px;width:auto;object-fit:contain;filter:grayscale(20%);opacity:.9;transition:all .3s}
+    .client-logos-wrap img:hover{filter:grayscale(0%);opacity:1;transform:scale(1.1)}
+    .project-dir{background:var(--glass-bg);padding:32px;border-radius:24px;border:1px solid var(--glass-border);backdrop-filter:blur(var(--glass-blur)) saturate(180%);max-width:900px;margin:0 auto}
+    .project-dir h3{margin-bottom:24px;text-align:center}
+    .project-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+    .project-link{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--on-surface);border:1px solid var(--outline);transition:all .2s ease;font-size:.9rem}
+    .project-link:hover{background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-2px)}
+    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+    .value-card{text-align:center;padding:32px;background:var(--surface);border:1px solid var(--outline);border-radius:24px;transition:all .3s}
+    .value-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 12px 32px rgba(10,132,255,.15)}
+    .value-icon{font-size:2.5rem;margin-bottom:16px}
+    .value-card h4{margin-bottom:8px}
+    .value-card p{font-size:.85rem}
+    @media(max-width:768px){.collab-grid{grid-template-columns:1fr}.project-dir{padding:24px 16px}.project-links{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}.client-logos-wrap{gap:20px}.client-logos-wrap img{height:44px}}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
+        <li><a href="services.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+        <li><a href="info.html" class="active"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+        <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="sendinfo.html" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
+        <button class="toggle-btn" id="langToggle" style="display:none"><span id="langIcon">EN</span></button>
+        <button class="toggle-btn" id="themeToggle"><svg id="sunIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="nav-links">
+      <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-en="Home" data-bn="হোম">Home</span></a></li>
+      <li><a href="services.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-en="Services" data-bn="সেবাসমূহ">Services</span></a></li>
+      <li><a href="info.html" class="active"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-en="About" data-bn="আমাদের সম্পর্কে">About</span></a></li>
+      <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-en="Contact" data-bn="যোগাযোগ">Contact</span></a></li>
+    </ul>
+    <a href="sendinfo.html" class="mobile-cta-btn" data-en="Let's Talk" data-bn="কথা বলুন">Let's Talk</a>
+    <div class="mobile-menu-social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.597 1.325-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <h1 data-en="About Us" data-bn="আমাদের সম্পর্কে">About Us</h1>
+    <p style="max-width:600px;margin:16px auto 0;font-size:1.1rem" data-en="Driving digital innovation since 2020." data-bn="২০২০ সাল থেকে ডিজিটাল উদ্ভাবন পরিচালনা করছি।">Driving digital innovation since 2020.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Story" data-bn="আমাদের গল্প">Our Story</span>
+      <h2 data-en="Building Digital Success Since 2020" data-bn="২০২০ সাল থেকে ডিজিটাল সাফল্য তৈরি করছি">Building Digital Success Since 2020</h2>
+      <p style="margin-top:16px" data-en="AlphaSEO &amp; Marketing was founded with a vision to help businesses navigate the complex digital landscape. What started as a small team passionate about SEO has grown into a full-service digital marketing agency serving clients across India and beyond." data-bn="AlphaSEO &amp; Marketing প্রতিষ্ঠিত হয়েছিল ব্যবসাগুলিকে জটিল ডিজিটাল পরিবেশে নেভিগেট করতে সাহায্য করার দৃষ্টিভঙ্গি নিয়ে।">AlphaSEO & Marketing was founded with a vision to help businesses navigate the complex digital landscape. What started as a small team passionate about SEO has grown into a full-service digital marketing agency serving clients across India and beyond.</p>
+    </div>
+    <div class="info-grid">
+      <div class="uniform-card"><div class="info-icon">◎</div><h3 class="info-title" data-en="Our Mission" data-bn="আমাদের লক্ষ্য">Our Mission</h3><p class="info-desc" data-en="To deliver measurable results through innovative digital strategies that drive growth and maximize ROI for our clients." data-bn="উদ্ভাবনী ডিজিটাল কৌশলের মাধ্যমে পরিমাপযোগ্য ফলাফল প্রদান করা।">To deliver measurable results through innovative digital strategies that drive growth and maximize ROI for our clients.</p></div>
+      <div class="uniform-card"><div class="info-icon">◈</div><h3 class="info-title" data-en="Our Vision" data-bn="আমাদের দৃষ্টি">Our Vision</h3><p class="info-desc" data-en="To be the most trusted digital marketing partner for businesses looking to establish a powerful online presence." data-bn="শক্তিশালী অনলাইন উপস্থিতি প্রতিষ্ঠা করতে চাওয়া ব্যবসাগুলির জন্য সবচেয়ে বিশ্বস্ত পার্টনার হওয়া।">To be the most trusted digital marketing partner for businesses looking to establish a powerful online presence.</p></div>
+      <div class="uniform-card"><div class="info-icon">⬡</div><h3 class="info-title" data-en="Our Values" data-bn="আমাদের মূল্যবোধ">Our Values</h3><p class="info-desc" data-en="Transparency, innovation, and client success are at the core of everything we do. We believe in building lasting partnerships." data-bn="স্বচ্ছতা, উদ্ভাবন এবং ক্লায়েন্ট সাফল্য আমাদের সব কিছুর মূলে।">Transparency, innovation, and client success are at the core of everything we do. We believe in building lasting partnerships.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--background)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Team" data-bn="আমাদের দল">Our Team</span>
+      <h2 data-en="Meet the Experts" data-bn="বিশেষজ্ঞদের সাথে পরিচিত হন">Meet the Experts</h2>
+    </div>
+    <div class="team-grid">
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="Debojyoti-Mitra.png" alt="Debojyoti Mitra" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Debojyoti Mitra</h3>
+        <p class="team-role" data-en="Founder &amp; CEO" data-bn="প্রতিষ্ঠাতা ও সিইও">Founder & CEO</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-priya.png" alt="Priya Das" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Priya Das</h3>
+        <p class="team-role" data-en="SEO Director" data-bn="এসইও ডিরেক্টর">SEO Director</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-sourav.png" alt="Sourav Mukherjee" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Sourav Mukherjee</h3>
+        <p class="team-role" data-en="Marketing Lead" data-bn="মার্কেটিং লিড">Marketing Lead</p>
+      </div>
+      <div class="uniform-card">
+        <div class="team-avatar" style="background:transparent;overflow:hidden"><img src="team-riya.png" alt="Riya Banerjee" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3 class="team-name">Riya Banerjee</h3>
+        <p class="team-role" data-en="Content Head" data-bn="কন্টেন্ট হেড">Content Head</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="section" style="background:var(--surface)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Clients" data-bn="আমাদের ক্লায়েন্ট">Our Clients</span>
+      <h2 data-en="Global Collaborations" data-bn="বিশ্বব্যাপী সহযোগিতা">Global Collaborations</h2>
+      <p style="margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto" data-en="We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation." data-bn="আমরা বিশ্বব্যাপী ২০০+ কোম্পানির সাথে কাজ করার সুযোগ পেয়েছি।">We have had the privilege of working with 200+ companies worldwide, helping them tell their unique stories through digital innovation.</p>
+    </div>
+    <div class="collab-grid">
+      <div class="uniform-card"><img src="vision.jpg" alt="Vision Project"></div>
+      <div class="uniform-card"><img src="oxxo1.jpg" alt="OXXO Brand"></div>
+      <div class="uniform-card"><img src="17-1.png" alt="Digital Campaign"></div>
+      <div class="uniform-card"><img src="19-1.png" alt="Website Mockup"></div>
+      <div class="uniform-card"><img src="20-1.png" alt="Marketing Analytics"></div>
+      <div class="uniform-card"><img src="Banner-3.jpg" alt="Business Growth"></div>
+      <div class="uniform-card"><img src="21-1.png" alt="Social Campaign"></div>
+      <div class="uniform-card"><img src="Untitled-design-10.png" alt="E-commerce Project"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Partners" data-bn="আমাদের অংশীদার">Our Partners</span>
+      <h2 data-en="Trusted by Industry Leaders" data-bn="শিল্প নেতাদের দ্বারা বিশ্বস্ত">Trusted by Industry Leaders</h2>
+    </div>
+    <div class="client-logos-wrap">
+      <img src="ABC-logo.jpg" alt="ABC">
+      <img src="Gainwell.png" alt="Gainwell">
+      <img src="Ocera.png" alt="Ocera">
+      <img src="OXXO.png" alt="OXXO">
+      <img src="MW.png" alt="MW">
+      <img src="Pinnacle-infotech.png" alt="Pinnacle Infotech">
+      <img src="EduBengal-Colour.png" alt="EduBengal">
+      <img src="kolkata-roll-corner-2.jpg" alt="Kolkata Roll Corner">
+      <img src="halosb-2.jpg" alt="Halosb">
+      <img src="muslimacpl-2.jpg" alt="Muslimacpl">
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--background)">
+    <div class="section-header">
+      <span class="section-label" data-en="Directory" data-bn="ডিরেক্টরি">Directory</span>
+      <h2 data-en="Project Directory" data-bn="প্রজেক্ট ডিরেক্টরি">Project Directory</h2>
+      <p style="margin-top:16px" data-en="Explore our portfolio of live projects and brand collaborations." data-bn="আমাদের লাইভ প্রকল্প এবং ব্র্যান্ড সহযোগিতা দেখুন।">Explore our portfolio of live projects and brand collaborations.</p>
+    </div>
+    <div class="project-dir">
+      <div class="project-links">
+        <a href="https://antonioalessi.malibucycles.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🚲</span> Malibu Cycles - Antonio Alessi</a>
+        <a href="https://theorchidvillamalibu.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🏡</span> The Orchid Villa Malibu</a>
+        <a href="https://ufcstore.pl/" target="_blank" class="project-link"><span style="font-size:1.2rem">🥊</span> UFC Store Poland</a>
+        <a href="https://malibucycles.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🚵</span> Malibu Cycles Official</a>
+        <a href="https://maliburanchcatering.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🍽️</span> Malibu Ranch Catering</a>
+        <a href="https://lightslategray-penguin-123156.hostingersite.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🌐</span> Hostinger Site Project</a>
+        <a href="https://dirty-diana.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">✨</span> Dirty Diana Official</a>
+        <a href="https://irsdesign.com/" target="_blank" class="project-link"><span style="font-size:1.2rem">🛠️</span> IRS Design Main</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <h2 data-en="Ready to Work With Us?" data-bn="আমাদের সাথে কাজ করতে প্রস্তুত?">Ready to Work With Us?</h2>
+    <p style="margin:16px auto 24px;max-width:500px" data-en="Let's discuss how we can help grow your business." data-bn="আসুন আলোচনা করি কিভাবে আমরা আপনার ব্যবসা বাড়াতে পারি।">Let's discuss how we can help grow your business.</p>
+    <a href="contact.html" class="btn btn-primary" data-en="Get in Touch" data-bn="যোগাযোগ করুন">Get in Touch</a>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="section-header">
+      <span class="section-label" data-en="Our Values" data-bn="আমাদের মূল্যবোধ">Our Values</span>
+      <h2 data-en="Our Core Values" data-bn="আমাদের মূল আদর্শ">Our Core Values</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <h4 data-en="Precision" data-bn="নির্ভুলতা">Precision</h4>
+        <p data-en="Actionable data over guesses." data-bn="অনুমানের চেয়ে কার্যকর ডেটা।">Actionable data over guesses.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h4 data-en="Speed" data-bn="গতি">Speed</h4>
+        <p data-en="Rapid execution, faster results." data-bn="দ্রুত সম্পাদন, দ্রুত ফলাফল।">Rapid execution, faster results.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💎</div>
+        <h4 data-en="Quality" data-bn="মান">Quality</h4>
+        <p data-en="Premium work for premium clients." data-bn="প্রিমিয়াম ক্লায়েন্টদের জন্য সেরা কাজ।">Premium work for premium clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand" style="margin-bottom:16px;display:inline-flex"><span class="nav-brand-text"><span style="color:var(--on-surface)">ALPHA</span><span style="color:#0A84FF">SEO</span></span></a>
+        <p data-en="Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies." data-bn="২০২০ সাল থেকে ডিজিটাল বৃদ্ধির জন্য আপনার বিশ্বস্ত অংশীদার।">Your trusted partner for digital growth since 2020. Empowering businesses across India and beyond with data-driven marketing strategies.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/alphaseo.in/" target="_blank"><img src="ig.png" alt="Instagram"></a>
+          <a href="https://wa.me/918906581045" target="_blank" style="font-size:1rem">💬</a>
+          <a href="https://t.me/+918906581045" target="_blank" style="font-size:1rem">✈️</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="info.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sendinfo.html">Free Audit</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Services" data-bn="সেবাসমূহ">Services</h4>
+        <ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Google Ads &amp; PPC</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Content Marketing</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Contact Info" data-bn="যোগাযোগ তথ্য">Contact Info</h4>
+        <ul>
+          <li style="display:flex;gap:8px;align-items:flex-start"><span>📍</span><span>Shantiniketan, Kolkata Newtown, West Bengal, India</span></li>
+          <li><a href="mailto:agencyroy0@gmail.com" style="display:flex;gap:8px;align-items:center"><span>✉️</span>agencyroy0@gmail.com</a></li>
+          <li><a href="tel:+918906581045" style="display:flex;gap:8px;align-items:center"><span>📞</span>+91 89065 81045</a></li>
+          <li style="display:flex;gap:8px;align-items:center"><span>🕐</span><span>Mon-Sat: 10AM - 7PM IST</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AlphaSEO &amp; Marketing. All Rights Reserved. | <a href="https://alphaseo.in" target="_blank">alphaseo.in</a></p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "whnbwbfssq");
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
